@@ -48,32 +48,24 @@ main_text/
 
 Each `figure_data` folder contains RDS format data files with the minimum information necessary to reproduce plot figures, allowing users to check numerical values.
 
-## Interactive Website
+## Website
 
-Explore the full interactive version of this manuscript at: https://statfungen.github.io/xqtl-paper/
+https://statfungen.github.io/xqtl-paper 
 
-The interactive website includes:
-- **Analysis Notebooks**: Interactive notebooks containing all analyses and figure generation code
-- **Data Access**: Direct links to datasets and processed results used in the manuscript
-- **Reproducible Figures**: Complete code for all manuscript figures
-
-## Getting Started
-
-To navigate this resource, use the table of contents in the left sidebar of our interactive website. Each section contains interactive notebooks that allow you to:
+To navigate this resource, use the table of contents in the left sidebar of the website. Each notebooks allow you to:
 
 1. View the code used to generate analyses
 2. Examine data associated with the figures
 3. Reproduce visualizations
 
-For detailed setup instructions and environment configuration, see our [Setup Guide](setting_up.md).
+For detailed setup instructions and environment configuration to generate the website, see our [Website Setup Guide](setting_up.md).
 
 ## Computational Requirements
 
 The analyses in this repository are performed using:
 - Python 3.9 or higher
 - R version 4.1 or higher
-- Key packages: jupyter-book, numpy, pandas, matplotlib, seaborn
-
+- Key packages: jupyter-book, ggplot2
 ## Citation
 
 If you use resources from this repository in your research, please cite our manuscript (citation details will be added upon publication).
