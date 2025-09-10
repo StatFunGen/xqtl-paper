@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting Up Jupyter Book with GitHub Pages for xQTL manuscript &#8212; xQTL Manuscript Resources</title>
+    <title>Setting Up Jupyter Book with GitHub Pages for xQTL manuscript &#8212; FunGen-xQTL Manuscript Repository</title>
   
   
   
@@ -142,14 +142,14 @@
     
   
 
-<a class="navbar-brand logo" href="index.html">
+<a class="navbar-brand logo" href="README.html">
   
   
   
   
   
   
-    <p class="title logo__title">xQTL Manuscript Resources</p>
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -168,14 +168,18 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
+                <a class="reference internal" href="README.html">
                     xQTL Manuscript Resources
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_text/6_AD_xQTL_genes/index.html">Insights into AD risk genes</a></li>
 </ul>
 
     </div>
@@ -378,7 +382,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-toc-yml">Custom _toc.yml</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-content-files">4. Create Content Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-content-files">4. Create Content Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-text-structure">Main Text Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementary-materials">Supplementary Materials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-files">Root Files</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">5. Build the Book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-to-github-pages">6. Deploy to GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-github-pages-in-repository-settings">7. Set Up GitHub Pages in Repository Settings</a></li>
@@ -426,8 +435,8 @@ document.write(`
 <h3>Custom _config.yml<a class="headerlink" href="#custom-config-yml" title="Link to this heading">#</a></h3>
 <p>Create or modify the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Book settings</span>
-<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xQTL Manuscript Resources</span>
-<span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FunGen-xQTL Consortium</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FunGen-xQTL Manuscript Repository</span>
+<span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FunGen-AD Consortium</span>
 <span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2025&quot;</span><span class="w">  </span><span class="c1"># Current year</span>
 
 <span class="c1"># Force re-execution of notebooks on each build</span>
@@ -462,32 +471,60 @@ document.write(`
 <span class="c1"># Learn more at https://jupyterbook.org/customize/toc.html</span>
 
 <span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jb-book</span>
-<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">README</span>
 <span class="nt">chapters</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">getting-started</span>
-<span class="w">  </span><span class="c1"># Add your analysis sections here as they are created</span>
-<span class="w">  </span><span class="c1"># - file: figures/index</span>
-<span class="w">  </span><span class="c1">#   sections:</span>
-<span class="w">  </span><span class="c1">#     - file: figures/figure_1</span>
-<span class="w">  </span><span class="c1">#     - file: figures/figure_2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/1_project_overview/index</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/2_single_context_cis/index</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/3_single_context_multigene_trans/index</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/4_multi_context/index</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/5_AD_xQTL_integration/index</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main_text/6_AD_xQTL_genes/index</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="create-content-files">
 <h2>4. Create Content Files<a class="headerlink" href="#create-content-files" title="Link to this heading">#</a></h2>
-<p>You’ll need to create markdown and notebook files for each section:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Root index.md</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# xQTL Manuscript Resources&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>index.md
-
-<span class="c1"># Introduction file</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Introduction&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>intro.md
-
-<span class="c1"># Getting started guide</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Getting Started&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>getting-started.md
+<p>The repository is now structured with the following organization:</p>
+<section id="main-text-structure">
+<h3>Main Text Structure<a class="headerlink" href="#main-text-structure" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>main_text/
+├── 1_project_overview/
+│   ├── index.md (FunGen-xQTL atlas and companion projects)
+│   └── figure_data/README.md
+├── 2_single_context_cis/
+│   ├── index.md (Single context cis-xQTL fine-mapping)
+│   └── figure_data/README.md
+├── 3_single_context_multigene_trans/
+│   ├── index.md (Multi-gene and trans-xQTL fine-mapping)
+│   └── figure_data/README.md
+├── 4_multi_context/
+│   ├── index.md (Propagation of multi-context xQTL effects)
+│   └── figure_data/README.md
+├── 5_AD_xQTL_integration/
+│   ├── index.md (Alzheimer&#39;s disease (AD) loci integration)
+│   └── figure_data/README.md
+└── 6_AD_xQTL_genes/
+    ├── index.md (Insights into AD risk genes)
+    └── figure_data/README.md
 </pre></div>
 </div>
+</section>
+<section id="supplementary-materials">
+<h3>Supplementary Materials<a class="headerlink" href="#supplementary-materials" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>supplementary_tables/
+└── README.md (Placeholder linking to Google Drive document)
+</pre></div>
+</div>
+</section>
+<section id="root-files">
+<h3>Root Files<a class="headerlink" href="#root-files" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code>: Landing page for the Jupyter Book</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">references.bib</span></code>: Bibliography file for citations</p></li>
+</ul>
+<p>Each <code class="docutils literal notranslate"><span class="pre">figure_data</span></code> folder contains RDS format data files with the minimum information necessary to reproduce plot figures, allowing users to check numerical values.</p>
+</section>
 </section>
 <section id="build-the-book">
 <h2>5. Build the Book<a class="headerlink" href="#build-the-book" title="Link to this heading">#</a></h2>
@@ -604,7 +641,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-toc-yml">Custom _toc.yml</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-content-files">4. Create Content Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-content-files">4. Create Content Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-text-structure">Main Text Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementary-materials">Supplementary Materials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-files">Root Files</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">5. Build the Book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-to-github-pages">6. Deploy to GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-github-pages-in-repository-settings">7. Set Up GitHub Pages in Repository Settings</a></li>
@@ -625,7 +667,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By FunGen-xQTL Consortium
+By FunGen-AD Consortium
 </p>
 
   </div>

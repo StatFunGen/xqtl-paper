@@ -33,8 +33,8 @@ Create or modify the `_config.yml` file:
 
 ```yaml
 # Book settings
-title: xQTL Manuscript Resources
-author: FunGen-xQTL Consortium
+title: FunGen-xQTL Manuscript Repository
+author: FunGen-AD Consortium
 copyright: "2025"  # Current year
 
 # Force re-execution of notebooks on each build
@@ -70,31 +70,54 @@ Create or modify `_toc.yml` file to include all figure notebooks and analysis se
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: index
+root: README
 chapters:
-  - file: intro
-  - file: getting-started
-  # Add your analysis sections here as they are created
-  # - file: figures/index
-  #   sections:
-  #     - file: figures/figure_1
-  #     - file: figures/figure_2
+  - file: main_text/1_project_overview/index
+  - file: main_text/2_single_context_cis/index
+  - file: main_text/3_single_context_multigene_trans/index
+  - file: main_text/4_multi_context/index
+  - file: main_text/5_AD_xQTL_integration/index
+  - file: main_text/6_AD_xQTL_genes/index
 ```
 
 ## 4. Create Content Files
 
-You'll need to create markdown and notebook files for each section:
+The repository is now structured with the following organization:
 
-```bash
-# Root index.md
-echo "# xQTL Manuscript Resources" > index.md
-
-# Introduction file
-echo "# Introduction" > intro.md
-
-# Getting started guide
-echo "# Getting Started" > getting-started.md
+### Main Text Structure
 ```
+main_text/
+├── 1_project_overview/
+│   ├── index.md (FunGen-xQTL atlas and companion projects)
+│   └── figure_data/README.md
+├── 2_single_context_cis/
+│   ├── index.md (Single context cis-xQTL fine-mapping)
+│   └── figure_data/README.md
+├── 3_single_context_multigene_trans/
+│   ├── index.md (Multi-gene and trans-xQTL fine-mapping)
+│   └── figure_data/README.md
+├── 4_multi_context/
+│   ├── index.md (Propagation of multi-context xQTL effects)
+│   └── figure_data/README.md
+├── 5_AD_xQTL_integration/
+│   ├── index.md (Alzheimer's disease (AD) loci integration)
+│   └── figure_data/README.md
+└── 6_AD_xQTL_genes/
+    ├── index.md (Insights into AD risk genes)
+    └── figure_data/README.md
+```
+
+### Supplementary Materials
+```
+supplementary_tables/
+└── README.md (Placeholder linking to Google Drive document)
+```
+
+### Root Files
+- `README.md`: Landing page for the Jupyter Book
+- `references.bib`: Bibliography file for citations
+
+Each `figure_data` folder contains RDS format data files with the minimum information necessary to reproduce plot figures, allowing users to check numerical values.
 
 ## 5. Build the Book
 
