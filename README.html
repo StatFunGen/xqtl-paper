@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>xQTL Manuscript Resources &#8212; FunGen-xQTL Manuscript Repository</title>
+    <title>About &#8212; FunGen-xQTL Manuscript Repository</title>
   
   
   
@@ -170,7 +170,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    xQTL Manuscript Resources
+                    About
                 </a>
             </li>
         </ul>
@@ -179,7 +179,12 @@
 <li class="toctree-l1"><a class="reference internal" href="main_text/2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main_text/3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main_text/4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="main_text/5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="main_text/5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="main_text/5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_text/5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_text/5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="main_text/6_AD_xQTL_genes/index.html">Insights into AD risk genes</a></li>
 </ul>
 
@@ -366,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>xQTL Manuscript Resources</h1>
+    <h1>About</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,10 +381,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-xqtl">About xQTL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungen-xqtl-overview">FunGen-xQTL Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-text-structure">Main Text Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content">Additional Content</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-website">Interactive Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-requirements">Computational Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
 </ul>
@@ -393,20 +402,64 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="xqtl-manuscript-resources">
-<h1>xQTL Manuscript Resources<a class="headerlink" href="#xqtl-manuscript-resources" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="about">
+<h1>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h1>
 <p>Code and data to reproduce figures in the FunGen-xQTL phase 1 manuscript.</p>
-<section id="about-xqtl">
-<h2>About xQTL<a class="headerlink" href="#about-xqtl" title="Link to this heading">#</a></h2>
+<section id="fungen-xqtl-overview">
+<h2>FunGen-xQTL Overview<a class="headerlink" href="#fungen-xqtl-overview" title="Link to this heading">#</a></h2>
 <p>This project focuses on functional genomics and expression quantitative trait loci (xQTL) analysis. The xQTL approach integrates multi-omics data to understand regulatory architecture and genetic influences on molecular phenotypes.</p>
+<p>For a list of data and resources from our project please check out <a class="reference external" href="https://statfungen.github.io/xqtl-resources/#fungen-xqtl">https://statfungen.github.io/xqtl-resources/#fungen-xqtl</a></p>
 </section>
 <section id="repository-structure">
 <h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Link to this heading">#</a></h2>
 <p>This repository contains the codes and data used to generate all figures from our manuscript, available at: <a class="github reference external" href="https://github.com/StatFunGen/xqtl-paper">StatFunGen/xqtl-paper</a></p>
+<p>The repository is organized as follows:</p>
+<section id="main-text-structure">
+<h3>Main Text Structure<a class="headerlink" href="#main-text-structure" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>main_text/
+├── 1_project_overview/
+│   ├── index.md (FunGen-xQTL atlas and companion projects)
+│   └── figure_data/README.md (Data for figures)
+├── 2_single_context_cis/
+│   ├── index.md (Single context cis-xQTL fine-mapping)
+│   └── figure_data/README.md (Data for figures)
+├── 3_single_context_multigene_trans/
+│   ├── index.md (Multi-gene and trans-xQTL fine-mapping)
+│   └── figure_data/README.md (Data for figures)
+├── 4_multi_context/
+│   ├── index.md (Propagation of multi-context xQTL effects)
+│   └── figure_data/README.md (Data for figures)
+├── 5_AD_xQTL_integration/
+│   ├── index.md (Alzheimer&#39;s disease loci integration)
+│   ├── Figure_5a_AD_GWAS_loci_harmonized.ipynb
+│   ├── Figure_5b_AD_GWAS_loci_properties.ipynb
+│   ├── Figure_5c_AD_loci_xQTL_annotated.ipynb
+│   └── figure_data/README.md (Data for figures)
+└── 6_AD_xQTL_genes/
+    ├── index.md (Insights into AD risk genes)
+    └── figure_data/README.md (Data for figures)
+</pre></div>
+</div>
+</section>
+<section id="additional-content">
+<h3>Additional Content<a class="headerlink" href="#additional-content" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>supplementary_tables/</strong>: Supplementary data tables</p></li>
+<li><p><strong>website/</strong>: Configuration files for the interactive Jupyter Book website</p></li>
+<li><p><strong>references.bib</strong>: Bibliography file for citations</p></li>
+<li><p><strong>setting_up.md</strong>: Setup instructions for the Jupyter Book environment</p></li>
+</ul>
+<p>Each <code class="docutils literal notranslate"><span class="pre">figure_data</span></code> folder contains RDS format data files with the minimum information necessary to reproduce plot figures, allowing users to check numerical values.</p>
+</section>
+</section>
+<section id="interactive-website">
+<h2>Interactive Website<a class="headerlink" href="#interactive-website" title="Link to this heading">#</a></h2>
+<p>Explore the full interactive version of this manuscript at: <a class="reference external" href="https://statfungen.github.io/xqtl-paper/">https://statfungen.github.io/xqtl-paper/</a></p>
+<p>The interactive website includes:</p>
 <ul class="simple">
 <li><p><strong>Analysis Notebooks</strong>: Interactive notebooks containing all analyses and figure generation code</p></li>
-<li><p><strong>Data</strong>: Datasets and processed results used in the manuscript</p></li>
-<li><p><strong>Figures</strong>: Reproducible code for all manuscript figures</p></li>
+<li><p><strong>Data Access</strong>: Direct links to datasets and processed results used in the manuscript</p></li>
+<li><p><strong>Reproducible Figures</strong>: Complete code for all manuscript figures</p></li>
 </ul>
 </section>
 <section id="getting-started">
@@ -418,10 +471,6 @@ document.write(`
 <li><p>Reproduce visualizations</p></li>
 </ol>
 <p>For detailed setup instructions and environment configuration, see our <a class="reference internal" href="setting_up.html"><span class="std std-doc">Setup Guide</span></a>.</p>
-</section>
-<section id="interactive-website">
-<h2>Interactive Website<a class="headerlink" href="#interactive-website" title="Link to this heading">#</a></h2>
-<p>Explore the full interactive version of this manuscript at: <a class="reference external" href="https://statfungen.github.io/xqtl-paper/">https://statfungen.github.io/xqtl-paper/</a></p>
 </section>
 <section id="computational-requirements">
 <h2>Computational Requirements<a class="headerlink" href="#computational-requirements" title="Link to this heading">#</a></h2>
@@ -495,10 +544,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-xqtl">About xQTL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungen-xqtl-overview">FunGen-xQTL Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-text-structure">Main Text Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content">Additional Content</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-website">Interactive Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-requirements">Computational Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
 </ul>

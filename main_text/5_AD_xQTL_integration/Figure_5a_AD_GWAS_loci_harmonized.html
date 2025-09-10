@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Multi-gene and trans-xQTL fine-mapping &#8212; FunGen-xQTL Manuscript Repository</title>
+    <title>AD GWAS loci harmonization and refinement &#8212; FunGen-xQTL Manuscript Repository</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/3_single_context_multigene_trans/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Propagation of multi-context xQTL effects" href="../4_multi_context/index.html" />
-    <link rel="prev" title="Single context cis-xQTL fine-mapping" href="../2_single_context_cis/index.html" />
+    <link rel="next" title="Refined AD GWAS loci properties" href="Figure_5b_AD_GWAS_loci_properties.html" />
+    <link rel="prev" title="Alzheimer’s disease (AD) loci integration" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,12 +176,12 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Alzheimer’s disease (AD) loci integration</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_AD_xQTL_genes/index.html">Insights into AD risk genes</a></li>
@@ -256,7 +256,7 @@
       
       
       
-      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/3_single_context_multigene_trans/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +286,7 @@
       
       
       
-      <li><a href="../../_sources/main_text/3_single_context_multigene_trans/index.md" target="_blank"
+      <li><a href="../../_sources/main_text/5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +296,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -357,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -368,11 +370,27 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Multi-gene and trans-xQTL fine-mapping</h1>
+    <h1>AD GWAS loci harmonization and refinement</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-overview">Methods Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-conclusions">Main Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-outcome">Expected outcome</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-gwas-fine-mapping-with-rss-qc-approach">AD GWAS fine-mapping with RSS QC approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-qc-ad-gwas-colocalization">Post-QC AD GWAS colocalization</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -382,9 +400,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="multi-gene-and-trans-xqtl-fine-mapping">
-<h1>Multi-gene and trans-xQTL fine-mapping<a class="headerlink" href="#multi-gene-and-trans-xqtl-fine-mapping" title="Link to this heading">#</a></h1>
-<p>Content for multi-gene and trans-xQTL fine-mapping chapter will be added here.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ad-gwas-loci-harmonization-and-refinement">
+<h1>AD GWAS loci harmonization and refinement<a class="headerlink" href="#ad-gwas-loci-harmonization-and-refinement" title="Link to this heading">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
+</section>
+<section id="methods-overview">
+<h2>Methods Overview<a class="headerlink" href="#methods-overview" title="Link to this heading">#</a></h2>
+</section>
+<section id="main-conclusions">
+<h2>Main Conclusions<a class="headerlink" href="#main-conclusions" title="Link to this heading">#</a></h2>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
+</section>
+<section id="expected-outcome">
+<h2>Expected outcome<a class="headerlink" href="#expected-outcome" title="Link to this heading">#</a></h2>
+<p>This analysis will generate an Upset plot that displays intersection patterns from fine-mapping results across different Alzheimer’s disease meta-analysis GWAS cohorts. The visualization will help identify cross-cohort consistencies and differences by showing which fine-mapped variants are shared between cohorts and which are unique to specific studies, providing insights into the reproducibility and robustness of fine-mapping signals across different AD GWAS datasets.</p>
+<section id="ad-gwas-fine-mapping-with-rss-qc-approach">
+<h3>AD GWAS fine-mapping with RSS QC approach<a class="headerlink" href="#ad-gwas-fine-mapping-with-rss-qc-approach" title="Link to this heading">#</a></h3>
+</section>
+<section id="post-qc-ad-gwas-colocalization">
+<h3>Post-QC AD GWAS colocalization<a class="headerlink" href="#post-qc-ad-gwas-colocalization" title="Link to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -396,16 +435,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./main_text/3_single_context_multigene_trans"
+            name: "ir",
+            path: "./main_text/5_AD_xQTL_integration"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
                 </article>
               
@@ -418,20 +457,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../2_single_context_cis/index.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Single context cis-xQTL fine-mapping</p>
+        <p class="prev-next-title">Alzheimer’s disease (AD) loci integration</p>
       </div>
     </a>
     <a class="right-next"
-       href="../4_multi_context/index.html"
+       href="Figure_5b_AD_GWAS_loci_properties.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Propagation of multi-context xQTL effects</p>
+        <p class="prev-next-title">Refined AD GWAS loci properties</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -441,6 +480,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-overview">Methods Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-conclusions">Main Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-outcome">Expected outcome</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-gwas-fine-mapping-with-rss-qc-approach">AD GWAS fine-mapping with RSS QC approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-qc-ad-gwas-colocalization">Post-QC AD GWAS colocalization</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

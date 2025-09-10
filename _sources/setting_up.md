@@ -15,7 +15,7 @@ pip install jupyter-book ghp-import
 Create a new Jupyter Book in the root directory of this project:
 
 ```bash
-jupyter-book create manuscript-website
+jupyter-book create website
 ```
 
 ## 3. Set Up Book Structure
@@ -122,7 +122,7 @@ Each `figure_data` folder contains RDS format data files with the minimum inform
 ## 5. Build the Book
 
 ```bash
-jupyter-book build . --config manuscript-website/_config.yml --toc manuscript-website/_toc.yml
+jupyter-book build . --config website/_config.yml --toc website/_toc.yml
 ```
 
 This will generate the HTML files in the `_build/html` directory.

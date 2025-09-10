@@ -1,0 +1,1 @@
+This folder is used to put in the relevant existing draft figure notebooks from various people waiting to be polished. It will be removed once finalized into the upper-level folder for the figures.
