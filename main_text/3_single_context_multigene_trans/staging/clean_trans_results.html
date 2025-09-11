@@ -1,0 +1,1352 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clean trans results &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/3_single_context_multigene_trans/staging/clean_trans_results';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../6_AD_xQTL_genes/index.html">Insights into AD risk genes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/3_single_context_multigene_trans/staging/clean_trans_results.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/3_single_context_multigene_trans/staging/clean_trans_results.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clean trans results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-boundry">Check Boundry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-one-special-case">Check one special case:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-trans-results">Filter trans results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-the-boudry-signals-shared-with-ad">Filter the boudry signals shared with AD</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="clean-trans-results">
+<h1>Clean trans results<a class="headerlink" href="#clean-trans-results" title="Link to this heading">#</a></h1>
+<p>This notebook filters the trans results by retaining variants with MAF &gt; 0.05 and p &lt; 1×10⁻⁵, and removes trans loci that are explained solely by AD loci but whose signals originate from block boundaries. The filtering criterion is defined as having signals in a neighboring block located within 100 kb of the boundary.</p>
+<p>The filtered trans results are stored at: s3://statfungen/ftp_fgc_xqtl/analysis_result/trans/FunGen_xQTL.trans.exported.toploci.bed.gz.</p>
+<section id="check-boundry">
+<h2>Check Boundry<a class="headerlink" href="#check-boundry" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.3.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.1.0     
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+
+Attaching package: ‘data.table’
+
+
+The following objects are masked from ‘package:lubridate’:
+
+    hour, isoweek, mday, minute, month, quarter, second, wday, week,
+    yday, year
+
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&#39;~/Work/trans/TensorQTL_post/FunGen_xQTL.trans.nofiltered.exported.toploci.bed.gz&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">head</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 × 18</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>resource</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>896978</td><td>896979</td><td>T</td><td>C</td><td>chr1:896979:C:T</td><td>0.02463768</td><td>0.6624651</td><td>0.1094392</td><td>6.053272</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>2</td><td>2</td><td>0.38040437</td><td>0.5381642</td><td>Knight_eQTL</td></tr>
+	<tr><td>1</td><td>898882</td><td>898883</td><td>T</td><td>C</td><td>chr1:898883:C:T</td><td>0.01906158</td><td>0.7379140</td><td>0.1179395</td><td>6.256717</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>2</td><td>2</td><td>0.23974357</td><td>0.5723862</td><td>Knight_eQTL</td></tr>
+	<tr><td>1</td><td>903284</td><td>903285</td><td>C</td><td>T</td><td>chr1:903285:T:C</td><td>0.02052786</td><td>0.6586505</td><td>0.1138062</td><td>5.787474</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>2</td><td>0</td><td>0.04172245</td><td>0.5084460</td><td>Knight_eQTL</td></tr>
+	<tr><td>1</td><td>903351</td><td>903352</td><td>A</td><td>G</td><td>chr1:903352:G:A</td><td>0.02052786</td><td>0.6586505</td><td>0.1138062</td><td>5.787474</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>0</td><td>0</td><td>0.04172245</td><td>0.5084460</td><td>Knight_eQTL</td></tr>
+	<tr><td>1</td><td>903509</td><td>903510</td><td>G</td><td>A</td><td>chr1:903510:A:G</td><td>0.02052786</td><td>0.6586505</td><td>0.1138062</td><td>5.787474</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>0</td><td>0</td><td>0.04172245</td><td>0.5084460</td><td>Knight_eQTL</td></tr>
+	<tr><td>1</td><td>903535</td><td>903536</td><td>T</td><td>A</td><td>chr1:903536:A:T</td><td>0.02052786</td><td>0.6586505</td><td>0.1138062</td><td>5.787474</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000168496</td><td>2</td><td>0</td><td>0</td><td>0.04172245</td><td>0.5084460</td><td>Knight_eQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_raw</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&#39;trans_only.loci.info.rds&#39;</span><span class="p">)</span>
+<span class="n">trans_only_gwas_cs_sum</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_raw</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">separate_rows</span><span class="p">(</span><span class="n">events</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">resource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">str_remove</span><span class="p">(</span><span class="n">events</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;_ENSG.+|_gp_.+&#39;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">          </span><span class="n">gene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">str_extract</span><span class="p">(</span><span class="n">events</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ENSG.+&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_raw</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">region</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'chr11_119829118_122612025'</li><li>'chr15_47690138_49901356'</li><li>'chr15_49901356_51733753'</li><li>'chr16_78676505_80260790'</li><li>'chr16_88382277_90220225'</li><li>'chr1_158933969_162352348'</li><li>'chr20_40697409_42726168'</li><li>'chr2_125689597_127728648'</li><li>'chr2_158720603_160577800'</li><li>'chr3_154360351_156292136'</li><li>'chr5_139769624_142619401'</li><li>'chr5_149895776_152257891'</li><li>'chr8_26225312_27515963'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">nrow</span><span class="p">(</span><span class="n">trans_only_gwas_cs_sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">21</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># i=7</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">susieR</span><span class="p">)</span>
+<span class="n">trans_path</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&#39;/home/fengr1/Work/trans/TensorQTL_post/&#39;</span>
+<span class="n">boundry_indexs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">21</span><span class="p">)</span>
+<span class="kr">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">boundry_indexs</span><span class="p">){</span>
+<span class="w">    </span><span class="n">sob_files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">trans_path</span><span class="p">,</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum</span><span class="o">$</span><span class="n">resource</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;/fine_mapping&#39;</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.univariate_bvsr.rds&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
+
+<span class="w">    </span><span class="n">sob_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sob_files</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">.</span><span class="p">[</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">sob_files</span><span class="p">,</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span>
+
+<span class="w">    </span><span class="n">sob</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="n">sob_file</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">susie_plot</span><span class="p">(</span><span class="n">sob</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="n">trans_only_gwas_cs_sum</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">]]][[</span><span class="s">&#39;susie_result_trimmed&#39;</span><span class="p">]],</span><span class="s">&quot;PIP&quot;</span><span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/c14a531ee749d091a741969e36d952ec277a1921a7e796214dfbe0e5a4811f47.png"><img alt="../../../_images/c14a531ee749d091a741969e36d952ec277a1921a7e796214dfbe0e5a4811f47.png" src="../../../_images/c14a531ee749d091a741969e36d952ec277a1921a7e796214dfbe0e5a4811f47.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/8a111e60a38d0708f69609b68fc0a0a1b178d3a49e572f803a580d2b326c124d.png"><img alt="../../../_images/8a111e60a38d0708f69609b68fc0a0a1b178d3a49e572f803a580d2b326c124d.png" src="../../../_images/8a111e60a38d0708f69609b68fc0a0a1b178d3a49e572f803a580d2b326c124d.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/df8b43dff2f11c4ddd546105cf4e19ba57ee252674275aa0936dc7bc97faa19f.png"><img alt="../../../_images/df8b43dff2f11c4ddd546105cf4e19ba57ee252674275aa0936dc7bc97faa19f.png" src="../../../_images/df8b43dff2f11c4ddd546105cf4e19ba57ee252674275aa0936dc7bc97faa19f.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/0f52d0c37845ef85bd7d7f647ad1871b4fd3ca29781c7d3c0940b4b4920fcba0.png"><img alt="../../../_images/0f52d0c37845ef85bd7d7f647ad1871b4fd3ca29781c7d3c0940b4b4920fcba0.png" src="../../../_images/0f52d0c37845ef85bd7d7f647ad1871b4fd3ca29781c7d3c0940b4b4920fcba0.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/ca1ad60793faad9060d4011fb0b57ea3874d76989aa186216b415c3401b951e9.png"><img alt="../../../_images/ca1ad60793faad9060d4011fb0b57ea3874d76989aa186216b415c3401b951e9.png" src="../../../_images/ca1ad60793faad9060d4011fb0b57ea3874d76989aa186216b415c3401b951e9.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/59da7fba246bb0ea18051e7e339ab4a967e74fbbaeea5bd3f5d97480485ec660.png"><img alt="../../../_images/59da7fba246bb0ea18051e7e339ab4a967e74fbbaeea5bd3f5d97480485ec660.png" src="../../../_images/59da7fba246bb0ea18051e7e339ab4a967e74fbbaeea5bd3f5d97480485ec660.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/9229b74e73e733a0c9e8261346c7e005c9e4da182894ded68c20f3d0b64e391b.png"><img alt="../../../_images/9229b74e73e733a0c9e8261346c7e005c9e4da182894ded68c20f3d0b64e391b.png" src="../../../_images/9229b74e73e733a0c9e8261346c7e005c9e4da182894ded68c20f3d0b64e391b.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/1da1021edcd45b6daa4bc8934cdb52c2c6721663cd62b945fbdeb3cdf7cd2eed.png"><img alt="../../../_images/1da1021edcd45b6daa4bc8934cdb52c2c6721663cd62b945fbdeb3cdf7cd2eed.png" src="../../../_images/1da1021edcd45b6daa4bc8934cdb52c2c6721663cd62b945fbdeb3cdf7cd2eed.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/dd4121942d88322f420ba409c9d31f02ef61bbc7de3fa8ee5c8dadd8353f2092.png"><img alt="../../../_images/dd4121942d88322f420ba409c9d31f02ef61bbc7de3fa8ee5c8dadd8353f2092.png" src="../../../_images/dd4121942d88322f420ba409c9d31f02ef61bbc7de3fa8ee5c8dadd8353f2092.png" style="width: 420px; height: 420px;" />
+</a>
+<a class="reference internal image-reference" href="../../../_images/8b6632145a9ceea2f3577c7ad82073ee92495f1090af5d2310a81f55c287ce15.png"><img alt="../../../_images/8b6632145a9ceea2f3577c7ad82073ee92495f1090af5d2310a81f55c287ce15.png" src="../../../_images/8b6632145a9ceea2f3577c7ad82073ee92495f1090af5d2310a81f55c287ce15.png" style="width: 420px; height: 420px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum</span><span class="p">[</span><span class="n">boundry_indexs</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">region</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'chr15_47690138_49901356'</li><li>'chr15_49901356_51733753'</li><li>'chr16_88382277_90220225'</li><li>'chr2_158720603_160577800'</li><li>'chr5_139769624_142619401'</li><li>'chr8_26225312_27515963'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum</span><span class="p">[</span><span class="n">boundry_indexs</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_boundry</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 10 × 6</caption>
+<thead>
+	<tr><th scope=col>region</th><th scope=col>n_event</th><th scope=col>events</th><th scope=col>studies</th><th scope=col>resource</th><th scope=col>gene</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr15_47690138_49901356 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td></tr>
+	<tr><td>chr15_49901356_51733753 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td></tr>
+	<tr><td>chr16_88382277_90220225 </td><td>1</td><td>ROSMAP_gpQTL_gp_2508                        </td><td>AD_Bellenguez_2022   </td><td>ROSMAP_gpQTL                </td><td>NA             </td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>MSBB_eQTL_BM10_ENSG00000213579              </td><td>AD_Bellenguez_2022   </td><td>MSBB_eQTL_BM10              </td><td>ENSG00000213579</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000179611</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000105220</td></tr>
+	<tr><td>chr5_139769624_142619401</td><td>1</td><td>MSBB_eQTL_BM10_ENSG00000136840              </td><td>AD_Kunkle_Stage1_2019</td><td>MSBB_eQTL_BM10              </td><td>ENSG00000136840</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM36_ENSG00000140987              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM36              </td><td>ENSG00000140987</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>ROSMAP_gpQTL_gp_7827                        </td><td>AD_Wightman_Full_2021</td><td>ROSMAP_gpQTL                </td><td>NA             </td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM22_ENSG00000137270              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM22              </td><td>ENSG00000137270</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># assumes: trans_only_gwas_cs_sum_boundry, trans, safe_min(), dplyr, stringr are available</span>
+
+<span class="c1"># helper: safe minimum (Inf if empty or all NA)</span>
+<span class="n">safe_min</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">all</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="w"> </span><span class="kr">return</span><span class="p">(</span><span class="kc">Inf</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">seq_len</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># parse target block info</span>
+<span class="w">  </span><span class="n">target_blocks</span><span class="w">       </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">  </span><span class="n">target_blocks_chr</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">target_blocks</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
+<span class="w">  </span><span class="n">target_blocks_start</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">target_blocks</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">()</span>
+<span class="w">  </span><span class="n">target_blocks_end</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">target_blocks</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">()</span>
+
+<span class="w">  </span><span class="c1"># find neighbor blocks that share a boundary with target (but exclude the target itself)</span>
+<span class="w">  </span><span class="n">trans_neighbors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">      </span><span class="n">block_chr</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">gene_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span>
+<span class="w">      </span><span class="n">block_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">gene_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(),</span>
+<span class="w">      </span><span class="n">block_end</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">gene_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">()</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span>
+<span class="w">      </span><span class="n">block_chr</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_chr</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="w">        </span><span class="p">(</span>
+<span class="w">          </span><span class="n">block_start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_start</span><span class="w"> </span><span class="o">|</span>
+<span class="w">            </span><span class="n">block_end</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_start</span><span class="w"> </span><span class="o">|</span>
+<span class="w">            </span><span class="n">block_start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_end</span><span class="w"> </span><span class="o">|</span>
+<span class="w">            </span><span class="n">block_end</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_end</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">block_chr</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_chr</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="w">               </span><span class="n">block_start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_start</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="w">               </span><span class="n">block_end</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_blocks_end</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="c1"># compute distance from variant end to neighbor block boundaries</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">      </span><span class="n">end_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">end</span><span class="p">)),</span>
+<span class="w">      </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pmin</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">abs</span><span class="p">(</span><span class="n">end_num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">block_start</span><span class="p">),</span>
+<span class="w">        </span><span class="nf">abs</span><span class="p">(</span><span class="n">end_num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">block_end</span><span class="p">),</span>
+<span class="w">        </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+
+<span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">trans_neighbors</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">cat</span><span class="p">(</span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;have neighbor block in exported results&quot;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1"># decision based on closest signal to boundary (100 kb threshold)</span>
+<span class="w">    </span><span class="n">min_dis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">safe_min</span><span class="p">(</span><span class="n">trans_neighbors</span><span class="o">$</span><span class="n">dis</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">min_dis</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1e6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">filter_decision</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">TRUE</span>
+<span class="w">      </span><span class="nf">cat</span><span class="p">(</span><span class="s">&quot; and closest signal to boundary is at:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">min_dis</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">filter_decision</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">FALSE</span>
+<span class="w">      </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">is.infinite</span><span class="p">(</span><span class="n">min_dis</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">cat</span><span class="p">(</span><span class="s">&quot; no neighbor signals found; DO NOT have signal in 100k of boundary\n&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">cat</span><span class="p">(</span><span class="s">&quot; but DO NOT have signal in 100k of boundary (closest:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">min_dis</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;)\n&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1"># no neighbor blocks matched; mark as not filtered</span>
+<span class="w">    </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">filter_decision</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">FALSE</span>
+<span class="w">    </span><span class="nf">cat</span><span class="p">(</span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;no neighbor block in exported results\n&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263 have neighbor block in exported results
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Unknown or uninitialised column: `filter_decision`.”
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> and closest signal to boundary is at: 0 
+ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263 have neighbor block in exported results and closest signal to boundary is at: 0 
+ROSMAP_gpQTL_gp_2508 no neighbor block in exported results
+MSBB_eQTL_BM10_ENSG00000213579 no neighbor block in exported results
+ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611 no neighbor block in exported results
+ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220 no neighbor block in exported results
+MSBB_eQTL_BM10_ENSG00000136840 no neighbor block in exported results
+MSBB_eQTL_BM36_ENSG00000140987 no neighbor block in exported results
+ROSMAP_gpQTL_gp_7827 no neighbor block in exported results
+MSBB_eQTL_BM22_ENSG00000137270 no neighbor block in exported results
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">seq_len</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">target_blocks</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">    </span><span class="nf">message</span><span class="p">(</span><span class="s">&quot;target block: &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">target_blocks</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; in &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">target_blocks_chr</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_split</span><span class="p">(</span><span class="n">target_blocks</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">simplify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
+<span class="w">    </span><span class="nf">cat</span><span class="p">(</span><span class="s">&quot;block on same chromosome are &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">gene_ID</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w">  </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">.</span><span class="p">[</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">target_blocks_chr</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;\n&#39;</span><span class="w"> </span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr15_47690138_49901356 in ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr15_47690138_49901356 chr15_49901356_51733753 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr15_49901356_51733753 in ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr15_47690138_49901356 chr15_49901356_51733753 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr16_88382277_90220225 in ROSMAP_gpQTL_gp_2508
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr16_88382277_90220225 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr2_158720603_160577800 in MSBB_eQTL_BM10_ENSG00000213579
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr2_158720603_160577800 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr2_158720603_160577800 in ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr2_158720603_160577800 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr2_158720603_160577800 in ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr2_158720603_160577800 chr2_176462474_179338809 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr5_139769624_142619401 in MSBB_eQTL_BM10_ENSG00000136840
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr5_139769624_142619401 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr8_26225312_27515963 in MSBB_eQTL_BM36_ENSG00000140987
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr8_26225312_27515963 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr8_26225312_27515963 in ROSMAP_gpQTL_gp_7827
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr8_26225312_27515963 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>target block: chr8_26225312_27515963 in MSBB_eQTL_BM22_ENSG00000137270
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>block on same chromosome are  chr8_26225312_27515963 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">1</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr15_47690138_49901356'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 12 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr1_29689521_31147701  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr1_170228106_172965199</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr3_10633421_12819971  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr6_166767544_167981705</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr7_71528863_73724576  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr8_3113856_3646595    </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr8_136512469_140094718</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr15_47690138_49901356 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr15_49901356_51733753 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr17_57489969_60570445 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr17_65149278_67025568 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr19_16707045_20110504 </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">2</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr15_49901356_51733753'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 12 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr1_29689521_31147701  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr1_170228106_172965199</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr3_10633421_12819971  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr6_166767544_167981705</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr7_71528863_73724576  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr8_3113856_3646595    </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr8_136512469_140094718</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr15_47690138_49901356 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr15_49901356_51733753 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr17_57489969_60570445 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr17_65149278_67025568 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>chr19_16707045_20110504 </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">3</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr16_88382277_90220225'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 14 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr1_12710318_15244493  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr1_50179506_54277735  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr1_234364329_235656952</td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr2_81393717_85666618  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr3_52179438_54975538  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr4_43205452_47542521  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr5_50868828_54641088  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr5_135495886_137607787</td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr6_31604117_32714947  </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr7_130784338_133120345</td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr14_16038675_21164036 </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr15_91547103_93020382 </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr16_88382277_90220225 </td></tr>
+	<tr><td>ROSMAP_gpQTL_gp_2508</td><td>chr19_9354363_11569122  </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">4</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr2_158720603_160577800'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>MSBB_eQTL_BM10_ENSG00000213579</td><td>chr2_158720603_160577800</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">5</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr2_158720603_160577800'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611</td><td>chr2_158720603_160577800</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611</td><td>chr5_29715047_31868737  </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">6</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr2_158720603_160577800'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 7 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr1_154829663_158933969</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr2_158720603_160577800</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr2_176462474_179338809</td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr3_54975538_56922208  </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr16_10031_1157592     </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr17_81070897_83242554 </td></tr>
+	<tr><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>chr18_75159731_76625474 </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">7</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr5_139769624_142619401'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>MSBB_eQTL_BM10_ENSG00000136840</td><td>chr5_139769624_142619401</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">8</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr8_26225312_27515963'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>MSBB_eQTL_BM36_ENSG00000140987</td><td>chr8_26225312_27515963</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">9</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr8_26225312_27515963'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ROSMAP_gpQTL_gp_7827</td><td>chr8_26225312_27515963</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="m">10</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">region</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="o">$</span><span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">`#chr`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'chr8_26225312_27515963'</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>event_ID</th><th scope=col>gene_ID</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>MSBB_eQTL_BM22_ENSG00000137270</td><td>chr8_26225312_27515963</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<section id="check-one-special-case">
+<h3>Check one special case:<a class="headerlink" href="#check-one-special-case" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_boundry</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 10 × 7</caption>
+<thead>
+	<tr><th scope=col>region</th><th scope=col>n_event</th><th scope=col>events</th><th scope=col>studies</th><th scope=col>resource</th><th scope=col>gene</th><th scope=col>filter_decision</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr15_47690138_49901356 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td><td> TRUE</td></tr>
+	<tr><td>chr15_49901356_51733753 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td><td> TRUE</td></tr>
+	<tr><td>chr16_88382277_90220225 </td><td>1</td><td>ROSMAP_gpQTL_gp_2508                        </td><td>AD_Bellenguez_2022   </td><td>ROSMAP_gpQTL                </td><td>NA             </td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>MSBB_eQTL_BM10_ENSG00000213579              </td><td>AD_Bellenguez_2022   </td><td>MSBB_eQTL_BM10              </td><td>ENSG00000213579</td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000179611</td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000105220</td><td>FALSE</td></tr>
+	<tr><td>chr5_139769624_142619401</td><td>1</td><td>MSBB_eQTL_BM10_ENSG00000136840              </td><td>AD_Kunkle_Stage1_2019</td><td>MSBB_eQTL_BM10              </td><td>ENSG00000136840</td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM36_ENSG00000140987              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM36              </td><td>ENSG00000140987</td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>ROSMAP_gpQTL_gp_7827                        </td><td>AD_Wightman_Full_2021</td><td>ROSMAP_gpQTL                </td><td>NA             </td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM22_ENSG00000137270              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM22              </td><td>ENSG00000137270</td><td>FALSE</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="s">&#39;ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="w"> </span><span class="o">==</span><span class="s">&#39;chr15_47690138_49901356&#39;</span><span class="p">)</span>
+<span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">event_ID</span><span class="w"> </span><span class="o">==</span><span class="s">&#39;ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">gene_ID</span><span class="w"> </span><span class="o">==</span><span class="s">&#39;chr15_49901356_51733753&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 18</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>resource</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>15</td><td>49901355</td><td>49901356</td><td>A</td><td>G</td><td>chr15:49901356:G:A</td><td>0.3761062</td><td>-0.1233689</td><td>0.02158984</td><td>-5.714214</td><td>chr15_47690138_49901356</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>1</td><td>1</td><td>1</td><td>0.9957963</td><td>-0.1191877</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 16 × 18</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>resource</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>15</td><td>49901355</td><td>49901356</td><td>A                               </td><td>G                                           </td><td>chr15:49901356:G:A                                                                          </td><td>0.37610619</td><td>-0.12336894</td><td>0.02158984</td><td>-5.714214</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>1</td><td>1</td><td>1</td><td>0.98668799</td><td>-0.12683928</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>50073014</td><td>50073015</td><td>TACACACACACACACACACACACACACTATAC</td><td>TATATACACACACACACACACACACACACACACACACACTATAC</td><td>chr15:50073015:TATATACACACACACACACACACACACACACACACACACTATAC:TACACACACACACACACACACACACACTATAC</td><td>0.01408451</td><td>-0.37831351</td><td>0.09582880</td><td>-3.947806</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.03239422</td><td>-0.27423309</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>50358603</td><td>50358604</td><td>C                               </td><td>G                                           </td><td>chr15:50358604:G:C                                                                          </td><td>0.48008850</td><td>-0.09723475</td><td>0.02247218</td><td>-4.326894</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.03421522</td><td>-0.06487435</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51211944</td><td>51211945</td><td>T                               </td><td>TC                                          </td><td>chr15:51211945:TC:T                                                                         </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51215596</td><td>51215597</td><td>C                               </td><td>T                                           </td><td>chr15:51215597:T:C                                                                          </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51215770</td><td>51215771</td><td>A                               </td><td>G                                           </td><td>chr15:51215771:G:A                                                                          </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51219573</td><td>51219574</td><td>A                               </td><td>G                                           </td><td>chr15:51219574:G:A                                                                          </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51223153</td><td>51223154</td><td>T                               </td><td>C                                           </td><td>chr15:51223154:C:T                                                                          </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51223180</td><td>51223181</td><td>A                               </td><td>AC                                          </td><td>chr15:51223181:AC:A                                                                         </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51226571</td><td>51226572</td><td>T                               </td><td>C                                           </td><td>chr15:51226572:C:T                                                                          </td><td>0.02433628</td><td>-0.27124096</td><td>0.08276378</td><td>-3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.05657956</td><td>-0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51226875</td><td>51226876</td><td>T                               </td><td>C                                           </td><td>chr15:51226876:C:T                                                                          </td><td>0.02433628</td><td> 0.27124096</td><td>0.08276378</td><td> 3.277291</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.05657956</td><td> 0.31211535</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51268090</td><td>51268091</td><td>G                               </td><td>C                                           </td><td>chr15:51268091:C:G                                                                          </td><td>0.02654867</td><td> 0.25312681</td><td>0.07797047</td><td> 3.246445</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.06307690</td><td> 0.29567053</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51275822</td><td>51275823</td><td>T                               </td><td>G                                           </td><td>chr15:51275823:G:T                                                                          </td><td>0.02433628</td><td> 0.25777334</td><td>0.07805715</td><td> 3.302367</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>3</td><td>0.07349745</td><td> 0.29873509</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51643436</td><td>51643437</td><td>CT                              </td><td>CTT                                         </td><td>chr15:51643437:CTT:CT                                                                       </td><td>0.14159292</td><td>-0.11421215</td><td>0.03326146</td><td>-3.433769</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.03869577</td><td>-0.09434792</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51692878</td><td>51692879</td><td>T                               </td><td>TTC                                         </td><td>chr15:51692879:TTC:T                                                                        </td><td>0.20353982</td><td>-0.09919673</td><td>0.02834196</td><td>-3.499995</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.02708230</td><td>-0.07776071</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+	<tr><td>15</td><td>51692879</td><td>51692880</td><td>*                               </td><td>TC                                          </td><td>chr15:51692880:TC:*                                                                         </td><td>0.20353982</td><td>-0.09919673</td><td>0.02834196</td><td>-3.499995</td><td>chr15_49901356_51733753</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>0</td><td>0</td><td>0</td><td>0.02708230</td><td>-0.07776071</td><td>ROSMAP_DeJager_eQTL_Monocyte</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">filter_decision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">events</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">filter_decision</span><span class="p">))</span>
+<span class="n">trans_only_gwas_cs_sum_boundry</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 10 × 7</caption>
+<thead>
+	<tr><th scope=col>region</th><th scope=col>n_event</th><th scope=col>events</th><th scope=col>studies</th><th scope=col>resource</th><th scope=col>gene</th><th scope=col>filter_decision</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr15_47690138_49901356 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td><td>FALSE</td></tr>
+	<tr><td>chr15_49901356_51733753 </td><td>1</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000087263</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000087263</td><td>FALSE</td></tr>
+	<tr><td>chr16_88382277_90220225 </td><td>1</td><td>ROSMAP_gpQTL_gp_2508                        </td><td>AD_Bellenguez_2022   </td><td>ROSMAP_gpQTL                </td><td>NA             </td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>MSBB_eQTL_BM10_ENSG00000213579              </td><td>AD_Bellenguez_2022   </td><td>MSBB_eQTL_BM10              </td><td>ENSG00000213579</td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000179611</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000179611</td><td>FALSE</td></tr>
+	<tr><td>chr2_158720603_160577800</td><td>3</td><td>ROSMAP_DeJager_eQTL_Monocyte_ENSG00000105220</td><td>AD_Bellenguez_2022   </td><td>ROSMAP_DeJager_eQTL_Monocyte</td><td>ENSG00000105220</td><td>FALSE</td></tr>
+	<tr><td>chr5_139769624_142619401</td><td>1</td><td>MSBB_eQTL_BM10_ENSG00000136840              </td><td>AD_Kunkle_Stage1_2019</td><td>MSBB_eQTL_BM10              </td><td>ENSG00000136840</td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM36_ENSG00000140987              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM36              </td><td>ENSG00000140987</td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>ROSMAP_gpQTL_gp_7827                        </td><td>AD_Wightman_Full_2021</td><td>ROSMAP_gpQTL                </td><td>NA             </td><td>FALSE</td></tr>
+	<tr><td>chr8_26225312_27515963  </td><td>3</td><td>MSBB_eQTL_BM22_ENSG00000137270              </td><td>AD_Wightman_Full_2021</td><td>MSBB_eQTL_BM22              </td><td>ENSG00000137270</td><td>FALSE</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>Among the 21 unique trans contexts that are exclusively explained by AD loci (i.e., those AD loci are not explained by any other resources), visual inspection suggests that 10 have signals close to the block boundary.</p>
+<p>By examining the exported trans results table—which includes all variants within all coverage credible sets as well as strong signals outside credible sets—we identified 2 cases with signals in the neighboring block, where the signal lies within 100 kb of the boundary.</p>
+<p><strong>Note:</strong>
+In ROSMAP_DeJager_eQTL_Monocyte, there is a signal precisely at the boundary between blocks chr15_47690138_49901356 and chr15_49901356_51733753. Both blocks show strong colocalization with AD, driven by the same variant (chr15:49901356:G:A) with PIP = 1. The suggestion for this case is keeping it as is.</p>
+</section>
+</section>
+<section id="filter-trans-results">
+<h2>Filter trans results<a class="headerlink" href="#filter-trans-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_sing_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">pnorm</span><span class="p">(</span><span class="o">-</span><span class="nf">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">MAF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1E-05</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">                </span><span class="nf">mutate</span><span class="p">(</span><span class="n">cs_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">gene_ID</span><span class="p">,</span><span class="w"> </span><span class="n">event_ID</span><span class="p">,</span><span class="w"> </span><span class="n">cs_coverage_0.95</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;_&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="filter-the-boudry-signals-shared-with-ad">
+<h3>Filter the boudry signals shared with AD<a class="headerlink" href="#filter-the-boudry-signals-shared-with-ad" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">gwas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&#39;./AD_GWAS_finemapping_109_blocks_top_loci_unified_any0.8ANDmin0.5.csv.gz&#39;</span><span class="p">)</span>
+<span class="n">coverage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;cs_coverage_0.95_min_corr&quot;</span>
+<span class="n">gwas_95</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gwas</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="o">!!</span><span class="n">coverage</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">.data</span><span class="p">[[</span><span class="n">coverage</span><span class="p">]]))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.data</span><span class="p">[[</span><span class="n">coverage</span><span class="p">]]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="n">AD_gwas_df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gwas_95</span><span class="w"> </span><span class="o">%&gt;%</span><span class="nf">mutate</span><span class="p">(</span><span class="n">gwas_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">study</span><span class="p">,</span><span class="n">region</span><span class="p">,</span><span class="n">.data</span><span class="p">[[</span><span class="n">coverage</span><span class="p">]],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;:&quot;</span><span class="p">))</span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">variant_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&#39;chr&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">variant_id</span><span class="p">))</span>
+<span class="n">AD_gwas_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">AD_gwas_df</span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">gwas_cs</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;AD_Bellenguez_2022:chr15_47690138_49901356:1&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pip</span><span class="o">==</span><span class="m">0.998973148941477</span><span class="p">))</span>
+<span class="n">coverage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;cs_coverage_0.95&quot;</span>
+<span class="n">trans_AD_GWAS_meta_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">trans_sing_df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">                                    </span><span class="nf">filter</span><span class="p">(</span><span class="n">.data</span><span class="p">[[</span><span class="n">coverage</span><span class="p">]]</span><span class="o">&gt;</span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">AD_gwas_df</span><span class="p">,</span><span class="w">  </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;variant_ID&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">suffixes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;QTL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;GWAS&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pairs_to_drop</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_only_gwas_cs_sum_boundry</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">filter_decision</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">events</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">need_to_filter_cs_id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_AD_GWAS_meta_df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">inner_join</span><span class="p">(</span><span class="n">pairs_to_drop</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;gene_ID&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;region&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;event_ID&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;events&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">cs_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">need_to_filter_cs_id</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_sing_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_sing_df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">cs_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">trans</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">trans_sing_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>5491897</li><li>18</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3169684</li><li>19</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">fwrite</span><span class="p">(</span><span class="n">trans_sing_df</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;~/Work/trans/TensorQTL_post/FunGen_xQTL.trans.exported.toploci.bed.gz&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/3_single_context_multigene_trans/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-boundry">Check Boundry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-one-special-case">Check one special case:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-trans-results">Filter trans results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-the-boudry-signals-shared-with-ad">Filter the boudry signals shared with AD</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

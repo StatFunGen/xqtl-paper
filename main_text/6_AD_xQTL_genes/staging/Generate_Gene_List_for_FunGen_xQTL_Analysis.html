@@ -1,0 +1,1301 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generate Gene List for FunGen xQTL Analysis &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/6_AD_xQTL_genes/staging/Generate_Gene_List_for_FunGen_xQTL_Analysis';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Insights into AD risk genes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/6_AD_xQTL_genes/staging/Generate_Gene_List_for_FunGen_xQTL_Analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/6_AD_xQTL_genes/staging/Generate_Gene_List_for_FunGen_xQTL_Analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Generate Gene List for FunGen xQTL Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-1-fungen-xqtl-results">Data Source 1: FunGen xQTL Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-2-adsp-alzheimer-s-variant-catalog">Data Source 2: ADSP Alzheimer’s Variant Catalog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-3-principal-investigator-gene-list">Data Source 3: Principal Investigator Gene List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-4-multi-gene-analysis-results">Data Source 4: Multi-gene Analysis Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-ad-gwas-fine-mapping-results-from-march-25-2025">Load AD GWAS fine-mapping results from March 25, 2025</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-5-genome-wide-multi-context-msbb-results">Data Source 5: Genome-Wide Multi-Context MSBB Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-6-updated-colocboost-list">Data Source 6: updated ColocBoost list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-7-twas-results">Data Source 7: TWAS Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-standardizing-all-data-sources">Combining and Standardizing All Data Sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twas-table-optional">twas table (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="generate-gene-list-for-fungen-xqtl-analysis">
+<h1>Generate Gene List for FunGen xQTL Analysis<a class="headerlink" href="#generate-gene-list-for-fungen-xqtl-analysis" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This analysis combines genes from multiple resources related to Alzheimer’s Disease (AD) to generate a comprehensive gene list for the FunGen xQTL project. We integrate data from:</p>
+<ol class="arabic">
+<li><p><strong>FunGen xQTL</strong> - Including three analytical approaches:</p>
+<ul class="simple">
+<li><p>Single context analysis</p></li>
+<li><p>Multi-context analysis (157 genes)</p></li>
+<li><p>ColocBoost analysis</p></li>
+</ul>
+<p><em>For detailed methodology, see: <a class="reference external" href="https://github.com/cumc/xqtl-paper/blob/main/landscape_analysis/Mar2025_xQTL_modalities_GWAS_Loci.ipynb">Mar2025_xQTL_modalities_GWAS_Loci.ipynb</a></em></p>
+</li>
+<li><p><strong>ADSP Alzheimer’s Disease Variant Catalog (AVC)</strong> - Genes from Table 2 of the ADSP AVC database
+<em>Source: <a class="reference external" href="https://adsp.niagads.org/gvc-top-hits-list/">NIAGADS GVC Top Hits List</a></em></p></li>
+<li><p><strong>FunGen AD PI List</strong> - Curated gene list contributed by Principal Investigators of the FunGen project</p></li>
+<li><p><strong>Multi-gene analysis results</strong> - From ROSMAP and MSBB datasets</p></li>
+<li><p><strong>Genome-wide MSBB multi-context results</strong> - Additional contextual analysis</p></li>
+</ol>
+</section>
+<section id="setup-and-data-loading">
+<h2>Setup and Data Loading<a class="headerlink" href="#setup-and-data-loading" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>#Load required libraries
+library(tidyverse)
+library(data.table)
+
+#Set paths and load gene reference
+gene_ref &lt;- fread(&#39;/data/resource/references/Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.region_list&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-source-1-fungen-xqtl-results">
+<h2>Data Source 1: FunGen xQTL Results<a class="headerlink" href="#data-source-1-fungen-xqtl-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load FunGen xQTL gene list (single/multi-context and ColocBoost results)
+tb1 &lt;- fread(&#39;~/project/FunGen_xQTL/2025/Mar/Mar19_2025.193genes.single_multicon_colocboost_metabrain.gene_list.tsv&#39;) %&gt;% 
+  mutate(data_resource = &#39;FunGen_xQTL&#39;)
+
+# Display sample records
+tb1 %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>gene_id</th><th scope=col>resources</th><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_name</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ENSG00000117322</td><td>ColocBoost,single_context,MetaBrain</td><td>1</td><td>207454229</td><td>207454230</td><td>CR2   </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000125944</td><td>ColocBoost                         </td><td>1</td><td> 23344335</td><td> 23344336</td><td>HNRNPR</td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000135766</td><td>ColocBoost                         </td><td>1</td><td>231422286</td><td>231422287</td><td>EGLN1 </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000142798</td><td>ColocBoost                         </td><td>1</td><td> 21937309</td><td> 21937310</td><td>HSPG2 </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000143321</td><td>ColocBoost                         </td><td>1</td><td>156766924</td><td>156766925</td><td>HDGF  </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000143771</td><td>ColocBoost                         </td><td>1</td><td>224356857</td><td>224356858</td><td>CNIH4 </td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="data-source-2-adsp-alzheimer-s-variant-catalog">
+<h2>Data Source 2: ADSP Alzheimer’s Variant Catalog<a class="headerlink" href="#data-source-2-adsp-alzheimer-s-variant-catalog" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load ADSP AVC data from Table 2
+tb2_raw &lt;- fread(&#39;~/project/FunGen_xQTL/2025/Mar/GVC - table2.csv&#39;, header = F)
+
+# Set column names from the second row and remove header rows
+colnames(tb2_raw) &lt;- tb2_raw[2,] %&gt;% as.character()
+tb2_raw &lt;- tb2_raw[-c(1:2),]
+
+# Display sample records
+tb2_raw %&gt;% head()
+
+# Map gene names to gene reference data and add resource identifier
+tb2 &lt;- gene_ref %&gt;% 
+  filter(gene_name %in% tb2_raw$Gene) %&gt;% 
+  mutate(data_resource = &#39;FunGen_ADSP&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 4</caption>
+<thead>
+	<tr><th scope=col>Number</th><th scope=col>Gene</th><th scope=col>Source</th><th scope=col>Location (hg38)</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>ABCA7</td><td>GVC         </td><td>chr19:1,039,997-1,065,572   </td></tr>
+	<tr><td>2</td><td>ABI3 </td><td>GVC         </td><td>chr17:49,210,411-49,223,225 </td></tr>
+	<tr><td>3</td><td>APOE </td><td>GVC         </td><td>chr19:44,905,791-44,909,393 </td></tr>
+	<tr><td>4</td><td>APP  </td><td>GVC         </td><td>chr21:25,880,550-26,171,128 </td></tr>
+	<tr><td>5</td><td>APBB3</td><td>Novikova    </td><td>chr5:140,558,268-140,564,781</td></tr>
+	<tr><td>6</td><td>BIN1 </td><td>GVC/Novikova</td><td>chr2:127,048,023-127,107,288</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="data-source-3-principal-investigator-gene-list">
+<h2>Data Source 3: Principal Investigator Gene List<a class="headerlink" href="#data-source-3-principal-investigator-gene-list" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load PI-curated gene list
+tb3_raw &lt;- fread(&#39;~/project/FunGen_xQTL/2025/Mar/Josh_list.csv&#39;)
+
+# Display sample records
+tb3_raw %&gt;% head()
+
+# Map gene names to gene reference data and add resource identifier
+tb3 &lt;- gene_ref %&gt;% 
+  filter(gene_name %in% tb3_raw$`Gene name`) %&gt;% 
+  mutate(data_resource = &#39;PI_list&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 2</caption>
+<thead>
+	<tr><th scope=col>Gene name</th><th scope=col>Projects or PI interested</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ABCA7  </td><td>Shulman</td></tr>
+	<tr><td>ADAM10 </td><td>Shulman</td></tr>
+	<tr><td>AKAP9  </td><td>Shulman</td></tr>
+	<tr><td>ALDH1A2</td><td>Shulman</td></tr>
+	<tr><td>AP4M1  </td><td>Shulman</td></tr>
+	<tr><td>AQP9   </td><td>Shulman</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="data-source-4-multi-gene-analysis-results">
+<h2>Data Source 4: Multi-gene Analysis Results<a class="headerlink" href="#data-source-4-multi-gene-analysis-results" title="Link to this heading">#</a></h2>
+<section id="load-ad-gwas-fine-mapping-results-from-march-25-2025">
+<h3>Load AD GWAS fine-mapping results from March 25, 2025<a class="headerlink" href="#load-ad-gwas-fine-mapping-results-from-march-25-2025" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>ad &lt;- fread(&#39;/data/analysis_result/AD_GWAS_finemapping/export/FunGen_xQTL.ADGWAS.Mar25.exported.toploci.bed.gz&#39;)
+
+# Filter for significant variants
+ad_vars &lt;- ad %&gt;% filter(cs_coverage_0.95 &gt; 0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load multi-gene analysis results from ROSMAP and MSBB datasets
+rosmap &lt;- fread(&#39;/data/analysis_result/multi_gene/ROSMAP/export/summary/ROSMAP.exported.toploci.bed.gz&#39;)
+msbb &lt;- fread(&#39;/data/analysis_result/multi_gene/MSBB/export/summary/MSBB.exported.toploci.bed.gz&#39;)
+
+# Combine datasets and filter for significant results (credible set coverage &gt; 0.95)
+multi_gene &lt;- rbind(
+  rosmap %&gt;% mutate(resource = &#39;ROSMAP_multi_gene&#39;), 
+  msbb %&gt;% mutate(resource = &#39;MSBB_multi_gene&#39;)
+) %&gt;% 
+  filter(cs_coverage_0.95 &gt; 0)
+
+# Display sample records
+multi_gene %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 15</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.95_purity0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>lfsr</th><th scope=col>context</th><th scope=col>resource</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>945258</td><td>945259</td><td>T</td><td>TC </td><td>chr1:945259:TC:T </td><td>chr1_0_7520074</td><td>ENSG00000187961</td><td>5</td><td>5</td><td>0.09419357</td><td>0.188749238940897</td><td>7.28999870208797e-07</td><td>ROSMAP_Exc_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+	<tr><td>1</td><td>954723</td><td>954724</td><td>A</td><td>G  </td><td>chr1:954724:G:A  </td><td>chr1_0_7520074</td><td>ENSG00000187961</td><td>5</td><td>5</td><td>0.57161741</td><td>0.204391161719796</td><td>7.28999870208797e-07</td><td>ROSMAP_Exc_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+	<tr><td>1</td><td>965124</td><td>965125</td><td>C</td><td>G  </td><td>chr1:965125:G:C  </td><td>chr1_0_7520074</td><td>ENSG00000187961</td><td>5</td><td>5</td><td>0.16732354</td><td>0.188129574826807</td><td>7.28999870208797e-07</td><td>ROSMAP_Exc_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+	<tr><td>1</td><td>965665</td><td>965666</td><td>A</td><td>ACC</td><td>chr1:965666:ACC:A</td><td>chr1_0_7520074</td><td>ENSG00000187961</td><td>5</td><td>5</td><td>0.13827854</td><td>0.185975987146749</td><td>7.28999870208797e-07</td><td>ROSMAP_Exc_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+	<tr><td>1</td><td>978508</td><td>978509</td><td>A</td><td>G  </td><td>chr1:978509:G:A  </td><td>chr1_0_7520074</td><td>ENSG00000187642</td><td>5</td><td>5</td><td>0.25836594</td><td>0.484054794439528</td><td>8.7517581088359e-15 </td><td>ROSMAP_PCC_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+	<tr><td>1</td><td>978952</td><td>978953</td><td>G</td><td>C  </td><td>chr1:978953:C:G  </td><td>chr1_0_7520074</td><td>ENSG00000187642</td><td>5</td><td>5</td><td>0.07840768</td><td>0.480242128208934</td><td>8.7517581088359e-15 </td><td>ROSMAP_PCC_DeJager_eQTL</td><td>ROSMAP_multi_gene</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Identify multi-gene results that overlap with AD GWAS variants
+multi_gene_ad &lt;- multi_gene %&gt;% filter(variant_ID %in% ad_vars$variant_ID)
+multi_gene_ad %&gt;% dim()
+
+# Extract gene IDs from the event_ID field and process
+tb4 &lt;- multi_gene_ad %&gt;%
+  filter(!is.na(event_ID) &amp; event_ID != &#39;&#39;) %&gt;% 
+  select(event_ID, resource) %&gt;%
+  separate_rows(event_ID, sep = &quot;;&quot;) %&gt;% 
+  distinct()
+
+# Map gene IDs to gene reference data
+tb4 &lt;- gene_ref %&gt;% 
+  filter(gene_id %in% tb4$event_ID) %&gt;% 
+  mutate(resources = &#39;multi_gene&#39;, data_resource = &#39;FunGen_xQTL&#39;)
+
+tb4 %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2885</li><li>15</li></ol>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th><th scope=col>gene_name</th><th scope=col>resources</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr1</td><td>207034365</td><td>207034366</td><td>ENSG00000123836</td><td>PFKFB2 </td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207052979</td><td>207052980</td><td>ENSG00000180667</td><td>YOD1   </td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207321531</td><td>207321532</td><td>ENSG00000196352</td><td>CD55   </td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207454229</td><td>207454230</td><td>ENSG00000117322</td><td>CR2    </td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207496146</td><td>207496147</td><td>ENSG00000203710</td><td>CR1    </td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr2</td><td>134718999</td><td>134719000</td><td>ENSG00000152128</td><td>TMEM163</td><td>multi_gene</td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="data-source-5-genome-wide-multi-context-msbb-results">
+<h2>Data Source 5: Genome-Wide Multi-Context MSBB Results<a class="headerlink" href="#data-source-5-genome-wide-multi-context-msbb-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load MSBB multi-context analysis results
+msbb_multicon &lt;- fread(&#39;/data/analysis_result/multi_context/MSBB/export/summary/MSBB.exported.toploci.bed.gz&#39;)
+
+# Filter for significant results (credible set coverage &gt; 0.95)
+msbb_multicon &lt;- msbb_multicon %&gt;% filter(cs_coverage_0.95 &gt; 0)
+msbb_multicon %&gt;% head()
+
+# Identify multi-context results that overlap with AD GWAS variants
+msbb_multicon_ad &lt;- msbb_multicon %&gt;% filter(variant_ID %in% ad_vars$variant_ID)
+msbb_multicon_ad %&gt;% dim()
+
+# Extract gene IDs
+tb5 &lt;- msbb_multicon_ad %&gt;% select(gene_ID) %&gt;% distinct()
+
+# Map gene IDs to gene reference data
+tb5 &lt;- gene_ref %&gt;% 
+  filter(gene_id %in% tb5$gene_ID) %&gt;% 
+  mutate(resources = &#39;multi_context&#39;, data_resource = &#39;FunGen_xQTL&#39;)
+
+tb5 %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 14</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>lfsr</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>1023774</td><td>1023775</td><td>A</td><td>G</td><td>chr1:1023775:G:A</td><td>ENSG00000188157</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>1</td><td>0.97210539</td><td>0.104506519939872;0.125894884716484;0.0900918435608349;0.11841837243765</td><td>3.79924606022026e-12;3.84197473318569e-11;7.66144505134629e-11;1.4305998342331e-16 </td></tr>
+	<tr><td>1</td><td>1185633</td><td>1185634</td><td>A</td><td>G</td><td>chr1:1185634:G:A</td><td>ENSG00000186891</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>1</td><td>0.14623895</td><td>0.634539886004572;0.51361551629155;0.591478449188189;0.582230552873455 </td><td>6.89576902647313e-13;5.66680716108471e-09;2.71034501950873e-12;9.65056341704484e-13</td></tr>
+	<tr><td>1</td><td>1185960</td><td>1185961</td><td>T</td><td>C</td><td>chr1:1185961:C:T</td><td>ENSG00000186891</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>1</td><td>0.07711689</td><td>0.634115468678271;0.516653150656981;0.540331824203107;0.565234066186421</td><td>6.89576902647313e-13;5.66680716108471e-09;2.71034501950873e-12;9.65056341704484e-13</td></tr>
+	<tr><td>1</td><td>1186413</td><td>1186414</td><td>A</td><td>G</td><td>chr1:1186414:G:A</td><td>ENSG00000186891</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>1</td><td>0.26701266</td><td>0.641661665800936;0.523696513943397;0.580825918223139;0.582827363955203</td><td>6.89576902647313e-13;5.66680716108471e-09;2.71034501950873e-12;9.65056341704484e-13</td></tr>
+	<tr><td>1</td><td>1186643</td><td>1186644</td><td>C</td><td>T</td><td>chr1:1186644:T:C</td><td>ENSG00000186891</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>0</td><td>0.02118090</td><td>0.635804267352963;0.540146604599051;0.57339889758486;0.581141794657505 </td><td>6.89576902647313e-13;5.66680716108471e-09;2.71034501950873e-12;9.65056341704484e-13</td></tr>
+	<tr><td>1</td><td>1186938</td><td>1186939</td><td>T</td><td>C</td><td>chr1:1186939:C:T</td><td>ENSG00000186891</td><td>BM_10_MSBB_eQTL;BM_22_MSBB_eQTL;BM_36_MSBB_eQTL;BM_44_MSBB_eQTL</td><td>1</td><td>1</td><td>0</td><td>0.02118090</td><td>0.635804267352963;0.540146604599051;0.57339889758486;0.581141794657505 </td><td>6.89576902647313e-13;5.66680716108471e-09;2.71034501950873e-12;9.65056341704484e-13</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>101</li><li>14</li></ol>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th><th scope=col>gene_name</th><th scope=col>resources</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr2 </td><td>202871765</td><td>202871766</td><td>ENSG00000163596</td><td>ICA1L</td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr7 </td><td> 55019016</td><td> 55019017</td><td>ENSG00000146648</td><td>EGFR </td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr12</td><td>113185525</td><td>113185526</td><td>ENSG00000139405</td><td>RITA1</td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr15</td><td> 63276017</td><td> 63276018</td><td>ENSG00000138613</td><td>APH1B</td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr17</td><td> 44345261</td><td> 44345262</td><td>ENSG00000030582</td><td>GRN  </td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr20</td><td> 44966478</td><td> 44966479</td><td>ENSG00000101109</td><td>STK4 </td><td>multi_context</td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="data-source-6-updated-colocboost-list">
+<h2>Data Source 6: updated ColocBoost list<a class="headerlink" href="#data-source-6-updated-colocboost-list" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load multi-gene analysis results from ROSMAP and MSBB datasets
+cb_apr25 &lt;- fread(&#39;/data/analysis_result//ColocBoost//export//summary//ad_xqtl_colocboost_export_filtered.bed.gz&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Map gene IDs to gene reference data
+tb6 &lt;- gene_ref %&gt;% 
+  filter(gene_id %in% cb_apr25$gene_ID) %&gt;% 
+  mutate(resources = &#39;ColocBoost&#39;, data_resource = &#39;FunGen_xQTL&#39;)
+
+tb6 %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th><th scope=col>gene_name</th><th scope=col>resources</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr1</td><td> 23980926</td><td> 23980927</td><td>ENSG00000188529</td><td>SRSF10    </td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>160285129</td><td>160285130</td><td>ENSG00000258465</td><td>AL139011.2</td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>161215233</td><td>161215234</td><td>ENSG00000158869</td><td>FCER1G    </td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207454229</td><td>207454230</td><td>ENSG00000117322</td><td>CR2       </td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>207496146</td><td>207496147</td><td>ENSG00000203710</td><td>CR1       </td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>231422286</td><td>231422287</td><td>ENSG00000135766</td><td>EGLN1     </td><td>ColocBoost</td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>tb1 %&gt;% head
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>gene_id</th><th scope=col>resources</th><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_name</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ENSG00000117322</td><td>ColocBoost,single_context,MetaBrain</td><td>1</td><td>207454229</td><td>207454230</td><td>CR2   </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000125944</td><td>ColocBoost                         </td><td>1</td><td> 23344335</td><td> 23344336</td><td>HNRNPR</td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000135766</td><td>ColocBoost                         </td><td>1</td><td>231422286</td><td>231422287</td><td>EGLN1 </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000142798</td><td>ColocBoost                         </td><td>1</td><td> 21937309</td><td> 21937310</td><td>HSPG2 </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000143321</td><td>ColocBoost                         </td><td>1</td><td>156766924</td><td>156766925</td><td>HDGF  </td><td>FunGen_xQTL</td></tr>
+	<tr><td>ENSG00000143771</td><td>ColocBoost                         </td><td>1</td><td>224356857</td><td>224356858</td><td>CNIH4 </td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>cb_gene_not_in_tb6 &lt;- setdiff(tb1 %&gt;% filter(str_detect(resources, &#39;ColocBoost&#39;)) %&gt;% pull(gene_id), tb6$gene_id)
+cb_gene_not_in_tb6 %&gt;% length # those are genes removed from ColocBoost new version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">28</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>cb_gene_not_in_tb1 &lt;- setdiff(tb6$gene_id, tb1 %&gt;% filter(str_detect(resources, &#39;ColocBoost&#39;)) %&gt;% pull(gene_id))
+cb_gene_not_in_tb1 %&gt;% length # those are new gene from ColocBoost new version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">75</div></div>
+</div>
+<p>remove the 28 CollocBoost genes not showing in tb6 from tb1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>nrow(tb1)
+tb1 &lt;- tb1 %&gt;%
+  mutate(
+    resources = ifelse(gene_id %in% cb_gene_not_in_tb6, sub(&#39;ColocBoost&#39;, &#39;&#39;, resources), resources),
+  ) %&gt;% filter(resources != &#39;&#39;)
+nrow(tb1)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">193</div><div class="output text_html">168</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>193-168
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">25</div></div>
+</div>
+<p>removed 25 genes, 3 genes are kept because they are not contributed by ColocBoost only</p>
+</section>
+<section id="data-source-7-twas-results">
+<h2>Data Source 7: TWAS Results<a class="headerlink" href="#data-source-7-twas-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Load twas results
+twas &lt;- fread(&#39;/data/analysis_result/twas/export/summary/FunGen_twas.exported.bed.gz&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>twas %&gt;% head
+twas %&gt;% dim
+twas %&gt;% pull(molecular_id) %&gt;% unique %&gt;% length
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 17</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>molecular_id</th><th scope=col>TADB_start</th><th scope=col>TADB_end</th><th scope=col>context</th><th scope=col>gwas_study</th><th scope=col>method</th><th scope=col>is_imputable</th><th scope=col>is_selected_method</th><th scope=col>rsq_cv</th><th scope=col>pval_cv</th><th scope=col>twas_z</th><th scope=col>twas_pval</th><th scope=col>type</th><th scope=col>block</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>bayes_l</td><td>TRUE</td><td>FALSE</td><td>0.06358278</td><td>4.713139e-10</td><td>-0.5516557</td><td>0.5811842</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>bayes_r</td><td>TRUE</td><td> TRUE</td><td>0.09006772</td><td>8.293727e-14</td><td>-0.6079598</td><td>0.5432142</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>enet   </td><td>TRUE</td><td>FALSE</td><td>0.07363354</td><td>1.811244e-11</td><td>-0.8264034</td><td>0.4085753</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>lasso  </td><td>TRUE</td><td>FALSE</td><td>0.07175097</td><td>3.341192e-11</td><td>-0.7787284</td><td>0.4361397</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>mrash  </td><td>TRUE</td><td>FALSE</td><td>0.08157779</td><td>1.353045e-12</td><td>-0.1803822</td><td>0.8568525</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+	<tr><td>1</td><td>923921</td><td>923922</td><td>ENSG00000187634</td><td>0</td><td>6480000</td><td>AC_DeJager_eQTL</td><td>Bellenguez_2022</td><td>mrmash </td><td>TRUE</td><td>FALSE</td><td>0.07746210</td><td>5.199122e-12</td><td>-1.4978502</td><td>0.1341722</td><td>eQTL</td><td>chr1_16103_2888443</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>9452198</li><li>17</li></ol>
+</div><div class="output text_html">16880</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>n_imputable_genes &lt;- twas %&gt;%
+  filter(is_imputable) %&gt;%                  # keep only imputable rows
+  distinct(molecular_id, context, gwas_study) %&gt;%         # count unique gene-context pairs
+  nrow()
+n_imputable_genes
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">1561127</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Compute cutoff using Bonferroni-style correction
+cutoff &lt;- 0.05 / n_imputable_genes
+cutoff
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.2028143770494e-08</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>twas %&gt;% filter(twas_pval &lt; cutoff) %&gt;% pull( molecular_id) %&gt;% unique %&gt;% length
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">490</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>twas_sig &lt;- twas %&gt;%
+  mutate(sig = twas_pval &lt; cutoff) %&gt;%
+  group_by(molecular_id, context, gwas_study) %&gt;%
+  summarise(
+    n_methods = n(),
+    n_sig = sum(sig),
+    best_sig = any(sig &amp; is_selected_method),
+    .groups = &quot;drop&quot;
+  ) %&gt;%
+  mutate(pass = (n_sig / n_methods &gt; 0.5) | best_sig) %&gt;%
+  mutate(pass_strict = (n_sig / n_methods &gt; 0.5)) %&gt;%
+  filter(pass)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>twas_sig %&gt;% pull(molecular_id) %&gt;% unique %&gt;% length
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">305</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Extract gene IDs
+tb7 &lt;- twas_sig %&gt;% select(molecular_id) %&gt;% distinct()
+
+# Map gene IDs to gene reference data
+tb7 &lt;- gene_ref %&gt;% 
+  filter(gene_id %in% tb7$molecular_id) %&gt;% 
+  mutate(resources = &#39;twas&#39;, data_resource = &#39;FunGen_xQTL&#39;)
+
+tb7 %&gt;% head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th><th scope=col>gene_name</th><th scope=col>resources</th><th scope=col>data_resource</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr1</td><td>15976131</td><td>15976132</td><td>ENSG00000116809</td><td>ZBTB17    </td><td>twas</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>26693235</td><td>26693236</td><td>ENSG00000117713</td><td>ARID1A    </td><td>twas</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>42817396</td><td>42817397</td><td>ENSG00000177868</td><td>SVBP      </td><td>twas</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>43389881</td><td>43389882</td><td>ENSG00000198198</td><td>SZT2      </td><td>twas</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>43650148</td><td>43650149</td><td>ENSG00000284989</td><td>KDM4A     </td><td>twas</td><td>FunGen_xQTL</td></tr>
+	<tr><td>chr1</td><td>43650148</td><td>43650149</td><td>ENSG00000284989</td><td>AL451062.2</td><td>twas</td><td>FunGen_xQTL</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="combining-and-standardizing-all-data-sources">
+<h2>Combining and Standardizing All Data Sources<a class="headerlink" href="#combining-and-standardizing-all-data-sources" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Combine all data sources
+tb &lt;- rbind(tb1, tb2, fill = TRUE) %&gt;% 
+  rbind(., tb3, fill = TRUE) %&gt;%
+  rbind(., tb4, fill = TRUE) %&gt;%
+  rbind(., tb5, fill = TRUE) %&gt;%
+  rbind(., tb6, fill = TRUE) 
+
+# Standardize nomenclature across data sources
+tb &lt;- tb %&gt;%
+  mutate(
+    data_resource = ifelse(data_resource == &quot;PI_list&quot;, &quot;FunGen_AD_PI&quot;, data_resource),
+    resources = gsub(&quot;single_multicon&quot;, &quot;single_multi_context&quot;, resources),
+    data_resource = gsub(&quot;FunGen_ADSP&quot;, &quot;ADSP_GVC&quot;, data_resource)
+  )
+
+
+## Creating the Final Gene List
+
+
+# Create a clean, consolidated gene list
+tb_clean &lt;- tb %&gt;% 
+  group_by(gene_id) %&gt;% 
+  summarise(
+    resources = paste(unique(na.omit(unlist(str_split(resources, &quot;,&quot;)))), collapse = &quot;,&quot;),
+    data_resources = paste(unique(data_resource), collapse = &quot;,&quot;)
+  ) %&gt;%        
+  left_join(tb %&gt;% select(-resources)) %&gt;% 
+  select(-data_resource) %&gt;% 
+  distinct(gene_id, .keep_all = TRUE)
+
+# Rename columns for clarity
+tb_clean &lt;- tb_clean %&gt;% 
+  rename(
+    &#39;resource_in_FunGen_xQTL&#39; = &#39;resources&#39;, 
+    &#39;chr&#39; = &#39;#chr&#39;
+  ) %&gt;% mutate(chr = gsub(&#39;chr&#39;,&#39;&#39;,chr)) %&gt;% 
+  mutate(resource_in_FunGen_xQTL = ifelse(str_detect(resource_in_FunGen_xQTL, &#39;^,&#39;), sub(&#39;,&#39;,&#39;&#39;,resource_in_FunGen_xQTL), resource_in_FunGen_xQTL))
+
+# Display sample records and summary statistics
+tb_clean %&gt;% head()
+
+# Count unique genes in the final list
+unique_gene_count &lt;- tb_clean$gene_id %&gt;% unique() %&gt;% length()
+cat(&quot;Total unique genes:&quot;, unique_gene_count, &quot;\n&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(gene_id)`
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>gene_id</th><th scope=col>resource_in_FunGen_xQTL</th><th scope=col>data_resources</th><th scope=col>chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_name</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ENSG00000002919</td><td>ColocBoost</td><td>FunGen_xQTL </td><td>17</td><td> 48103356</td><td> 48103357</td><td>SNX11 </td></tr>
+	<tr><td>ENSG00000005100</td><td>ColocBoost</td><td>FunGen_xQTL </td><td>17</td><td>  5468981</td><td>  5468982</td><td>DHX33 </td></tr>
+	<tr><td>ENSG00000006530</td><td>ColocBoost</td><td>FunGen_xQTL </td><td>7 </td><td>141551277</td><td>141551278</td><td>AGK   </td></tr>
+	<tr><td>ENSG00000008294</td><td>ColocBoost</td><td>FunGen_xQTL </td><td>17</td><td> 51120867</td><td> 51120868</td><td>SPAG9 </td></tr>
+	<tr><td>ENSG00000013503</td><td>ColocBoost</td><td>FunGen_xQTL </td><td>12</td><td>106357747</td><td>106357748</td><td>POLR3B</td></tr>
+	<tr><td>ENSG00000015592</td><td>          </td><td>FunGen_AD_PI</td><td>8 </td><td> 27258419</td><td> 27258420</td><td>STMN4 </td></tr>
+</tbody>
+</table>
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total unique genes: 287 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>tb_clean %&gt;% pull(data_resources) %&gt;% unique
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'FunGen_xQTL'</li><li>'FunGen_AD_PI'</li><li>'ADSP_GVC,FunGen_AD_PI'</li><li>'ADSP_GVC'</li><li>'FunGen_xQTL,ADSP_GVC'</li><li>'FunGen_xQTL,ADSP_GVC,FunGen_AD_PI'</li><li>'FunGen_xQTL,FunGen_AD_PI'</li><li>'FunGen_AD_PI,FunGen_xQTL'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>fwrite(tb_clean,&quot;~/data/resource/AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv&quot;, sep = &#39;\t&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="twas-table-optional">
+<h3>twas table (optional)<a class="headerlink" href="#twas-table-optional" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Combine all data sources
+tb &lt;- rbind(tb1, tb2, fill = TRUE) %&gt;% 
+  rbind(., tb3, fill = TRUE) %&gt;%
+  rbind(., tb4, fill = TRUE) %&gt;%
+  rbind(., tb5, fill = TRUE) %&gt;%
+  rbind(., tb6, fill = TRUE) %&gt;%
+  rbind(., tb7, fill = TRUE) 
+
+# Standardize nomenclature across data sources
+tb &lt;- tb %&gt;%
+  mutate(
+    data_resource = ifelse(data_resource == &quot;PI_list&quot;, &quot;FunGen_AD_PI&quot;, data_resource),
+    resources = gsub(&quot;single_multicon&quot;, &quot;single_multi_context&quot;, resources),
+    data_resource = gsub(&quot;FunGen_ADSP&quot;, &quot;ADSP_GVC&quot;, data_resource)
+  )
+
+
+## Creating the Final Gene List
+
+
+# Create a clean, consolidated gene list
+tb_clean &lt;- tb %&gt;% 
+  group_by(gene_id) %&gt;% 
+  summarise(
+    resources = paste(unique(na.omit(unlist(str_split(resources, &quot;,&quot;)))), collapse = &quot;,&quot;),
+    data_resources = paste(unique(data_resource), collapse = &quot;,&quot;)
+  ) %&gt;%        
+  left_join(tb %&gt;% select(-resources)) %&gt;% 
+  select(-data_resource) %&gt;% 
+  distinct(gene_id, .keep_all = TRUE)
+
+# Rename columns for clarity
+tb_clean &lt;- tb_clean %&gt;% 
+  rename(
+    &#39;resource_in_FunGen_xQTL&#39; = &#39;resources&#39;, 
+    &#39;chr&#39; = &#39;#chr&#39;
+  ) %&gt;% mutate(chr = gsub(&#39;chr&#39;,&#39;&#39;,chr)) %&gt;% 
+  mutate(resource_in_FunGen_xQTL = ifelse(str_detect(resource_in_FunGen_xQTL, &#39;^,&#39;), sub(&#39;,&#39;,&#39;&#39;,resource_in_FunGen_xQTL), resource_in_FunGen_xQTL)) %&gt;%
+ filter(str_detect(resource_in_FunGen_xQTL, &#39;twas&#39;))
+
+# Display sample records and summary statistics
+tb_clean %&gt;% head()
+
+# Count unique genes in the final list
+unique_gene_count &lt;- tb_clean$gene_id %&gt;% unique() %&gt;% length()
+cat(&quot;Total unique genes:&quot;, unique_gene_count, &quot;\n&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(gene_id)`
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 x 7</caption>
+<thead>
+	<tr><th scope=col>gene_id</th><th scope=col>resource_in_FunGen_xQTL</th><th scope=col>data_resources</th><th scope=col>chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_name</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ENSG00000001617</td><td>twas</td><td>FunGen_xQTL</td><td>3 </td><td> 50155044</td><td> 50155045</td><td>SEMA3F  </td></tr>
+	<tr><td>ENSG00000005469</td><td>twas</td><td>FunGen_xQTL</td><td>7 </td><td> 87345663</td><td> 87345664</td><td>CROT    </td></tr>
+	<tr><td>ENSG00000006062</td><td>twas</td><td>FunGen_xQTL</td><td>17</td><td> 45317028</td><td> 45317029</td><td>MAP3K14 </td></tr>
+	<tr><td>ENSG00000006459</td><td>twas</td><td>FunGen_xQTL</td><td>7 </td><td>140176982</td><td>140176983</td><td>KDM7A   </td></tr>
+	<tr><td>ENSG00000006704</td><td>twas</td><td>FunGen_xQTL</td><td>7 </td><td> 74453789</td><td> 74453790</td><td>GTF2IRD1</td></tr>
+	<tr><td>ENSG00000007171</td><td>twas</td><td>FunGen_xQTL</td><td>17</td><td> 27800528</td><td> 27800529</td><td>NOS2    </td></tr>
+</tbody>
+</table>
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total unique genes: 305 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>fwrite(tb_clean,&quot;~/data/resource/AD_genes_FunGen_AD_twas_GVC_xQTL_20250325.tsv&quot;, sep = &#39;\t&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="summary-of-results">
+<h2>Summary of Results<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h2>
+<p>The final gene list contains 243 genes incorporates evidence from multiple sources including FunGen xQTL analyses, ADSP database, and PI-curated lists. The integration of multi-gene and multi-context analyses provides a comprehensive view of genes potentially involved in Alzheimer’s Disease pathology.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>tb &lt;- fread(&quot;~/data/resource/AD_genes_FunGen_AD_GVC_xQTL_20250325.tsv&quot;, sep = &#39;\t&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>dim(tb)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>287</li><li>7</li></ol>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sos"
+        },
+        kernelOptions: {
+            name: "sos",
+            path: "./main_text/6_AD_xQTL_genes/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sos'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-1-fungen-xqtl-results">Data Source 1: FunGen xQTL Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-2-adsp-alzheimer-s-variant-catalog">Data Source 2: ADSP Alzheimer’s Variant Catalog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-3-principal-investigator-gene-list">Data Source 3: Principal Investigator Gene List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-4-multi-gene-analysis-results">Data Source 4: Multi-gene Analysis Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-ad-gwas-fine-mapping-results-from-march-25-2025">Load AD GWAS fine-mapping results from March 25, 2025</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-5-genome-wide-multi-context-msbb-results">Data Source 5: Genome-Wide Multi-Context MSBB Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-6-updated-colocboost-list">Data Source 6: updated ColocBoost list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-7-twas-results">Data Source 7: TWAS Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-standardizing-all-data-sources">Combining and Standardizing All Data Sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twas-table-optional">twas table (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
