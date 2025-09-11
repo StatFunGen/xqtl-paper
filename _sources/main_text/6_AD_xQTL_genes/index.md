@@ -1,3 +1,3 @@
 # Insights into AD risk genes
 
-Content for AD risk genes insights chapter will be added here.
+- [Visualization of FunGen-xQTL AD loci table](Figure_6_AD_loci_table_visualization)
