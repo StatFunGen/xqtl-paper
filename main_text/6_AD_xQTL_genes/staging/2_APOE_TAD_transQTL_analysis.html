@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Trans-xQTL fine-mapping analysis in the APOE TAD region &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/6_AD_xQTL_genes/staging/2_APOE_TAD_transQTL_analysis';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Insights into AD risk genes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/6_AD_xQTL_genes/staging/2_APOE_TAD_transQTL_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/6_AD_xQTL_genes/staging/2_APOE_TAD_transQTL_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Trans-xQTL fine-mapping analysis in the APOE TAD region</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-trans-xqtl-results-of-apoe-tad-region">1. Summary of trans-xQTL results of APOE TAD region</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-trans-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">2. Connect trans-xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="trans-xqtl-fine-mapping-analysis-in-the-apoe-tad-region">
+<h1>Trans-xQTL fine-mapping analysis in the APOE TAD region<a class="headerlink" href="#trans-xqtl-fine-mapping-analysis-in-the-apoe-tad-region" title="Link to this heading">#</a></h1>
+<p>Date: Sep 11, 2025</p>
+<p>We performed xQTL-wide trans-xQTL fine-mapping analysis using SuSiE on the APOE TAD region (chr19:41840000-47960000). Trans-xQTL fine-mapping analyses were conducted separately across four each of single-xQTL context.</p>
+<p>This notebook is a summary of the trans-xQTL fine-mapping results of variants in APOE TAD region, including the following sections:</p>
+<ol class="arabic simple">
+<li><p><em>Extract variants in APOE TAD region and summary of trans-xQTL results</em>: This section identifies trans-xQTL within the APOE TAD region and provides an overview of their sharing patterns. It offers a comprehensive landscape of regulatory relationships across the entire TAD region.</p></li>
+<li><p><em>Connect fine-mapped trans-xQTL to APOE2 and APOE4 - LD between xQTL and two loci</em>: This section examines the linkage disequilibrium relationships between identified colocalized xQTLs and the two key APOE loci. It determines whether colocalized signals are independent with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2/APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4.</p></li>
+</ol>
+<section id="summary-of-trans-xqtl-results-of-apoe-tad-region">
+<h2>1. Summary of trans-xQTL results of APOE TAD region<a class="headerlink" href="#summary-of-trans-xqtl-results-of-apoe-tad-region" title="Link to this heading">#</a></h2>
+<p>Only consider 5616 xQTL within APOE TAD region.</p>
+<ul class="simple">
+<li><p>These 5616 trans-xQTL spans 406 95% CS. To get the number of independent sets of variants, we merged the sets if the cummulative summation of PIP for overlapped variants are greater than 0.5 for <strong>each set</strong>. That means, assuming cs (snp1, snp2, snp3) and cs2 (snp2, snp3, snp4), we merge cs1 and cs2 if and only if PIP(snp2+snp3)&gt;0.5 calculated in cs1 and PIP(snp2+snp3)&gt;0.5 calculated in cs2. A total of 286 independent sets identified in APOE TAD region.</p></li>
+<li><p>The majority of trans-xQTL occur in MSBB cohorts and Knight_eQTL, ROSMAP Monocyte, ROSMAP gpQTL. MIGA cohort datasets and <strong>all ROSMAP sQTL</strong> lack analyzable xQTL signals in the APOE region.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;/data1/deyk/xuewei/colocboost/pipeline/columbia/APOE&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_toploci</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/data1/deyk/xuewei/colocboost/pipeline/columbia/APOE/FunGen_xQTL.trans.exported.toploci.bed.gz&quot;</span><span class="p">)</span>
+<span class="n">trans_toploci</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_toploci</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">cs_coverage_0.95</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="n">trans_toploci</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">dim</span>
+<span class="n">trans_toploci</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1683487</li><li>20</li></ol>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 20</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>resource</th><th scope=col>p</th><th scope=col>cs_id</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>1593619</td><td>1593620</td><td>C</td><td>G</td><td>chr1:1593620:G:C</td><td>0.1384181</td><td>0.5165502</td><td>0.09126267</td><td>5.660038</td><td>chr1_16103_2888443</td><td>Knight_eQTL_ENSG00000260644</td><td>1</td><td>1</td><td>1</td><td>0.1218043</td><td>0.4950032</td><td>Knight_eQTL</td><td>1.513391e-08</td><td>chr1_16103_2888443_Knight_eQTL_ENSG00000260644_1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">gene_TAD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.table</span><span class="o">::</span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/data1/deyk/ftp_fgc_xqtl/utils/TADB_enhanced_cis.coding.bed&quot;</span><span class="p">)</span>
+<span class="n">APOE_TAD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gene_TAD</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;ENSG00000130203&quot;</span><span class="p">)</span>
+<span class="n">APOE_TAD</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>41840000</td><td>47960000</td><td>ENSG00000130203</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_toploci</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="w"> </span><span class="n">`#chr`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">APOE_TAD</span><span class="o">$</span><span class="n">start</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">APOE_TAD</span><span class="o">$</span><span class="n">end</span><span class="p">)</span>
+<span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">dim</span>
+<span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>5616</li><li>20</li></ol>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 20</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>gene_ID</th><th scope=col>event_ID</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th><th scope=col>PIP</th><th scope=col>conditional_effect</th><th scope=col>resource</th><th scope=col>p</th><th scope=col>cs_id</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19</td><td>41924614</td><td>41924615</td><td>G</td><td>A</td><td>chr19:41924615:A:G</td><td>0.3375706</td><td>0.07482203</td><td>0.01500462</td><td>4.986599</td><td>chr19_41137068_42346101</td><td>Knight_eQTL_ENSG00000198846</td><td>1</td><td>0</td><td>0</td><td>0.03329592</td><td>0.06576609</td><td>Knight_eQTL</td><td>6.145156e-07</td><td>chr19_41137068_42346101_Knight_eQTL_ENSG00000198846_1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">cs_id</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+<span class="n">cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">cs_id</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="n">cos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">406</div><div class="output text_html">406</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;merge_coloc_also_within_loci.R&quot;</span><span class="p">)</span>
+<span class="n">threshold</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.5</span>
+<span class="n">flat_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">cs_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">variant_ID</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">flat_cos_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">cs_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">PIP</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">as.numeric</span>
+<span class="p">})</span>
+<span class="n">merge_pairwise_idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_merge_pairwise_idx</span><span class="p">(</span><span class="n">flat_cos</span><span class="p">,</span><span class="w"> </span><span class="n">flat_cos_vcp</span><span class="p">,</span><span class="w"> </span><span class="n">threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">threshold</span><span class="p">)</span>
+<span class="n">flat_coloc_outcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">cs_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_in_APOE</span><span class="o">$</span><span class="n">event_ID</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span><span class="w"> </span><span class="nf">strsplit</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;; &quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">286</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">final_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="n">final_colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">ii</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">)){</span>
+<span class="w">    </span><span class="n">p.merge</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merge_pairwise_idx</span><span class="p">[[</span><span class="n">ii</span><span class="p">]]</span>
+<span class="w">    </span><span class="c1"># - coloc outcomes </span>
+<span class="w">    </span><span class="n">oo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">flat_coloc_outcome</span><span class="p">[</span><span class="n">p.merge</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span>
+<span class="w">    </span><span class="n">colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">oo</span><span class="p">),</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;; &quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># - coloc CoS and pph4</span>
+<span class="w">    </span><span class="n">snps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unlist</span><span class="p">(</span><span class="n">flat_cos</span><span class="p">[</span><span class="n">p.merge</span><span class="p">])</span>
+<span class="w">    </span><span class="n">vcps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unlist</span><span class="p">(</span><span class="n">flat_cos_vcp</span><span class="p">[</span><span class="n">p.merge</span><span class="p">])</span>
+<span class="w">    </span><span class="n">context_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">SNP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">snps</span><span class="p">,</span><span class="w"> </span><span class="n">vcp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcps</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">    </span><span class="n">unique_snps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">context_df</span><span class="o">$</span><span class="n">SNP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">max_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">unique_snps</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">snp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nf">max</span><span class="p">(</span><span class="n">context_df</span><span class="o">$</span><span class="n">vcp</span><span class="p">[</span><span class="n">context_df</span><span class="o">$</span><span class="n">SNP</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">snp</span><span class="p">],</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="w">      </span><span class="c1"># min(context_df$vcp[context_df$SNP == snp], na.rm = TRUE)</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="n">merged_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">SNP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique_snps</span><span class="p">,</span><span class="w"> </span><span class="n">MaxVCP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_vcp</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merged_df</span><span class="o">$</span><span class="n">SNP</span>
+<span class="w">    </span><span class="n">vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merged_df</span><span class="o">$</span><span class="n">MaxVCP</span>
+<span class="w">    </span><span class="c1"># - coloc purity</span>
+<span class="w">    </span><span class="n">final_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_cos</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">cos</span><span class="p">))</span>
+<span class="w">    </span><span class="n">final_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_vcp</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">vcp</span><span class="p">))</span>
+<span class="w">    </span><span class="n">final_colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">,</span><span class="w"> </span><span class="n">colocOutcome</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">final_cos</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_vcp</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;ind_cos_&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span>
+<span class="w">    </span><span class="n">MIGA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;MIGA_GFM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_GTS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_SVZ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_THA&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">MSBB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;MSBB_eQTL_BM10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM22&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM36&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM44&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_pQTL_BM36&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">KNIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Knight_eQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Knight_pQTL&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">STARNET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;STARNET_eQTL&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">ROSMAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ROSMAP_pQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_adjusted_gpQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_gpQTL&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="s">&quot;ROSMAP_DeJager_AC_sQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_DLPFC_sQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_PCC_sQTL&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Ast&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Mic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Exc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Inh&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_DeJager_eQTL_OPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Oli&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_Kellis_eQTL_Ast&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_Kellis_eQTL_Mic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_Kellis_eQTL_Exc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_Kellis_eQTL_Inh&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="s">&quot;ROSMAP_Kellis_eQTL_OPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_Kellis_eQTL_Oli&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_mega_eQTL_Ast&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_mega_eQTL_Mic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_mega_eQTL_Exc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_mega_eQTL_Inh&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_mega_eQTL_OPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_mega_eQTL_Oli&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_DeJager_eQTL_PCC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_AC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_DLPFC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DeJager_eQTL_Monocyte&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">40</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">vector</span><span class="p">(</span><span class="s">&quot;list&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">setNames</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">)</span>
+<span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">ac</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">fc</span><span class="p">){</span><span class="w"> </span><span class="nf">grepl</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span><span class="w"> </span><span class="n">fc</span><span class="p">)</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">which</span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">)[</span><span class="n">pos</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>MIGA_GFM</dt><dd>0</dd><dt>MIGA_GTS</dt><dd>0</dd><dt>MIGA_SVZ</dt><dd>0</dd><dt>MIGA_THA</dt><dd>0</dd><dt>MSBB_eQTL_BM10</dt><dd>25</dd><dt>MSBB_eQTL_BM22</dt><dd>24</dd><dt>MSBB_eQTL_BM36</dt><dd>28</dd><dt>MSBB_eQTL_BM44</dt><dd>25</dd><dt>MSBB_pQTL_BM36</dt><dd>16</dd><dt>Knight_eQTL</dt><dd>38</dd><dt>Knight_pQTL</dt><dd>1</dd><dt>STARNET_eQTL</dt><dd>15</dd><dt>ROSMAP_pQTL</dt><dd>8</dd><dt>ROSMAP_adjusted_gpQTL</dt><dd>28</dd><dt>ROSMAP_gpQTL</dt><dd>18</dd><dt>ROSMAP_DeJager_AC_sQTL</dt><dd>0</dd><dt>ROSMAP_DeJager_DLPFC_sQTL</dt><dd>0</dd><dt>ROSMAP_DeJager_PCC_sQTL</dt><dd>0</dd><dt>ROSMAP_DeJager_eQTL_Ast</dt><dd>5</dd><dt>ROSMAP_DeJager_eQTL_Mic</dt><dd>6</dd><dt>ROSMAP_DeJager_eQTL_Exc</dt><dd>5</dd><dt>ROSMAP_DeJager_eQTL_Inh</dt><dd>3</dd><dt>ROSMAP_DeJager_eQTL_OPC</dt><dd>5</dd><dt>ROSMAP_DeJager_eQTL_Oli</dt><dd>9</dd><dt>ROSMAP_Kellis_eQTL_Ast</dt><dd>7</dd><dt>ROSMAP_Kellis_eQTL_Mic</dt><dd>5</dd><dt>ROSMAP_Kellis_eQTL_Exc</dt><dd>5</dd><dt>ROSMAP_Kellis_eQTL_Inh</dt><dd>9</dd><dt>ROSMAP_Kellis_eQTL_OPC</dt><dd>8</dd><dt>ROSMAP_Kellis_eQTL_Oli</dt><dd>15</dd><dt>ROSMAP_mega_eQTL_Ast</dt><dd>3</dd><dt>ROSMAP_mega_eQTL_Mic</dt><dd>2</dd><dt>ROSMAP_mega_eQTL_Exc</dt><dd>4</dd><dt>ROSMAP_mega_eQTL_Inh</dt><dd>8</dd><dt>ROSMAP_mega_eQTL_OPC</dt><dd>2</dd><dt>ROSMAP_mega_eQTL_Oli</dt><dd>2</dd><dt>ROSMAP_DeJager_eQTL_PCC</dt><dd>14</dd><dt>ROSMAP_DeJager_eQTL_AC</dt><dd>7</dd><dt>ROSMAP_DeJager_eQTL_DLPFC</dt><dd>8</dd><dt>ROSMAP_DeJager_eQTL_Monocyte</dt><dd>30</dd></dl>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pos_no_coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">coloc</span><span class="p">)[</span><span class="o">-</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+<span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">coloc</span><span class="p">[</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_contexts</span><span class="p">[</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'MIGA_GFM'</li><li>'MIGA_GTS'</li><li>'MIGA_SVZ'</li><li>'MIGA_THA'</li><li>'ROSMAP_DeJager_AC_sQTL'</li><li>'ROSMAP_DeJager_DLPFC_sQTL'</li><li>'ROSMAP_DeJager_PCC_sQTL'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;UpSetR&quot;</span><span class="p">)</span>
+<span class="n">max_size</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">))</span>
+<span class="nf">upset</span><span class="p">(</span><span class="nf">fromList</span><span class="p">(</span><span class="n">coloc</span><span class="p">),</span><span class="w"> </span>
+<span class="w">            </span><span class="n">order.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;freq&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">keep.order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span>
+<span class="w">            </span><span class="n">main.bar.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue3&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">sets.bar.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sandybrown&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">text.scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="c1"># Adjust font sizes for the main title, set names, set sizes, intersection sizes, and axis titles</span>
+<span class="w">            </span><span class="n">matrix.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># Adjust the color of matrix dots</span>
+<span class="w">            </span><span class="n">number.angles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="c1"># Adjust the angle of number labels, useful for some plots</span>
+<span class="w">            </span><span class="n">mb.ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="c1"># Adjust the ratio of main bar and sets bar</span>
+<span class="w">            </span><span class="n">point.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">line.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span>
+<span class="w">            </span><span class="n">sets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_contexts</span><span class="p">,</span><span class="w">  </span>
+<span class="w">            </span><span class="n">nsets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">coloc</span><span class="p">),</span>
+<span class="w">            </span><span class="n">set_size.show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.angles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.numbers_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.scale_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.25</span><span class="o">*</span><span class="n">max_size</span><span class="p">,</span>
+<span class="w">            </span><span class="n">nintersects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">            </span><span class="n">mainbar.y.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">sets.x.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/225d3724f857bd46063033a7978fd297304b22d2c1ae8395fd9f00e536e95489.png"><img alt="../../../_images/225d3724f857bd46063033a7978fd297304b22d2c1ae8395fd9f00e536e95489.png" src="../../../_images/225d3724f857bd46063033a7978fd297304b22d2c1ae8395fd9f00e536e95489.png" style="width: 1440px; height: 1200px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="connect-trans-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">
+<h2>2. Connect trans-xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4<a class="headerlink" href="#connect-trans-xqtl-to-apoe-epsilon2-and-apoe-epsilon4" title="Link to this heading">#</a></h2>
+<p>Calculate LD between trans-xQTL and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2/APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</p>
+<ul class="simple">
+<li><p><strong>Important</strong>: ROSMAP_gpQTL_gp_1629 identified a 95% CS including APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 with other 5 variants.</p></li>
+<li><p>Across all 5,616 xQTLs (3,596 unique trans-xQTL), correlations with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 range from -0.322 to 1, while correlations with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4 range from -0.259 to 0.306.</p></li>
+<li><p>Need to discuss.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;trans_xqtl_APOE_all_cohorts_addGWAS.rds&quot;</span><span class="p">)</span>
+<span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>-0.220397908940475</li><li>1</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>-0.322853473074491</li><li>0.837022117217574</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;chr19:44908822:C:T&quot;</span>
+<span class="n">APOE4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;chr19:44908684:T:C&quot;</span>
+<span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">variant_ID</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">APOE2</span><span class="p">,</span><span class="w"> </span><span class="n">APOE4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 29</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>⋯</th><th scope=col>cs_id</th><th scope=col>cohort</th><th scope=col>APOE2_cor</th><th scope=col>APOE4_cor</th><th scope=col>AD_Bellenguez</th><th scope=col>AD_Kunkle_Stage1_2019</th><th scope=col>AD_Wightman_Full_2021</th><th scope=col>AD_Wightman_Excluding23andMe_2021</th><th scope=col>AD_Wightman_ExcludingUKBand23andME_2021</th><th scope=col>AD_Bellenguez_EADB_2022</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19</td><td>44908821</td><td>44908822</td><td>T</td><td>C</td><td>chr19:44908822:C:T</td><td>0.08386076</td><td>-0.3192714</td><td>0.05673898</td><td>-5.627022</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>1</td><td>-0.1378542</td><td>NA</td><td>52.19375</td><td>178.8557</td><td>156.2673</td><td>109.7825</td><td>126.159</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">cs_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 5 × 29</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>MAF</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>z</th><th scope=col>⋯</th><th scope=col>cs_id</th><th scope=col>cohort</th><th scope=col>APOE2_cor</th><th scope=col>APOE4_cor</th><th scope=col>AD_Bellenguez</th><th scope=col>AD_Kunkle_Stage1_2019</th><th scope=col>AD_Wightman_Full_2021</th><th scope=col>AD_Wightman_Excluding23andMe_2021</th><th scope=col>AD_Wightman_ExcludingUKBand23andME_2021</th><th scope=col>AD_Bellenguez_EADB_2022</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19</td><td>44908821</td><td>44908822</td><td>T   </td><td>C   </td><td>chr19:44908822:C:T      </td><td>0.08386076</td><td>-0.3192714</td><td>0.05673898</td><td>-5.627022</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>1.0000000</td><td>-0.13785423</td><td>        NA</td><td>52.19375217</td><td>178.8557</td><td>156.26731697</td><td>109.7825161</td><td>126.1590030</td></tr>
+	<tr><td>19</td><td>44909975</td><td>44909976</td><td>TGGT</td><td>GGGT</td><td>chr19:44909976:GGGT:TGGT</td><td>0.08386076</td><td>-0.3192714</td><td>0.05673898</td><td>-5.627022</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>0.9969070</td><td>-0.13683048</td><td>        NA</td><td>         NA</td><td>      NA</td><td>          NA</td><td>         NA</td><td>         NA</td></tr>
+	<tr><td>19</td><td>44911141</td><td>44911142</td><td>A   </td><td>C   </td><td>chr19:44911142:C:A      </td><td>0.10284810</td><td>-0.2809271</td><td>0.05144824</td><td>-5.460384</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>0.8491625</td><td> 0.09132053</td><td>0.02858498</td><td> 0.23634743</td><td>      NA</td><td>  0.10051139</td><td>  0.8955129</td><td>  0.5931449</td></tr>
+	<tr><td>19</td><td>44912382</td><td>44912383</td><td>A   </td><td>G   </td><td>chr19:44912383:G:A      </td><td>0.10284810</td><td>-0.2809271</td><td>0.05144824</td><td>-5.460384</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>0.8491625</td><td> 0.09132053</td><td>0.93107239</td><td> 0.08618615</td><td>      NA</td><td>  0.05036407</td><td>  1.3297541</td><td>  1.4118662</td></tr>
+	<tr><td>19</td><td>44913573</td><td>44913574</td><td>G   </td><td>T   </td><td>chr19:44913574:T:G      </td><td>0.10284810</td><td>-0.2809271</td><td>0.05144824</td><td>-5.460384</td><td>⋯</td><td>chr19_42346101_44935906_ROSMAP_gpQTL_gp_1629_1</td><td>ROSMAP</td><td>0.8491625</td><td> 0.09132053</td><td>        NA</td><td>         NA</td><td>      NA</td><td>  0.04778777</td><td>         NA</td><td>  1.3262734</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">colnames</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'#chr'</li><li>'start'</li><li>'end'</li><li>'a1'</li><li>'a2'</li><li>'variant_ID'</li><li>'MAF'</li><li>'betahat'</li><li>'sebetahat'</li><li>'z'</li><li>'gene_ID'</li><li>'event_ID'</li><li>'cs_coverage_0.95'</li><li>'cs_coverage_0.7'</li><li>'cs_coverage_0.5'</li><li>'PIP'</li><li>'conditional_effect'</li><li>'resource'</li><li>'p'</li><li>'cs_id'</li><li>'cohort'</li><li>'APOE2_cor'</li><li>'APOE4_cor'</li><li>'AD_Bellenguez'</li><li>'AD_Kunkle_Stage1_2019'</li><li>'AD_Wightman_Full_2021'</li><li>'AD_Wightman_Excluding23andMe_2021'</li><li>'AD_Wightman_ExcludingUKBand23andME_2021'</li><li>'AD_Bellenguez_EADB_2022'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+
+<span class="c1"># Reshape data from wide to long format</span>
+<span class="n">apoe_long</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">,</span><span class="w"> </span><span class="n">APOE4_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">,</span><span class="w"> </span><span class="n">APOE4_cor</span><span class="p">),</span><span class="w"> </span>
+<span class="w">               </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APOE_type&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;correlation&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">correlation</span><span class="p">))</span><span class="w">  </span><span class="c1"># Remove NA values</span>
+
+<span class="c1"># Create faceted histogram</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">apoe_long</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">correlation</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">APOE_type</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="c1"># &quot;Distribution of APOE Correlations&quot;,</span>
+<span class="w">       </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Correlation&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/ce69980f2dd927cf01a656b6d2d49a4b58d118ed934ada852908511ff0bef823.png"><img alt="../../../_images/ce69980f2dd927cf01a656b6d2d49a4b58d118ed934ada852908511ff0bef823.png" src="../../../_images/ce69980f2dd927cf01a656b6d2d49a4b58d118ed934ada852908511ff0bef823.png" style="width: 960px; height: 360px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.5</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">event_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'STARNET_eQTL_ENSG00000003402'</li><li>'MSBB_eQTL_BM10_ENSG00000110719'</li><li>'MSBB_eQTL_BM10_ENSG00000229515'</li><li>'ROSMAP_DeJager_eQTL_Monocyte_ENSG00000111647'</li><li>'ROSMAP_gpQTL_gp_1629'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trans_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">event_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Knight_eQTL_ENSG00000276213'</li><li>'MSBB_eQTL_BM36_ENSG00000230790'</li><li>'MSBB_eQTL_BM36_ENSG00000287207'</li><li>'STARNET_eQTL_ENSG00000003402'</li><li>'STARNET_eQTL_ENSG00000151304'</li><li>'MSBB_eQTL_BM44_ENSG00000223298'</li><li>'MSBB_eQTL_BM10_ENSG00000110719'</li><li>'MSBB_eQTL_BM10_ENSG00000229515'</li><li>'ROSMAP_DeJager_eQTL_Monocyte_ENSG00000111647'</li><li>'ROSMAP_gpQTL_gp_1629'</li><li>'MSBB_eQTL_BM22_ENSG00000265547'</li><li>'ROSMAP_mega_eQTL_Exc_ENSG00000104047'</li></ol>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/6_AD_xQTL_genes/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-trans-xqtl-results-of-apoe-tad-region">1. Summary of trans-xQTL results of APOE TAD region</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-trans-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">2. Connect trans-xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

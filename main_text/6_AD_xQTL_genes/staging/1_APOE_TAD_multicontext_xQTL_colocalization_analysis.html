@@ -1,0 +1,997 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Multi-context xQTL colocalization analysis in the APOE TAD region &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/6_AD_xQTL_genes/staging/1_APOE_TAD_multicontext_xQTL_colocalization_analysis';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">FunGen-xQTL atlas and companion projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Single context cis-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_single_context_multigene_trans/index.html">Multi-gene and trans-xQTL fine-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Propagation of multi-context xQTL effects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Alzheimer’s disease (AD) loci integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Insights into AD risk genes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/6_AD_xQTL_genes/staging/1_APOE_TAD_multicontext_xQTL_colocalization_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/6_AD_xQTL_genes/staging/1_APOE_TAD_multicontext_xQTL_colocalization_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Multi-context xQTL colocalization analysis in the APOE TAD region</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicontext-colocalization-results-of-apoe-ensg00000130203">1. Multicontext colocalization results of APOE (ENSG00000130203)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-colocalization-results-of-genes-in-apoe-tad-region">2. Summary of colocalization results of genes in APOE TAD region</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-genes-in-apoe-tad-region">Extract genes in APOE TAD region</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apoe-colocalization-results-for-all-cohorts">APOE colocalization results for all cohorts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-colocalized-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">3. Connect colocalized xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="multi-context-xqtl-colocalization-analysis-in-the-apoe-tad-region">
+<h1>Multi-context xQTL colocalization analysis in the APOE TAD region<a class="headerlink" href="#multi-context-xqtl-colocalization-analysis-in-the-apoe-tad-region" title="Link to this heading">#</a></h1>
+<p>Date: Sep 08, 2025</p>
+<p>We performed xQTL-wide multi-context colocalization analysis using ColocBoost on 603 genes located within the TAD region overlapping with APOE (chr19:41840000-47960000). Multi-context colocalization analyses were conducted separately across four xQTL cohorts: ROSMAP, MSBB, KNIGHT, and MIGA.</p>
+<p>This notebook is a summary of the colocalization results of the gene in APOE TAD region, including the following sections:</p>
+<ol class="arabic simple">
+<li><p><em>Multicontext colocalization results of APOE (ENSG00000130203)</em>: This section presents colocalization findings specifically for the APOE gene itself across the four xQTL cohorts.</p></li>
+<li><p><em>Extract genes in APOE TAD region and summary of colocalization results</em>: This section identifies all 603 genes within the APOE TAD region and provides an overview of their colocalization patterns. It offers a comprehensive landscape of regulatory relationships across the entire TAD region.</p></li>
+<li><p><em>Connect colocalized xQTL to APOE2 and APOE4 - LD between xQTL and two loci</em>: This section examines the linkage disequilibrium relationships between identified colocalized xQTLs and the two key APOE loci. It determines whether colocalized signals are independent with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2/APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4.</p></li>
+</ol>
+<section id="multicontext-colocalization-results-of-apoe-ensg00000130203">
+<h2>1. Multicontext colocalization results of APOE (ENSG00000130203)<a class="headerlink" href="#multicontext-colocalization-results-of-apoe-ensg00000130203" title="Link to this heading">#</a></h2>
+<p>Only ROSMAP xQTL cohort has colocalization results in APOE gene.</p>
+<ul class="simple">
+<li><p>Two CoS in APOE gene: one sQTL only colocalization (1 variant; chr19:44905923:44906601 in AC and DLPFC and chr19:44905841:44906601 in DLPFC) and one Microglia specific colocalization (52 variants with purity 0.63; Dejager and Kellis). The between-purity of two CoS is 0.02765798.</p></li>
+<li><p>Two sQTL uCoS in APOE gene: chr19:44905923:44906601 in PCC has between-purity 0.7973871 (a little bit smaller than the default cutoff 0.8), it should be a potential colocalization with the sQTL CoS.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;/data1/deyk/xuewei/colocboost/pipeline/columbia/APOE&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">colocboost</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;AD_xQTL.chr19_ENSG00000130203.cb_xqtl.rds&quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span>
+<span class="nf">colocboost_plot</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="w"> </span><span class="n">plot_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">plot_ucos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/1d13b5be865fbd6b3e93f9e901f0f0fa70b8ef43a43c8ad335083cef040b266a.png"><img alt="../../../_images/1d13b5be865fbd6b3e93f9e901f0f0fa70b8ef43a43c8ad335083cef040b266a.png" src="../../../_images/1d13b5be865fbd6b3e93f9e901f0f0fa70b8ef43a43c8ad335083cef040b266a.png" style="width: 900px; height: 780px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">$</span><span class="n">cos_summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 2 × 12</caption>
+<thead>
+	<tr><th scope=col>focal_outcome</th><th scope=col>colocalized_outcomes</th><th scope=col>cos_id</th><th scope=col>purity</th><th scope=col>top_variable</th><th scope=col>top_variable_vcp</th><th scope=col>cos_npc</th><th scope=col>min_npc_outcome</th><th scope=col>n_variables</th><th scope=col>colocalized_index</th><th scope=col>colocalized_variables</th><th scope=col>colocalized_variables_vcp</th></tr>
+	<tr><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>FALSE</td><td>AC_lf2_sQTL_chr19:44905923:44906601:clu_129667_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905923:44906601:clu_155254_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905841:44906601:clu_155254_+:PR:ENSG00000130203</td><td>cos1:y2_y12_y13</td><td>1.0000000</td><td>chr19:44905910:C:G      </td><td>0.9999962</td><td>0.9997</td><td>0.9653</td><td> 1</td><td>18069                                                                                                                                                                                                                                                                                                                                                                     </td><td>chr19:44905910:C:G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </td><td>0.99999615802828                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </td></tr>
+	<tr><td>FALSE</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203                                                                                                                                                            </td><td>cos2:y19_y25   </td><td>0.6135642</td><td>chr19:44954150:CA:CAAAAA</td><td>0.1921628</td><td>0.9280</td><td>0.9266</td><td>52</td><td>18414; 18549; 18587; 18601; 18607; 18590; 18612; 18623; 18487; 18643; 18591; 18594; 18380; 18381; 18574; 18256; 18410; 18346; 18339; 18653; 18347; 18273; 18275; 18404; 18267; 18450; 18280; 18408; 18271; 18396; 18272; 18303; 18316; 18313; 18458; 18407; 18409; 18416; 18349; 18366; 18367; 18368; 18378; 18400; 18403; 18406; 18374; 18382; 18394; 18405; 18350; 18268</td><td>chr19:44954150:CA:CAAAAA; chr19:44980181:A:C; chr19:44986934:A:G; chr19:44989803:T:C; chr19:44992424:A:G; chr19:44987312:A:G; chr19:44993518:A:G; chr19:44996130:T:C; chr19:44967657:CAA:CA; chr19:44999110:TAAAA:TAA; chr19:44987378:T:C; chr19:44987916:A:G; chr19:44951502:A:G; chr19:44951509:G:A; chr19:44983921:C:T; chr19:44938353:A:C; chr19:44954120:G:A; chr19:44947615:A:G; chr19:44946776:C:T; chr19:45001091:C:G; chr19:44947671:T:C; chr19:44940390:T:C; chr19:44940660:A:ATTGTT; chr19:44953848:A:G; chr19:44939092:T:C; chr19:44962801:T:C; chr19:44941309:G:T; chr19:44954049:C:T; chr19:44939831:G:C; chr19:44952989:T:C; chr19:44940247:A:G; chr19:44943014:C:T; chr19:44946027:T:G; chr19:44945208:T:G; chr19:44963328:ATT:AT; chr19:44954036:C:T; chr19:44954062:G:A; chr19:44954427:G:C; chr19:44948185:A:G; chr19:44949887:C:T; chr19:44949894:T:G; chr19:44949908:C:T; chr19:44951106:G:A; chr19:44953240:T:C; chr19:44953684:G:A; chr19:44953968:G:A; chr19:44950979:G:A; chr19:44952201:G:A; chr19:44952844:G:A; chr19:44953923:T:C; chr19:44948363:T:A; chr19:44939262:A:T</td><td>0.192162795565134; 0.0691354844356256; 0.0691354844356256; 0.0691354844356256; 0.0691354844356256; 0.0621637147919165; 0.0621637147919165; 0.0567102668365725; 0.043625396042876; 0.0398205367768834; 0.0129894451438679; 0.0129894451438679; 0.0104691140203157; 0.00940518513208866; 0.00891915352758621; 0.00794413573327479; 0.00750060527511009; 0.00736510142122448; 0.00641588295676565; 0.00604174645391398; 0.00591383362455378; 0.00552568995660008; 0.00531025280986186; 0.00522994412205646; 0.00496008056524899; 0.00495367647864553; 0.00492960635414186; 0.00460982161806744; 0.00449421064537547; 0.00443580792466791; 0.00429323831259321; 0.00427570490286433; 0.00409273914080022; 0.00406647343624; 0.00396080672243093; 0.00361576147684295; 0.00361576147684295; 0.00361576147684295; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00350839092650868; 0.00331811762548428; 0.00331315570877577; 0.00305552418962529; 0.00305552418962529; 0.00296544350912764; 0.00292232650327395</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">$</span><span class="n">cos_details</span><span class="o">$</span><span class="n">cos_purity</span><span class="o">$</span><span class="n">min_abs_cor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A matrix: 2 × 2 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>cos1:y2_y12_y13</th><th scope=col>cos2:y19_y25</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>cos1:y2_y12_y13</th><td>1.00000000</td><td>0.02765798</td></tr>
+	<tr><th scope=row>cos2:y19_y25</th><td>0.02765798</td><td>0.61356417</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">$</span><span class="n">ucos_details</span><span class="o">$</span><span class="n">cos_ucos_purity</span><span class="o">$</span><span class="n">min_abs_cor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A matrix: 2 × 2 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>ucos3:y3</th><th scope=col>ucos10:y29</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>cos1:y2_y12_y13</th><td>0.07483545</td><td>0.7973871</td></tr>
+	<tr><th scope=row>cos2:y19_y25</th><td>0.02394156</td><td>0.0158295</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="summary-of-colocalization-results-of-genes-in-apoe-tad-region">
+<h2>2. Summary of colocalization results of genes in APOE TAD region<a class="headerlink" href="#summary-of-colocalization-results-of-genes-in-apoe-tad-region" title="Link to this heading">#</a></h2>
+<p>Only consider 4460 xQTL (both in CoS and uCoS) located within APOE TAD region.</p>
+<ul class="simple">
+<li><p>These 4460 xQTL are identified by 133 genes spanning 378 CoS and uCoS. To get the number of independent sets of variants, we merged the sets if the cummulative summation of VCP for overlapped variants are greater than 0.5 for <strong>each set</strong>. That means, assuming cos1 (snp1, snp2, snp3) and cos2 (snp2, snp3, snp4), we merge cos1 and cos2 if and only if VCP(snp2+snp3)&gt;0.5 calculated in cos1 and VCP(snp2+snp3)&gt;0.5 calculated in cos2. A total of 336 independent sets identified in APOE TAD region.</p></li>
+<li><p>Excluding sQTL, the majority of colocalizations occur with bulk ROSMAP eQTL data across three cortical brain regions and two neuronal cell types (excitatory and inhibitory neurons). KNIGHT cohort eQTL and pQTL datasets lack analyzable xQTL signals in the APOE region.</p></li>
+</ul>
+<section id="extract-genes-in-apoe-tad-region">
+<h3>Extract genes in APOE TAD region<a class="headerlink" href="#extract-genes-in-apoe-tad-region" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">gene_TAD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.table</span><span class="o">::</span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/data1/deyk/ftp_fgc_xqtl/utils/TADB_enhanced_cis.coding.bed&quot;</span><span class="p">)</span>
+<span class="n">APOE_TAD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gene_TAD</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;ENSG00000130203&quot;</span><span class="p">)</span>
+<span class="n">APOE_TAD</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>41840000</td><td>47960000</td><td>ENSG00000130203</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">genes_in_APOE</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gene_TAD</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="w"> </span><span class="n">`#chr`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">APOE_TAD</span><span class="o">$</span><span class="n">`#chr`</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">APOE_TAD</span><span class="o">$</span><span class="n">start</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">APOE_TAD</span><span class="o">$</span><span class="n">end</span><span class="p">)</span>
+<span class="n">genes_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">dim</span>
+<span class="n">genes_in_APOE</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>603</li><li>4</li></ol>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>gene_id</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>32720000</td><td>43520000</td><td>ENSG00000004776</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="apoe-colocalization-results-for-all-cohorts">
+<h3>APOE colocalization results for all cohorts<a class="headerlink" href="#apoe-colocalization-results-for-all-cohorts" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;xqtl_only_APOE_all_cohorts_addGWAS.rds&quot;</span><span class="p">)</span>
+<span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">dim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>4460</li><li>23</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">region_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+<span class="n">cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">identifier</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="n">cos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">133</div><div class="output text_html">378</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;merge_coloc_also_within_loci.R&quot;</span><span class="p">)</span>
+<span class="n">threshold</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.5</span>
+<span class="n">flat_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">identifier</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">variant_ID</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">flat_cos_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">identifier</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">vcp</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">as.numeric</span>
+<span class="p">})</span>
+<span class="n">merge_pairwise_idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_merge_pairwise_idx</span><span class="p">(</span><span class="n">flat_cos</span><span class="p">,</span><span class="w"> </span><span class="n">flat_cos_vcp</span><span class="p">,</span><span class="w"> </span><span class="n">threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">threshold</span><span class="p">)</span>
+<span class="n">flat_coloc_outcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">cos</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">identifier</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">APOE_summary</span><span class="o">$</span><span class="n">event_ID</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span><span class="w"> </span><span class="nf">strsplit</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;; &quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">336</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">final_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">final_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="n">final_colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">ii</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">)){</span>
+<span class="w">    </span><span class="n">p.merge</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merge_pairwise_idx</span><span class="p">[[</span><span class="n">ii</span><span class="p">]]</span>
+<span class="w">    </span><span class="c1"># - coloc outcomes </span>
+<span class="w">    </span><span class="n">oo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">flat_coloc_outcome</span><span class="p">[</span><span class="n">p.merge</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span>
+<span class="w">    </span><span class="n">colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">oo</span><span class="p">),</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;; &quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># - coloc CoS and pph4</span>
+<span class="w">    </span><span class="n">snps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unlist</span><span class="p">(</span><span class="n">flat_cos</span><span class="p">[</span><span class="n">p.merge</span><span class="p">])</span>
+<span class="w">    </span><span class="n">vcps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unlist</span><span class="p">(</span><span class="n">flat_cos_vcp</span><span class="p">[</span><span class="n">p.merge</span><span class="p">])</span>
+<span class="w">    </span><span class="n">context_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">SNP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">snps</span><span class="p">,</span><span class="w"> </span><span class="n">vcp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcps</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">    </span><span class="n">unique_snps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">context_df</span><span class="o">$</span><span class="n">SNP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">max_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">unique_snps</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">snp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nf">max</span><span class="p">(</span><span class="n">context_df</span><span class="o">$</span><span class="n">vcp</span><span class="p">[</span><span class="n">context_df</span><span class="o">$</span><span class="n">SNP</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">snp</span><span class="p">],</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="w">      </span><span class="c1"># min(context_df$vcp[context_df$SNP == snp], na.rm = TRUE)</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="n">merged_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">SNP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique_snps</span><span class="p">,</span><span class="w"> </span><span class="n">MaxVCP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_vcp</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merged_df</span><span class="o">$</span><span class="n">SNP</span>
+<span class="w">    </span><span class="n">vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merged_df</span><span class="o">$</span><span class="n">MaxVCP</span>
+<span class="w">    </span><span class="c1"># - coloc purity</span>
+<span class="w">    </span><span class="n">final_cos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_cos</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">cos</span><span class="p">))</span>
+<span class="w">    </span><span class="n">final_vcp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_vcp</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">vcp</span><span class="p">))</span>
+<span class="w">    </span><span class="n">final_colocOutcome</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">,</span><span class="w"> </span><span class="n">colocOutcome</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">final_cos</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_vcp</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;ind_cos_&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">merge_pairwise_idx</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span>
+<span class="w">    </span><span class="n">MIGA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;MIGA_GFM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_GTS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_SVZ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIGA_THA&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">MSBB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;MSBB_eQTL_BM_10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM_22&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM_36&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_eQTL_BM_44&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MSBB_pQTL_BM_36&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">KNIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;KNIGHT_eQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;KNIGHT_pQTL&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">ROSMAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;DLPFC_Bennett_pQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DLPFC_Klein_gpQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AC_lf2_sQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DLPFC_lf2_sQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PCC_lf2_sQTL&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;DeJager_Ast&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DeJager_Mic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DeJager_Exc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DeJager_Inh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DeJager_OPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DeJager_Oli&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;Kellis_Ast&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kellis_Mic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kellis_Exc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kellis_Inh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kellis_OPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kellis_Oli&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s">&quot;ROSMAP_PCC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_AC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_DLPFC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ROSMAP_Monocyte&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unlist</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">32</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">vector</span><span class="p">(</span><span class="s">&quot;list&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">setNames</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">)</span>
+<span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">ac</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">fc</span><span class="p">){</span><span class="w"> </span><span class="nf">grepl</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span><span class="w"> </span><span class="n">fc</span><span class="p">)</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">which</span>
+<span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">final_colocOutcome</span><span class="p">)[</span><span class="n">pos</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>MIGA_GFM</dt><dd>1</dd><dt>MIGA_GTS</dt><dd>1</dd><dt>MIGA_SVZ</dt><dd>1</dd><dt>MIGA_THA</dt><dd>2</dd><dt>MSBB_eQTL_BM_10</dt><dd>31</dd><dt>MSBB_eQTL_BM_22</dt><dd>22</dd><dt>MSBB_eQTL_BM_36</dt><dd>30</dd><dt>MSBB_eQTL_BM_44</dt><dd>29</dd><dt>MSBB_pQTL_BM_36</dt><dd>8</dd><dt>KNIGHT_eQTL</dt><dd>0</dd><dt>KNIGHT_pQTL</dt><dd>0</dd><dt>DLPFC_Bennett_pQTL</dt><dd>17</dd><dt>DLPFC_Klein_gpQTL</dt><dd>1</dd><dt>AC_lf2_sQTL</dt><dd>107</dd><dt>DLPFC_lf2_sQTL</dt><dd>100</dd><dt>PCC_lf2_sQTL</dt><dd>100</dd><dt>DeJager_Ast</dt><dd>17</dd><dt>DeJager_Mic</dt><dd>2</dd><dt>DeJager_Exc</dt><dd>46</dd><dt>DeJager_Inh</dt><dd>25</dd><dt>DeJager_OPC</dt><dd>1</dd><dt>DeJager_Oli</dt><dd>9</dd><dt>Kellis_Ast</dt><dd>8</dd><dt>Kellis_Mic</dt><dd>4</dd><dt>Kellis_Exc</dt><dd>35</dd><dt>Kellis_Inh</dt><dd>22</dd><dt>Kellis_OPC</dt><dd>12</dd><dt>Kellis_Oli</dt><dd>21</dd><dt>ROSMAP_PCC</dt><dd>61</dd><dt>ROSMAP_AC</dt><dd>65</dd><dt>ROSMAP_DLPFC</dt><dd>72</dd><dt>ROSMAP_Monocyte</dt><dd>5</dd></dl>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pos_no_coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="w"> </span><span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">coloc</span><span class="p">)[</span><span class="o">-</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+<span class="n">coloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">coloc</span><span class="p">[</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+<span class="n">all_contexts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_contexts</span><span class="p">[</span><span class="n">pos_no_coloc</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'KNIGHT_eQTL'</li><li>'KNIGHT_pQTL'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;UpSetR&quot;</span><span class="p">)</span>
+<span class="n">max_size</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">coloc</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">))</span>
+<span class="nf">upset</span><span class="p">(</span><span class="nf">fromList</span><span class="p">(</span><span class="n">coloc</span><span class="p">),</span><span class="w"> </span>
+<span class="w">            </span><span class="n">order.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;freq&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">keep.order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span>
+<span class="w">            </span><span class="n">main.bar.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue3&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">sets.bar.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sandybrown&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">text.scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="c1"># Adjust font sizes for the main title, set names, set sizes, intersection sizes, and axis titles</span>
+<span class="w">            </span><span class="n">matrix.color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># Adjust the color of matrix dots</span>
+<span class="w">            </span><span class="n">number.angles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="c1"># Adjust the angle of number labels, useful for some plots</span>
+<span class="w">            </span><span class="n">mb.ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="c1"># Adjust the ratio of main bar and sets bar</span>
+<span class="w">            </span><span class="n">point.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">line.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span>
+<span class="w">            </span><span class="n">sets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_contexts</span><span class="p">,</span><span class="w">  </span>
+<span class="w">            </span><span class="n">nsets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">coloc</span><span class="p">),</span>
+<span class="w">            </span><span class="n">set_size.show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.angles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.numbers_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<span class="w">            </span><span class="n">set_size.scale_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.25</span><span class="o">*</span><span class="n">max_size</span><span class="p">,</span>
+<span class="w">            </span><span class="n">nintersects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">            </span><span class="n">mainbar.y.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">sets.x.label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/7242f7d015de467027b7b467b3b6e4eed7497ce5d368b38a2e702fe587ea1fb4.png"><img alt="../../../_images/7242f7d015de467027b7b467b3b6e4eed7497ce5d368b38a2e702fe587ea1fb4.png" src="../../../_images/7242f7d015de467027b7b467b3b6e4eed7497ce5d368b38a2e702fe587ea1fb4.png" style="width: 1440px; height: 1200px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+<section id="connect-colocalized-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">
+<h2>3. Connect colocalized xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4<a class="headerlink" href="#connect-colocalized-xqtl-to-apoe-epsilon2-and-apoe-epsilon4" title="Link to this heading">#</a></h2>
+<p>Calculate LD between xQTL and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2/APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</p>
+<ul class="simple">
+<li><p>Across all 4,460 xQTLs, correlations with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 range from -0.233 to 0.645, while correlations with APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4 range from -0.259 to 0.306.</p></li>
+<li><p>Only xQTLs in NECTIN2 (ENSG00000130202) show correlations &gt;0.5 with both APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4; these xQTLs colocalize with three p-sQTLs. Additionally, xQTLs identified in the APOE gene that colocalize with three sQTLs show correlations &gt;0.2 with both APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4, while xQTLs identified in APOC2 (ENSG00000130208) colocalizing in AC and DLPFC also show correlations &gt;0.2.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;xqtl_only_APOE_all_cohorts_addGWAS.rds&quot;</span><span class="p">)</span>
+<span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">range</span>
+<span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">range</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>-0.232859147564077</li><li>0.645145867601617</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>-0.258650664290217</li><li>0.305520576106806</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+
+<span class="c1"># Reshape data from wide to long format</span>
+<span class="n">apoe_long</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">,</span><span class="w"> </span><span class="n">APOE4_cor</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">,</span><span class="w"> </span><span class="n">APOE4_cor</span><span class="p">),</span><span class="w"> </span>
+<span class="w">               </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APOE_type&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;correlation&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">correlation</span><span class="p">))</span><span class="w">  </span><span class="c1"># Remove NA values</span>
+
+<span class="c1"># Create faceted histogram</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">apoe_long</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">correlation</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">APOE_type</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="c1"># &quot;Distribution of APOE Correlations&quot;,</span>
+<span class="w">       </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Correlation&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/17c57a5e8350191550dbf2d1fa5995c5e30f01cf3bc4bfa2ff35f7af2e7f0e71.png"><img alt="../../../_images/17c57a5e8350191550dbf2d1fa5995c5e30f01cf3bc4bfa2ff35f7af2e7f0e71.png" src="../../../_images/17c57a5e8350191550dbf2d1fa5995c5e30f01cf3bc4bfa2ff35f7af2e7f0e71.png" style="width: 960px; height: 360px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.5</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 4 × 23</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>region_ID</th><th scope=col>event_ID</th><th scope=col>cos_ID</th><th scope=col>vcp</th><th scope=col>⋯</th><th scope=col>cohort</th><th scope=col>identifier</th><th scope=col>APOE2_cor</th><th scope=col>APOE4_cor</th><th scope=col>AD_Bellenguez</th><th scope=col>AD_Kunkle_Stage1_2019</th><th scope=col>AD_Wightman_Full_2021</th><th scope=col>AD_Wightman_Excluding23andMe_2021</th><th scope=col>AD_Wightman_ExcludingUKBand23andME_2021</th><th scope=col>AD_Bellenguez_EADB_2022</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>44886339</td><td>44886339</td><td>A</td><td>G</td><td>chr19:44886339:G:A</td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.76060495</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>0.6081370</td><td>-0.06141883</td><td>      NA</td><td>17.41578</td><td>NA</td><td>50.32242</td><td>39.71942</td><td>48.88464</td></tr>
+	<tr><td>chr19</td><td>44893972</td><td>44893972</td><td>A</td><td>G</td><td>chr19:44893972:G:A</td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07649710</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>0.6411934</td><td>-0.05980457</td><td>82.30207</td><td>18.16768</td><td>NA</td><td>54.18003</td><td>42.13900</td><td>53.20302</td></tr>
+	<tr><td>chr19</td><td>44897490</td><td>44897490</td><td>A</td><td>T</td><td>chr19:44897490:T:A</td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07649710</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>0.6411934</td><td>-0.05980457</td><td>82.64226</td><td>15.36231</td><td>NA</td><td>52.53517</td><td>38.95078</td><td>54.22612</td></tr>
+	<tr><td>chr19</td><td>44899005</td><td>44899005</td><td>G</td><td>T</td><td>chr19:44899005:T:G</td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07487616</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202</td><td>0.6451459</td><td>-0.06155799</td><td>81.99396</td><td>      NA</td><td>NA</td><td>20.74840</td><td>      NA</td><td>54.28826</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 15 × 23</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>region_ID</th><th scope=col>event_ID</th><th scope=col>cos_ID</th><th scope=col>vcp</th><th scope=col>⋯</th><th scope=col>cohort</th><th scope=col>identifier</th><th scope=col>APOE2_cor</th><th scope=col>APOE4_cor</th><th scope=col>AD_Bellenguez</th><th scope=col>AD_Kunkle_Stage1_2019</th><th scope=col>AD_Wightman_Full_2021</th><th scope=col>AD_Wightman_Excluding23andMe_2021</th><th scope=col>AD_Wightman_ExcludingUKBand23andME_2021</th><th scope=col>AD_Bellenguez_EADB_2022</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>44886339</td><td>44886339</td><td>A  </td><td>G   </td><td>chr19:44886339:G:A     </td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.76060495</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td> 0.60813703</td><td>-0.06141883</td><td>      NA</td><td>1.741578e+01</td><td>      NA</td><td> 50.32242105</td><td> 39.7194216</td><td> 48.88463582</td></tr>
+	<tr><td>chr19</td><td>44892009</td><td>44892009</td><td>A  </td><td>G   </td><td>chr19:44892009:G:A     </td><td>ENSG00000130203</td><td>PCC_lf2_sQTL_chr19:44905923:44906601:clu_119019_+:NE:ENSG00000130203                                                                                                                                               </td><td>ENSG00000130203:ucos10:y29     </td><td>0.67143294</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130203:ucos10:y29; PCC_lf2_sQTL_chr19:44905923:44906601:clu_119019_+:NE:ENSG00000130203                                                                                                                                                    </td><td>-0.11913992</td><td> 0.30169781</td><td>      NA</td><td>1.513188e+02</td><td>      NA</td><td>         Inf</td><td>248.0762380</td><td>148.23151063</td></tr>
+	<tr><td>chr19</td><td>44893972</td><td>44893972</td><td>A  </td><td>G   </td><td>chr19:44893972:G:A     </td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07649710</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td> 0.64119338</td><td>-0.05980457</td><td>82.30207</td><td>1.816768e+01</td><td>      NA</td><td> 54.18002570</td><td> 42.1390036</td><td> 53.20301723</td></tr>
+	<tr><td>chr19</td><td>44897490</td><td>44897490</td><td>A  </td><td>T   </td><td>chr19:44897490:T:A     </td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07649710</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td> 0.64119338</td><td>-0.05980457</td><td>82.64226</td><td>1.536231e+01</td><td>      NA</td><td> 52.53517103</td><td> 38.9507820</td><td> 54.22611706</td></tr>
+	<tr><td>chr19</td><td>44899005</td><td>44899005</td><td>G  </td><td>T   </td><td>chr19:44899005:T:G     </td><td>ENSG00000130202</td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td>ENSG00000130202:cos1:y3_y17_y18</td><td>0.07487616</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130202:cos1:y3_y17_y18; AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202    </td><td> 0.64514587</td><td>-0.06155799</td><td>81.99396</td><td>          NA</td><td>      NA</td><td> 20.74840001</td><td>         NA</td><td> 54.28826024</td></tr>
+	<tr><td>chr19</td><td>44905910</td><td>44905910</td><td>G  </td><td>C   </td><td>chr19:44905910:C:G     </td><td>ENSG00000130203</td><td>AC_lf2_sQTL_chr19:44905923:44906601:clu_129667_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905923:44906601:clu_155254_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905841:44906601:clu_155254_+:PR:ENSG00000130203</td><td>ENSG00000130203:cos1:y2_y12_y13</td><td>0.99999616</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130203:cos1:y2_y12_y13; AC_lf2_sQTL_chr19:44905923:44906601:clu_129667_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905923:44906601:clu_155254_+:NE:ENSG00000130203; DLPFC_lf2_sQTL_chr19:44905841:44906601:clu_155254_+:PR:ENSG00000130203</td><td> 0.20506197</td><td> 0.29258934</td><td>      NA</td><td>          NA</td><td>255.8602</td><td>226.84290488</td><td>         NA</td><td>109.68731922</td></tr>
+	<tr><td>chr19</td><td>44905910</td><td>44905910</td><td>G  </td><td>C   </td><td>chr19:44905910:C:G     </td><td>ENSG00000130203</td><td>PCC_lf2_sQTL_chr19:44905923:44906601:clu_119019_+:NE:ENSG00000130203                                                                                                                                               </td><td>ENSG00000130203:ucos10:y29     </td><td>0.31635270</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130203:ucos10:y29; PCC_lf2_sQTL_chr19:44905923:44906601:clu_119019_+:NE:ENSG00000130203                                                                                                                                                    </td><td> 0.20506197</td><td> 0.29258934</td><td>      NA</td><td>          NA</td><td>255.8602</td><td>226.84290488</td><td>         NA</td><td>109.68731922</td></tr>
+	<tr><td>chr19</td><td>44911194</td><td>44911194</td><td>C  </td><td>T   </td><td>chr19:44911194:T:C     </td><td>ENSG00000130208</td><td>AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                </td><td>ENSG00000130208:ucos7:y5       </td><td>0.20508329</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:ucos7:y5; AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                       </td><td> 0.21698558</td><td> 0.30516044</td><td>      NA</td><td>          NA</td><td>      NA</td><td>257.02841329</td><td>         NA</td><td>113.06491262</td></tr>
+	<tr><td>chr19</td><td>44911609</td><td>44911609</td><td>ATT</td><td>ATTT</td><td>chr19:44911609:ATTT:ATT</td><td>ENSG00000130208</td><td>AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                </td><td>ENSG00000130208:ucos7:y5       </td><td>0.23303897</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:ucos7:y5; AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                       </td><td> 0.21227595</td><td> 0.30552058</td><td>      NA</td><td>          NA</td><td>      NA</td><td>          NA</td><td>         NA</td><td>          NA</td></tr>
+	<tr><td>chr19</td><td>44915704</td><td>44915704</td><td>C  </td><td>T   </td><td>chr19:44915704:T:C     </td><td>ENSG00000130208</td><td>AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                </td><td>ENSG00000130208:ucos7:y5       </td><td>0.52451014</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:ucos7:y5; AC_lf2_sQTL_chr19:44914949:44919172:clu_129675_+:PR:ENSG00000130208                                                                                                                                                       </td><td> 0.21613311</td><td> 0.30395313</td><td>      NA</td><td>          NA</td><td>      NA</td><td>141.49248782</td><td>         NA</td><td>112.71536176</td></tr>
+	<tr><td>chr19</td><td>44918487</td><td>44918487</td><td>T  </td><td>G   </td><td>chr19:44918487:G:T     </td><td>ENSG00000130208</td><td>ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                            </td><td>ENSG00000130208:cos2:y36_y37   </td><td>0.06212972</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:cos2:y36_y37; ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                               </td><td>-0.22591159</td><td>-0.25865066</td><td>      NA</td><td>8.637090e+01</td><td>130.4056</td><td>130.40559871</td><td>164.2048154</td><td>120.49517994</td></tr>
+	<tr><td>chr19</td><td>44918715</td><td>44918715</td><td>A  </td><td>AG  </td><td>chr19:44918715:AG:A    </td><td>ENSG00000130208</td><td>ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                            </td><td>ENSG00000130208:cos2:y36_y37   </td><td>0.18615425</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:cos2:y36_y37; ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                               </td><td>-0.22994282</td><td>-0.25555516</td><td>      NA</td><td>8.585480e+01</td><td>      NA</td><td>          NA</td><td>         NA</td><td>120.20789210</td></tr>
+	<tr><td>chr19</td><td>44920379</td><td>44920379</td><td>A  </td><td>G   </td><td>chr19:44920379:G:A     </td><td>ENSG00000130208</td><td>ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                            </td><td>ENSG00000130208:cos2:y36_y37   </td><td>0.11749383</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:cos2:y36_y37; ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                               </td><td>-0.23285915</td><td>-0.25222945</td><td>      NA</td><td>8.479507e+01</td><td>127.7248</td><td>127.72479872</td><td>160.3904056</td><td>119.21014864</td></tr>
+	<tr><td>chr19</td><td>44925202</td><td>44925202</td><td>T  </td><td>C   </td><td>chr19:44925202:C:T     </td><td>ENSG00000130208</td><td>ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                            </td><td>ENSG00000130208:cos2:y36_y37   </td><td>0.60355474</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000130208:cos2:y36_y37; ROSMAP_AC_ENSG00000130208; ROSMAP_DLPFC_ENSG00000130208                                                                                                                                                               </td><td>-0.23164237</td><td>-0.24974017</td><td>      NA</td><td>8.380967e+01</td><td>124.0043</td><td>124.00433216</td><td>152.3178549</td><td>116.08026103</td></tr>
+	<tr><td>chr19</td><td>45816157</td><td>45816157</td><td>C  </td><td>G   </td><td>chr19:45816157:G:C     </td><td>ENSG00000125755</td><td>MIGA_SVZ_ENSG00000125755; MIGA_THA_ENSG00000125755                                                                                                                                                                 </td><td>ENSG00000125755:cos1:y3_y4     </td><td>1.00000000</td><td>⋯</td><td>MIGA  </td><td>ENSG00000125755:cos1:y3_y4; MIGA_SVZ_ENSG00000125755; MIGA_THA_ENSG00000125755                                                                                                                                                                      </td><td> 0.07932491</td><td> 0.22424154</td><td>      NA</td><td>2.701008e-03</td><td>      NA</td><td>  0.09451966</td><td>  0.3299398</td><td>  0.04846918</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">APOE_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE2_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">APOE4_cor</span><span class="p">)</span><span class="o">&gt;</span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">pull</span><span class="p">(</span><span class="n">region_ID</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">unique</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'ENSG00000130202'</li><li>'ENSG00000130203'</li><li>'ENSG00000130208'</li><li>'ENSG00000125755'</li></ol>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/6_AD_xQTL_genes/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicontext-colocalization-results-of-apoe-ensg00000130203">1. Multicontext colocalization results of APOE (ENSG00000130203)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-colocalization-results-of-genes-in-apoe-tad-region">2. Summary of colocalization results of genes in APOE TAD region</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-genes-in-apoe-tad-region">Extract genes in APOE TAD region</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apoe-colocalization-results-for-all-cohorts">APOE colocalization results for all cohorts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-colocalized-xqtl-to-apoe-epsilon2-and-apoe-epsilon4">3. Connect colocalized xQTL to APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
