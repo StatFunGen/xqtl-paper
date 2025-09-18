@@ -20,3 +20,4 @@ chapters:
   - file: main_text/6_AD_xQTL_genes/index
     sections:
       - file: main_text/6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization
+  - file: main_text/7_AD_gene_prioritized/index
