@@ -1,4 +1,4 @@
-# Alzheimer's disease (AD) loci integration
+# Regulatory architecture of AD susceptibility loci
 
 This chapter includes the following notebooks:
 
