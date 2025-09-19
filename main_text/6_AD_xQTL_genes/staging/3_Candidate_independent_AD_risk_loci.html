@@ -1,0 +1,1081 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Candidate independent loci from APOE \(\epsilon\)2 and APOE \(\epsilon\)4 &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/6_AD_xQTL_genes/staging/3_Candidate_independent_AD_risk_loci';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">Multi-omics QTL atlas of the aging human brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Fine-mapped QTL landscape across brain molecular phenotypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_single_context_multigene_trans/index.html">Coordinated gene regulation and long-range genetic effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Cascading genetic effects across molecular contexts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Regulatory architecture of AD susceptibility loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Molecular dissection of prioritized AD loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_AD_gene_prioritized/index.html">Molecular insights and gene prioritization at key AD loci</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/6_AD_xQTL_genes/staging/3_Candidate_independent_AD_risk_loci.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/6_AD_xQTL_genes/staging/3_Candidate_independent_AD_risk_loci.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Candidate independent loci from APOE \epsilon2 and APOE \epsilon4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-for-reproducing-the-imputation-analysis">1. Code for reproducing the imputation analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#candidate-independent-ad-risk-loci-in-cis-xqtl">2. Candidate independent AD risk loci in cis-xQTL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-imputation-results-for-all-ad-gwas">2.1 Visualization of the imputation results for all AD GWAS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-previous-variant-rs5167-in-kellis-fine-mapped-cs3-and-rs2288911-in-cs4">2.2 Check previous variant <code class="docutils literal notranslate"><span class="pre">rs5167</span></code> in Kellis fine-mapped CS3 and <code class="docutils literal notranslate"><span class="pre">rs2288911</span></code> in CS4?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-based-statistical-test-for-the-imputation-results-cheap-idea">2.3 Distance based statistical test for the imputation results (cheap idea)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="candidate-independent-loci-from-apoe-epsilon2-and-apoe-epsilon4">
+<h1>Candidate independent loci from APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4<a class="headerlink" href="#candidate-independent-loci-from-apoe-epsilon2-and-apoe-epsilon4" title="Link to this heading">#</a></h1>
+<p>Date: Sep 09, 2025</p>
+<p>To examine whether there are potentially independent xQTLs in the APOE TAD region (chr19:41840000-47960000) that are independent of two well-known AD risk loci, APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4, we performed a diagnostic approach using imputation of GWAS summary statistics.</p>
+<ul class="simple">
+<li><p>For each independent cis-xQTL set or trans-xQTL set, we used a leave-one-set-out imputation strategy. We first removed the summary statistics for variants in each set from all 6 AD GWAS summary statistics, then applied the RAISS imputation method to impute marginal association z-scores for each set and each AD GWAS.</p></li>
+<li><p>Analysis scope: In this analysis, we focused on the association region (chr19:42346101-46842901), which represents <strong>Need to check with Alexandre why we use this region in APOE analysis. I was assuming that this is directly combined LD region from two LD block.</strong> within the broader APOE TAD. All xQTLs within this association region were included in our independence assessment to ensure comprehensive coverage of potentially causal regulatory variants.</p></li>
+</ul>
+<p>The analysis is organized into the following sections:</p>
+<ol class="arabic simple">
+<li><p><em>Code for reproducing the imputation analysis</em>: This section provides the computational framework and implementation details for the leave-one-set-out imputation strategy, including data preprocessing steps, RAISS parameter settings, and quality control measures applied to ensure robust imputation results.</p></li>
+<li><p><em>Candidate independent AD risk loci in cis-xQTL</em>: This section examines 285 independent cis-xQTL sets within the association region, evaluating their potential independence from APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>2 and APOE <span class="math notranslate nohighlight">\(\epsilon\)</span>4 through comparison of observed versus imputed z-scores across the 6 AD GWAS datasets.</p></li>
+<li><p><em>Candidate independent AD risk loci in trans-xQTL</em>: This section examines <strong>XX</strong> independent trans-xQTL sets within the association region, assessing whether distant regulatory effects captured by these trans-xQTLs represent novel, independent contributions to AD risk beyond the established APOE variants <strong>Missing Now</strong>.</p></li>
+</ol>
+<section id="code-for-reproducing-the-imputation-analysis">
+<h2>1. Code for reproducing the imputation analysis<a class="headerlink" href="#code-for-reproducing-the-imputation-analysis" title="Link to this heading">#</a></h2>
+<p>The code for performing the leave-one-CoS-out imputation strategy can be found in <code class="docutils literal notranslate"><span class="pre">APOE_Rcode.R</span></code>. The code is used for each GWAS and each CoS at one time. Code contains the following steps:</p>
+<ol class="arabic simple">
+<li><p>Load GWAS sumstat (<code class="docutils literal notranslate"><span class="pre">load_rss_data</span></code>) and LD matrix from APOE combined LD block region (<code class="docutils literal notranslate"><span class="pre">load_LD_matrix</span></code>).</p></li>
+<li><p>Preprocess the input data (<code class="docutils literal notranslate"><span class="pre">rss_basic_qc</span></code>) with the transformation of Inf z-score as the max value - reproducing Alexandre previous code.</p></li>
+<li><p>Perform Slalom quality control (<code class="docutils literal notranslate"><span class="pre">summary_stats_qc</span></code>) - reproducing Alexandre previous code.</p></li>
+<li><p>Index the variants in the specific CoS then drop those variants from sumstats.</p></li>
+<li><p>Perform RAISS imputation for the droped sumstats (<code class="docutils literal notranslate"><span class="pre">raiss</span></code>).</p></li>
+</ol>
+</section>
+<section id="candidate-independent-ad-risk-loci-in-cis-xqtl">
+<h2>2. Candidate independent AD risk loci in cis-xQTL<a class="headerlink" href="#candidate-independent-ad-risk-loci-in-cis-xqtl" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>For 6 AD GWAS GWAS, we obtained 1830 - 1943 variants with valid imputation results, respectively (<code class="docutils literal notranslate"><span class="pre">RAISS_imputation_results_summary_cis_only.rds</span></code>). This summary results including variant names, the observed z-score, the imputed z-score, index of the independent CoS, the merged colocalization outcomes names, and the results file name you obtained after running section 1.</p></li>
+<li><p>Trying to reproduce the variants <code class="docutils literal notranslate"><span class="pre">rs5167</span></code> reported previously in Kellis fine-mapped CS3 and <code class="docutils literal notranslate"><span class="pre">rs2288911</span></code>in CS4. But based on the leave-one-CoS-out imputation strategy, we did not see much difference between the observed z-score and imputed z-score in all AD GWAS (<strong>section 2.2</strong>).</p></li>
+<li><p>Discovery the potential AD risk loci in cis-xQTL using a distance-based statistics and check LD of the variants with APOE2 and APOE4. This is a cheap idea for detection, and will be updated the better statistics for this.</p>
+<ul>
+<li><p>Selection criteria: minimum p-values of variants in CoS &lt; 0.05 and LD&lt;0.2 with both APOE2 and APOE4 (given that the high LD will cause the higher imputation)</p></li>
+<li><p>AD Bellenguez and AD Bellenguez EADB has a common s-QTL specific CoS (AC_lf2_sQTL_chr19:44916325:44926955:clu_129675_+:UP:ENSG00000130208; AC_lf2_sQTL_chr19:44916325:44930999:clu_129675_+:UP:ENSG00000130208) including one variant <code class="docutils literal notranslate"><span class="pre">19:44927023:C:G</span></code>.</p></li>
+<li><p>Outside of sQTL-specific CoS, there is a CoS for gene <strong>CEACAM19</strong> including two variants <code class="docutils literal notranslate"><span class="pre">19:44646342:T:C</span></code> and <code class="docutils literal notranslate"><span class="pre">19:44662645:A:C</span></code> - (DLPFC_Bennett_pQTL_ENSG00000073008; DeJager_Exc_ENSG00000186567; DeJager_Inh_ENSG00000186567; Kellis_Exc_ENSG00000186567; Kellis_Inh_ENSG00000186567; Kellis_OPC_ENSG00000186567; ROSMAP_AC_ENSG00000186567; ROSMAP_DLPFC_ENSG00000186567; ROSMAP_PCC_ENSG00000186567).</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="n">raiss_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/data1/deyk/xuewei/colocboost/pipeline/columbia/APOE/RAISS_imputation_results_summary_cis_only.rds&quot;</span><span class="p">)</span>
+<span class="nf">sapply</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">as.data.frame</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 1</caption>
+<thead>
+	<tr><th></th><th scope=col>.</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>AD_Bellenguez</th><td>1875</td></tr>
+	<tr><th scope=row>AD_Bellenguez_EADB</th><td>1882</td></tr>
+	<tr><th scope=row>AD_Kunkle_Stage1_2019</th><td>1943</td></tr>
+	<tr><th scope=row>AD_Wightman_Full_2021</th><td>1834</td></tr>
+	<tr><th scope=row>AD_Wightman_Excluding23andMe_2021</th><td>1830</td></tr>
+	<tr><th scope=row>AD_Wightman_ExcludingUKBand23andME_2021</th><td>1829</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">raiss_summary</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>2</th><td>19:42347760:C:G</td><td>0.8684211</td><td>0.3887788</td><td>cos_1</td><td>AC_lf2_sQTL_chr19:42358307:42358786:clu_129538_+:PR:ENSG00000105429; AC_lf2_sQTL_chr19:42358307:42359097:clu_129538_+:PR:ENSG00000105429; AC_lf2_sQTL_chr19:42358954:42359097:clu_129538_+:PR:ENSG00000105429; DLPFC_lf2_sQTL_chr19:42358307:42359097:clu_155115_+:PR:ENSG00000105429; DLPFC_lf2_sQTL_chr19:42358954:42359097:clu_155115_+:PR:ENSG00000105429; PCC_lf2_sQTL_chr19:42358307:42358786:clu_118897_+:PR:ENSG00000105429; PCC_lf2_sQTL_chr19:42358307:42359097:clu_118897_+:PR:ENSG00000105429; PCC_lf2_sQTL_chr19:42358954:42359097:clu_118897_+:PR:ENSG00000105429</td><td>rss_qc_imputed_AD_Bellenguez_indcos_1.rds</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<section id="visualization-of-the-imputation-results-for-all-ad-gwas">
+<h3>2.1 Visualization of the imputation results for all AD GWAS<a class="headerlink" href="#visualization-of-the-imputation-results-for-all-ad-gwas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">gridExtra</span><span class="p">)</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span>
+
+<span class="c1"># Create individual plots</span>
+<span class="n">plot_list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+
+<span class="kr">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">plot_list</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">[[</span><span class="n">i</span><span class="p">]],</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z_imp</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z_obs</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dashed&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos_idx</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Observed z-score&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imputed z-score&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COS&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">      </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">),</span>
+<span class="w">      </span><span class="n">axis.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">),</span>
+<span class="w">      </span><span class="n">axis.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">),</span>
+<span class="w">      </span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span>
+<span class="w">      </span><span class="n">panel.grid.minor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">      </span><span class="n">panel.grid.major</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_line</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grey90&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># Fixed: removed alpha, used color instead</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">coord_equal</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1"># Arrange in 3 rows x 2 columns</span>
+<span class="nf">grid.arrange</span><span class="p">(</span><span class="n">grobs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plot_list</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/059f825036fed6405e99b92354432ada811cba95a68d1e22155a7f7f82405764.png"><img alt="../../../_images/059f825036fed6405e99b92354432ada811cba95a68d1e22155a7f7f82405764.png" src="../../../_images/059f825036fed6405e99b92354432ada811cba95a68d1e22155a7f7f82405764.png" style="width: 1440px; height: 780px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="check-previous-variant-rs5167-in-kellis-fine-mapped-cs3-and-rs2288911-in-cs4">
+<h3>2.2 Check previous variant <code class="docutils literal notranslate"><span class="pre">rs5167</span></code> in Kellis fine-mapped CS3 and <code class="docutils literal notranslate"><span class="pre">rs2288911</span></code> in CS4?<a class="headerlink" href="#check-previous-variant-rs5167-in-kellis-fine-mapped-cs3-and-rs2288911-in-cs4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">lapply</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">ss</span><span class="p">){</span>
+<span class="w">    </span><span class="n">ss</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;19:44945208&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">variants</span><span class="p">))</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><dl>
+	<dt>$AD_Bellenguez</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>11.14607</td><td>11.22493</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Bellenguez_EADB</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>9.65202</td><td>9.576777</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_EADB_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Kunkle_Stage1_2019</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>8.630872</td><td>9.347072</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Kunkle_Stage1_2019_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_Full_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>14.78468</td><td>13.41176</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_Full_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_Excluding23andMe_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>13.94834</td><td>12.28804</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_ExcludingUKBand23andME_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44945208:T:G</td><td>13.74038</td><td>12.44581</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_ExcludingUKBand23andME_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">lapply</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">ss</span><span class="p">){</span>
+<span class="w">    </span><span class="n">ss</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;19:44946027&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">variants</span><span class="p">))</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><dl>
+	<dt>$AD_Bellenguez</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>7.125</td><td>7.54528</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Bellenguez_EADB</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>5.031638</td><td>4.850486</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_EADB_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Kunkle_Stage1_2019</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>6.191781</td><td>5.797036</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Kunkle_Stage1_2019_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_Full_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>4.366113</td><td>4.370649</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_Full_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_Excluding23andMe_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>3.134539</td><td>3.182422</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+	<dt>$AD_Wightman_ExcludingUKBand23andME_2021</dt>
+		<dd><table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:44946027:T:G</td><td>5.108911</td><td>4.521739</td><td>cos_137</td><td>DeJager_Mic_ENSG00000130203; Kellis_Mic_ENSG00000130203; DeJager_Mic_ENSG00000130208; Kellis_Mic_ENSG00000130208</td><td>rss_qc_imputed_AD_Wightman_ExcludingUKBand23andME_2021_indcos_137.rds</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div></div>
+</div>
+</section>
+<section id="distance-based-statistical-test-for-the-imputation-results-cheap-idea">
+<h3>2.3 Distance based statistical test for the imputation results (cheap idea)<a class="headerlink" href="#distance-based-statistical-test-for-the-imputation-results-cheap-idea" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cix_xqtl_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/data1/deyk/xuewei/colocboost/pipeline/columbia/APOE/xqtl_only_APOE_all_cohorts_addGWAS.rds&quot;</span><span class="p">)</span>
+<span class="n">cix_xqtl_summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">head</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 23</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>a2</th><th scope=col>variant_ID</th><th scope=col>region_ID</th><th scope=col>event_ID</th><th scope=col>cos_ID</th><th scope=col>vcp</th><th scope=col>⋯</th><th scope=col>cohort</th><th scope=col>identifier</th><th scope=col>APOE2_cor</th><th scope=col>APOE4_cor</th><th scope=col>AD_Bellenguez</th><th scope=col>AD_Kunkle_Stage1_2019</th><th scope=col>AD_Wightman_Full_2021</th><th scope=col>AD_Wightman_Excluding23andMe_2021</th><th scope=col>AD_Wightman_ExcludingUKBand23andME_2021</th><th scope=col>AD_Bellenguez_EADB_2022</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr19</td><td>41896933</td><td>41896933</td><td>ACCTCCCCCCTCCTCTCTCACCTTCCCCCTCCTCTCTTT</td><td>A</td><td>chr19:41896933:A:ACCTCCCCCCTCCTCTCTCACCTTCCCCCTCCTCTCTTT</td><td>ENSG00000075702</td><td>PCC_lf2_sQTL_chr19:36083188:36084652:clu_118392_+:NE:ENSG00000075702; PCC_lf2_sQTL_chr19:36083241:36084652:clu_118392_+:PR:ENSG00000075702</td><td>ENSG00000075702:cos1:y22_y23    </td><td>0.999927014</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000075702:cos1:y22_y23; PCC_lf2_sQTL_chr19:36083188:36084652:clu_118392_+:NE:ENSG00000075702; PCC_lf2_sQTL_chr19:36083241:36084652:clu_118392_+:PR:ENSG00000075702</td><td> 0.008514667</td><td>-0.03795463</td><td>       NA</td><td>        NA</td><td>       NA</td><td>       NA</td><td>        NA</td><td>       NA</td></tr>
+	<tr><td>chr19</td><td>41924615</td><td>41924615</td><td>G                                      </td><td>A</td><td>chr19:41924615:A:G                                      </td><td>ENSG00000105404</td><td>ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                       </td><td>ENSG00000105404:cos1:y13_y14_y16</td><td>0.009947145</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000105404:cos1:y13_y14_y16; ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                   </td><td>-0.006763106</td><td>-0.02721777</td><td>0.6219657</td><td>        NA</td><td>0.1812836</td><td>0.1812836</td><td>        NA</td><td>0.4299044</td></tr>
+	<tr><td>chr19</td><td>41925681</td><td>41925681</td><td>A                                      </td><td>G</td><td>chr19:41925681:G:A                                      </td><td>ENSG00000105404</td><td>ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                       </td><td>ENSG00000105404:cos1:y13_y14_y16</td><td>0.018625740</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000105404:cos1:y13_y14_y16; ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                   </td><td>-0.002882181</td><td>-0.02908831</td><td>       NA</td><td>0.03701542</td><td>0.3150206</td><td>0.3150206</td><td>0.19640634</td><td>0.3656810</td></tr>
+	<tr><td>chr19</td><td>41930164</td><td>41930164</td><td>G                                      </td><td>C</td><td>chr19:41930164:C:G                                      </td><td>ENSG00000105404</td><td>ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                       </td><td>ENSG00000105404:cos1:y13_y14_y16</td><td>0.014985178</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000105404:cos1:y13_y14_y16; ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                   </td><td>-0.002892787</td><td>-0.02391997</td><td>0.5922693</td><td>        NA</td><td>0.2043100</td><td>0.2043100</td><td>        NA</td><td>0.3761204</td></tr>
+	<tr><td>chr19</td><td>41930288</td><td>41930288</td><td>C                                      </td><td>G</td><td>chr19:41930288:G:C                                      </td><td>ENSG00000105404</td><td>ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                       </td><td>ENSG00000105404:cos1:y13_y14_y16</td><td>0.023988430</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000105404:cos1:y13_y14_y16; ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                   </td><td>-0.004932222</td><td>-0.02417259</td><td>0.6294869</td><td>0.12124848</td><td>0.1799801</td><td>0.1799801</td><td>0.03221809</td><td>0.3844666</td></tr>
+	<tr><td>chr19</td><td>41931584</td><td>41931584</td><td>T                                      </td><td>G</td><td>chr19:41931584:G:T                                      </td><td>ENSG00000105404</td><td>ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                       </td><td>ENSG00000105404:cos1:y13_y14_y16</td><td>0.014601421</td><td>⋯</td><td>ROSMAP</td><td>ENSG00000105404:cos1:y13_y14_y16; ROSMAP_AC_ENSG00000105404; ROSMAP_DLPFC_ENSG00000105404; ROSMAP_PCC_ENSG00000105404                                                   </td><td>-0.002384244</td><td>-0.02584696</td><td>       NA</td><td>0.01448371</td><td>0.1970726</td><td>0.1970726</td><td>0.13088567</td><td>0.3663094</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">distance_analysis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">summary</span><span class="p">){</span>
+<span class="w">    </span><span class="n">summary</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">      </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">        </span><span class="c1"># Distance from y=x line</span>
+<span class="w">        </span><span class="n">distance_from_diagonal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">z_obs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z_imp</span><span class="p">),</span>
+<span class="w">        </span><span class="c1"># Perpendicular distance from y=x line</span>
+<span class="w">        </span><span class="n">perp_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">z_obs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z_imp</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="m">2</span><span class="p">),</span>
+<span class="w">        </span><span class="c1"># check the correlation with APOE2</span>
+<span class="w">        </span><span class="n">cor_APOE2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">cix_xqtl_summary</span><span class="o">$</span><span class="n">APOE2_cor</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;chr&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">variants</span><span class="p">),</span><span class="w"> </span><span class="n">cix_xqtl_summary</span><span class="o">$</span><span class="n">variant_ID</span><span class="p">)]),</span>
+<span class="w">        </span><span class="c1"># check the correlation with APOE4</span>
+<span class="w">        </span><span class="n">cor_APOE4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">cix_xqtl_summary</span><span class="o">$</span><span class="n">APOE4_cor</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;chr&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">variants</span><span class="p">),</span><span class="w"> </span><span class="n">cix_xqtl_summary</span><span class="o">$</span><span class="n">variant_ID</span><span class="p">)]),</span>
+<span class="w">        </span><span class="n">p_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pchisq</span><span class="p">(</span><span class="n">perp_distance</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">      </span><span class="nf">group_by</span><span class="p">(</span><span class="n">cos_idx</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">      </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">        </span><span class="n">n_variants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">mean_observed_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">z_obs</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">mean_imputed_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">z_imp</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">max_abscor_APOE2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">cor_APOE2</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">max_abscor_APOE4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">cor_APOE4</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="c1"># mean_distance = mean(distance_from_diagonal, na.rm = TRUE),</span>
+<span class="w">        </span><span class="c1"># median_distance = median(distance_from_diagonal, na.rm = TRUE),</span>
+<span class="w">        </span><span class="n">max_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">distance_from_diagonal</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="c1">#mean_perp_distance = mean(perp_distance, na.rm = TRUE),</span>
+<span class="w">        </span><span class="c1"># median_perp_distance = median(perp_distance, na.rm = TRUE),</span>
+<span class="w">        </span><span class="n">max_perp_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">perp_distance</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">variants_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;; &quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">outcome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outcome</span><span class="p">[</span><span class="m">1</span><span class="p">],</span>
+<span class="w">        </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">[</span><span class="m">1</span><span class="p">],</span>
+<span class="w">        </span><span class="n">min_pvalue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">p_value</span><span class="p">),</span>
+<span class="w">        </span><span class="n">bh_adjusted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="nf">p.adjust</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;BH&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">      </span><span class="nf">arrange</span><span class="p">(</span><span class="n">bh_adjusted</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">distance_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">raiss_summary</span><span class="p">,</span><span class="w"> </span><span class="n">distance_analysis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">distance_summary</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 5 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_128</td><td>3</td><td>19.28806217</td><td>14.2178830</td><td>0.64514587</td><td>0.06155799</td><td>5.092335</td><td>3.600825</td><td>19:44893972:G:A; 19:44897490:T:A; 19:44899005:T:G                                  </td><td>AC_lf2_sQTL_chr19:44882364:44888109:clu_129669_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44878222:clu_119013_+:PR:ENSG00000130202; PCC_lf2_sQTL_chr19:44874478:44882210:clu_119013_+:PR:ENSG00000130202                                                      </td><td>rss_qc_imputed_AD_Bellenguez_indcos_128.rds</td><td>0.0003172094</td><td>0.0003750548</td></tr>
+	<tr><td>cos_135</td><td>1</td><td>10.26315789</td><td> 6.9130070</td><td>0.06717244</td><td>0.06355071</td><td>3.350151</td><td>2.368914</td><td>19:44927023:C:G                                                                    </td><td>AC_lf2_sQTL_chr19:44916325:44926955:clu_129675_+:UP:ENSG00000130208; AC_lf2_sQTL_chr19:44916325:44930999:clu_129675_+:UP:ENSG00000130208                                                                                                                             </td><td>rss_qc_imputed_AD_Bellenguez_indcos_135.rds</td><td>0.0178403822</td><td>0.0178403822</td></tr>
+	<tr><td>cos_122</td><td>5</td><td> 1.79550265</td><td> 0.4305079</td><td>0.06703899</td><td>0.01357677</td><td>2.286278</td><td>1.616642</td><td>19:44852338:C:T; 19:44853638:G:A; 19:44855243:G:A; 19:44855891:C:G; 19:44856313:A:G</td><td>AC_lf2_sQTL_chr19:47203740:47209158:clu_129835_+:PR:ENSG00000142230; AC_lf2_sQTL_chr19:47205129:47209158:clu_129835_+:PR:ENSG00000142230                                                                                                                             </td><td>rss_qc_imputed_AD_Bellenguez_indcos_122.rds</td><td>0.1059554821</td><td>0.1327983992</td></tr>
+	<tr><td>cos_113</td><td>2</td><td> 8.76642336</td><td>10.8817485</td><td>0.04107180</td><td>0.08382691</td><td>2.403404</td><td>1.699464</td><td>19:44646342:T:C; 19:44662645:A:C                                                   </td><td>DLPFC_Bennett_pQTL_ENSG00000073008; DeJager_Exc_ENSG00000186567; DeJager_Inh_ENSG00000186567; Kellis_Exc_ENSG00000186567; Kellis_Inh_ENSG00000186567; Kellis_OPC_ENSG00000186567; ROSMAP_AC_ENSG00000186567; ROSMAP_DLPFC_ENSG00000186567; ROSMAP_PCC_ENSG00000186567</td><td>rss_qc_imputed_AD_Bellenguez_indcos_113.rds</td><td>0.0892318749</td><td>0.1784637499</td></tr>
+	<tr><td>cos_227</td><td>1</td><td> 0.08159393</td><td> 1.9302039</td><td>0.02352748</td><td>0.01362588</td><td>1.848610</td><td>1.307165</td><td>19:46406890:A:G                                                                    </td><td>DeJager_Exc_ENSG00000125746; DeJager_Inh_ENSG00000125746                                                                                                                                                                                                             </td><td>rss_qc_imputed_AD_Bellenguez_indcos_227.rds</td><td>0.1911568043</td><td>0.1911568043</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">distance_summary</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">summary</span><span class="p">){</span>
+<span class="w">    </span><span class="n">summary</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">max_abscor_APOE2</span><span class="o">&lt;</span><span class="m">0.2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">max_abscor_APOE4</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">bh_adjusted</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.1</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_135</td><td>1</td><td>10.26316</td><td>6.913007</td><td>0.06717244</td><td>0.06355071</td><td>3.350151</td><td>2.368914</td><td>19:44927023:C:G</td><td>AC_lf2_sQTL_chr19:44916325:44926955:clu_129675_+:UP:ENSG00000130208; AC_lf2_sQTL_chr19:44916325:44930999:clu_129675_+:UP:ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_indcos_135.rds</td><td>0.01784038</td><td>0.01784038</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_135</td><td>1</td><td>10.19505</td><td>6.447521</td><td>0.06717244</td><td>0.06355071</td><td>3.747529</td><td>2.649903</td><td>19:44927023:C:G</td><td>AC_lf2_sQTL_chr19:44916325:44926955:clu_129675_+:UP:ENSG00000130208; AC_lf2_sQTL_chr19:44916325:44930999:clu_129675_+:UP:ENSG00000130208</td><td>rss_qc_imputed_AD_Bellenguez_EADB_indcos_135.rds</td><td>0.008051489</td><td>0.008051489</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_141</td><td>22</td><td>4.423876</td><td>5.008799</td><td>0.045026</td><td>0.03728499</td><td>5.150728</td><td>3.642115</td><td>19:45081719:C:T; 19:45081916:C:T; 19:45083747:C:T; 19:45083977:A:G; 19:45084147:G:A; 19:45084547:T:C; 19:45084881:A:G; 19:45084908:A:C; 19:45084960:G:A; 19:45085140:A:G; 19:45085204:G:A; 19:45085511:T:C; 19:45085715:A:G; 19:45086157:A:G; 19:45086337:C:T; 19:45086979:T:C; 19:45087478:G:GT; 19:45087730:G:A; 19:45088086:C:T; 19:45088095:G:A; 19:45088420:G:A; 19:45088482:A:T</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Kunkle_Stage1_2019_indcos_141.rds</td><td>0.0002704076</td><td>0.005948967</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">4</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_119</td><td>1</td><td> 4.345579</td><td> 7.182163</td><td>0.002274422</td><td>0.03689960</td><td>2.836583</td><td>2.005767</td><td>19:44791300:T:C                 </td><td>PCC_lf2_sQTL_chr19:43646548:43652224:clu_123024_-:PR:ENSG00000011422; PCC_lf2_sQTL_chr19:43649143:43652224:clu_123024_-:PR:ENSG00000011422                                                                                                                           </td><td>rss_qc_imputed_AD_Wightman_Full_2021_indcos_119.rds</td><td>0.04488107</td><td>0.04488107</td></tr>
+	<tr><td>cos_113</td><td>2</td><td>13.449236</td><td>14.037015</td><td>0.041071802</td><td>0.08382691</td><td>3.042823</td><td>2.151601</td><td>19:44646342:T:C; 19:44662645:A:C</td><td>DLPFC_Bennett_pQTL_ENSG00000073008; DeJager_Exc_ENSG00000186567; DeJager_Inh_ENSG00000186567; Kellis_Exc_ENSG00000186567; Kellis_Inh_ENSG00000186567; Kellis_OPC_ENSG00000186567; ROSMAP_AC_ENSG00000186567; ROSMAP_DLPFC_ENSG00000186567; ROSMAP_PCC_ENSG00000186567</td><td>rss_qc_imputed_AD_Wightman_Full_2021_indcos_113.rds</td><td>0.03142879</td><td>0.06285757</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_119</td><td>1</td><td> 3.804752</td><td> 7.373987</td><td>0.002274422</td><td>0.03689960</td><td>3.569235</td><td>2.523830</td><td>19:44791300:T:C                 </td><td>PCC_lf2_sQTL_chr19:43646548:43652224:clu_123024_-:PR:ENSG00000011422; PCC_lf2_sQTL_chr19:43649143:43652224:clu_123024_-:PR:ENSG00000011422                                                                                                                           </td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_119.rds</td><td>0.01160839</td><td>0.01160839</td></tr>
+	<tr><td>cos_113</td><td>2</td><td>13.449236</td><td>14.119890</td><td>0.041071802</td><td>0.08382691</td><td>3.162956</td><td>2.236548</td><td>19:44646342:T:C; 19:44662645:A:C</td><td>DLPFC_Bennett_pQTL_ENSG00000073008; DeJager_Exc_ENSG00000186567; DeJager_Inh_ENSG00000186567; Kellis_Exc_ENSG00000186567; Kellis_Inh_ENSG00000186567; Kellis_OPC_ENSG00000186567; ROSMAP_AC_ENSG00000186567; ROSMAP_DLPFC_ENSG00000186567; ROSMAP_PCC_ENSG00000186567</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_113.rds</td><td>0.02531592</td><td>0.05063184</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">extract_potential</span><span class="p">[[</span><span class="m">6</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 3 × 13</caption>
+<thead>
+	<tr><th scope=col>cos_idx</th><th scope=col>n_variants</th><th scope=col>mean_observed_z</th><th scope=col>mean_imputed_z</th><th scope=col>max_abscor_APOE2</th><th scope=col>max_abscor_APOE4</th><th scope=col>max_distance</th><th scope=col>max_perp_distance</th><th scope=col>variants_ID</th><th scope=col>outcome</th><th scope=col>file</th><th scope=col>min_pvalue</th><th scope=col>bh_adjusted</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cos_141</td><td>21</td><td> 5.313913</td><td> 5.739858</td><td>0.045025996</td><td>0.03728499</td><td>5.101333</td><td>3.607187</td><td>19:45081719:C:T; 19:45081916:C:T; 19:45083747:C:T; 19:45083977:A:G; 19:45084147:G:A; 19:45084547:T:C; 19:45084881:A:G; 19:45084908:A:C; 19:45084960:G:A; 19:45085140:A:G; 19:45085204:G:A; 19:45085511:T:C; 19:45085715:A:G; 19:45086157:A:G; 19:45086337:C:T; 19:45086979:T:C; 19:45087730:G:A; 19:45088086:C:T; 19:45088095:G:A; 19:45088420:G:A; 19:45088482:A:T</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684                                                                                                                                                                                                             </td><td>rss_qc_imputed_AD_Wightman_ExcludingUKBand23andME_2021_indcos_141.rds</td><td>0.0003095346</td><td>0.006500226</td></tr>
+	<tr><td>cos_119</td><td> 1</td><td> 4.904977</td><td> 8.096490</td><td>0.002274422</td><td>0.03689960</td><td>3.191512</td><td>2.256740</td><td>19:44791300:T:C                                                                                                                                                                                                                                                                                                                                                    </td><td>PCC_lf2_sQTL_chr19:43646548:43652224:clu_123024_-:PR:ENSG00000011422; PCC_lf2_sQTL_chr19:43649143:43652224:clu_123024_-:PR:ENSG00000011422                                                                                                                           </td><td>rss_qc_imputed_AD_Wightman_ExcludingUKBand23andME_2021_indcos_119.rds</td><td>0.0240243297</td><td>0.024024330</td></tr>
+	<tr><td>cos_113</td><td> 2</td><td>11.380816</td><td>12.111105</td><td>0.041071802</td><td>0.08382691</td><td>2.938875</td><td>2.078099</td><td>19:44646342:T:C; 19:44662645:A:C                                                                                                                                                                                                                                                                                                                                   </td><td>DLPFC_Bennett_pQTL_ENSG00000073008; DeJager_Exc_ENSG00000186567; DeJager_Inh_ENSG00000186567; Kellis_Exc_ENSG00000186567; Kellis_Inh_ENSG00000186567; Kellis_OPC_ENSG00000186567; ROSMAP_AC_ENSG00000186567; ROSMAP_DLPFC_ENSG00000186567; ROSMAP_PCC_ENSG00000186567</td><td>rss_qc_imputed_AD_Wightman_ExcludingUKBand23andME_2021_indcos_113.rds</td><td>0.0377002609</td><td>0.075400522</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">raiss_summary</span><span class="p">[[</span><span class="m">5</span><span class="p">]]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">cos_idx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;cos_141&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 21 × 6</caption>
+<thead>
+	<tr><th scope=col>variants</th><th scope=col>z_obs</th><th scope=col>z_imp</th><th scope=col>cos_idx</th><th scope=col>outcome</th><th scope=col>file</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>19:45081719:C:T</td><td>4.4767687</td><td>4.980480</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45081916:C:T</td><td>4.5247202</td><td>4.919557</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45083747:C:T</td><td>4.5555395</td><td>4.665575</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45083977:A:G</td><td>0.6535828</td><td>4.548600</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45084147:G:A</td><td>4.5185275</td><td>4.651395</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45084547:T:C</td><td>4.4924227</td><td>4.721186</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45084881:A:G</td><td>4.6397150</td><td>4.724359</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45084908:A:C</td><td>4.6374643</td><td>4.742353</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45084960:G:A</td><td>4.6497124</td><td>4.736706</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45085140:A:G</td><td>4.4302132</td><td>4.710194</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45085204:G:A</td><td>4.6560241</td><td>4.778063</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45085511:T:C</td><td>4.5358916</td><td>4.741648</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45085715:A:G</td><td>4.5716495</td><td>4.674088</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45086157:A:G</td><td>4.5873776</td><td>4.552168</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45086337:C:T</td><td>4.5633771</td><td>4.781448</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45086979:T:C</td><td>4.4636622</td><td>4.663370</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45087730:G:A</td><td>4.5733632</td><td>4.742552</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45088086:C:T</td><td>4.6640413</td><td>4.676126</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45088095:G:A</td><td>4.6510111</td><td>4.691219</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45088420:G:A</td><td>4.6051429</td><td>4.686091</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+	<tr><td>19:45088482:A:T</td><td>4.5875012</td><td>4.726268</td><td>cos_141</td><td>ROSMAP_DLPFC_ENSG00000170684; ROSMAP_PCC_ENSG00000170684</td><td>rss_qc_imputed_AD_Wightman_Excluding23andMe_2021_indcos_141.rds</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/6_AD_xQTL_genes/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-for-reproducing-the-imputation-analysis">1. Code for reproducing the imputation analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#candidate-independent-ad-risk-loci-in-cis-xqtl">2. Candidate independent AD risk loci in cis-xQTL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-imputation-results-for-all-ad-gwas">2.1 Visualization of the imputation results for all AD GWAS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-previous-variant-rs5167-in-kellis-fine-mapped-cs3-and-rs2288911-in-cs4">2.2 Check previous variant <code class="docutils literal notranslate"><span class="pre">rs5167</span></code> in Kellis fine-mapped CS3 and <code class="docutils literal notranslate"><span class="pre">rs2288911</span></code> in CS4?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-based-statistical-test-for-the-imputation-results-cheap-idea">2.3 Distance based statistical test for the imputation results (cheap idea)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
