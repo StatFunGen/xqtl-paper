@@ -1,0 +1,1264 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Visualization of SLDSC results &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/2_single_context_cis/Figure_sLDSC_meta_analysis';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_project_overview/index.html">Multi-omics QTL atlas of the aging human brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Fine-mapped QTL landscape across brain molecular phenotypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_single_context_multigene_trans/index.html">Coordinated gene regulation and long-range genetic effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_multi_context/index.html">Cascading genetic effects across molecular contexts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_AD_xQTL_integration/index.html">Regulatory architecture of AD susceptibility loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_AD_xQTL_genes/index.html">Molecular dissection of prioritized AD loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_AD_gene_prioritized/index.html">Molecular insights and gene prioritization at key AD loci</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/2_single_context_cis/Figure_sLDSC_meta_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/main_text/2_single_context_cis/Figure_sLDSC_meta_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Visualization of SLDSC results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-library">01 Load library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-data">02 Prepare the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traits-specific-analysis">03 Traits specific analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-showing-enrichment-values-across-qtl-studies">Heatmap showing Enrichment values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-traits">AD traits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-analysis">04 Meta analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-marginal-tau-values-across-qtl-studies">Barplot showing marginal tau values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-enrichment-values-across-qtl-studies">Barplot showing enrichment values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-joint-tau-values-across-qtl-studies">Barplot showing joint tau values across QTL studies</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="visualization-of-sldsc-results">
+<h1>Visualization of SLDSC results<a class="headerlink" href="#visualization-of-sldsc-results" title="Link to this heading">#</a></h1>
+<p>This notebook contains scripts to visualize SLDSC results from trait-specific and meta-analyses.</p>
+<section id="load-library">
+<h2>01 Load library<a class="headerlink" href="#load-library" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">colorspace</span><span class="p">)</span><span class="w"> </span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ComplexHeatmap</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">circlize</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="prepare-the-data">
+<h2>02 Prepare the data<a class="headerlink" href="#prepare-the-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">loci.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/SLDSC_ADSP_1000G_input/files_for_pipline/&quot;</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="n">out.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output&quot;</span><span class="w"> </span><span class="c1">#FIXME</span>
+
+<span class="c1">## loci info (univariate, multicontext, multigene and fsusie)</span>
+<span class="n">loci.uni</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">loci.dir</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;loci_info.txt&quot;</span><span class="p">))</span>
+<span class="n">loci.multi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">loci.dir</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;loci_multigene_all.txt&quot;</span><span class="p">))</span>
+<span class="n">loci.susie</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">loci.dir</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;loci_susie_fsusie.txt&quot;</span><span class="p">))</span>
+
+<span class="n">loci.all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbind</span><span class="p">(</span><span class="n">loci.uni</span><span class="p">,</span><span class="w"> </span><span class="n">loci.multi</span><span class="p">,</span><span class="w"> </span><span class="n">loci.susie</span><span class="p">)</span>
+<span class="n">loci.info</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.all</span><span class="p">[</span><span class="n">loci.all</span><span class="o">$</span><span class="n">method</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;trans&quot;</span><span class="p">,]</span>
+<span class="n">loci.info</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.info</span><span class="p">[</span><span class="o">!</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">loci.info</span><span class="o">$</span><span class="n">study</span><span class="p">),]</span>
+<span class="n">studies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.info</span><span class="o">$</span><span class="n">study</span>
+
+<span class="c1">## import sumstats file info from TASKFILES</span>
+<span class="n">brain.trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/sumstats_colocboost_brain.txt&quot;</span><span class="p">,</span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="n">blood.trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/sumstats_colocboost_blood.txt&quot;</span><span class="p">,</span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="n">all.trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fread</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/sumstats_colocboost_all.txt&quot;</span><span class="p">,</span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+
+<span class="n">res.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output/&quot;</span><span class="w"> </span><span class="c1">#FIXME</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in fread(paste0(loci.dir, &quot;loci_info.txt&quot;)):
+“Detected 4 column names but the data has 5 columns (i.e. invalid file). Added an extra default column name for the first column which is guessed to be row names or an index. Use setnames() afterwards if this guess is not correct, or fix the file write command that created the file to create a valid file.”
+Warning message in fread(paste0(loci.dir, &quot;loci_multigene_all.txt&quot;)):
+“Detected 4 column names but the data has 5 columns (i.e. invalid file). Added an extra default column name for the first column which is guessed to be row names or an index. Use setnames() afterwards if this guess is not correct, or fix the file write command that created the file to create a valid file.”
+Warning message in fread(paste0(loci.dir, &quot;loci_susie_fsusie.txt&quot;)):
+“Detected 4 column names but the data has 5 columns (i.e. invalid file). Added an extra default column name for the first column which is guessed to be row names or an index. Use setnames() afterwards if this guess is not correct, or fix the file write command that created the file to create a valid file.”
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="traits-specific-analysis">
+<h2>03 Traits specific analysis<a class="headerlink" href="#traits-specific-analysis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Import SLDSC results on traits specific levels</span>
+<span class="n">enrich.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">study</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">studies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">se1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">res.dir</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/sumstats/&quot;</span><span class="p">,</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.single_tau.initial_processed_stats.rds&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="w">  </span><span class="n">enrich</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">bind_rows</span><span class="p">(</span>
+<span class="w">  </span><span class="nf">lapply</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">se1</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">se1</span><span class="p">[[</span><span class="n">nm</span><span class="p">]][[</span><span class="s">&quot;enrichment&quot;</span><span class="p">]][[</span><span class="s">&quot;enrichment_summary&quot;</span><span class="p">]]</span>
+<span class="w">    </span><span class="n">tmp</span><span class="o">$</span><span class="n">dataset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nm</span><span class="w"> </span>
+<span class="w">    </span><span class="n">tmp</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="w">  </span><span class="n">enrich</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">study</span>
+<span class="w">  </span><span class="n">enrich</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;.sumstats.parquet&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="n">enrich</span><span class="o">$</span><span class="n">dataset</span><span class="p">)</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich</span>
+<span class="p">}</span>
+
+<span class="c1">## Reshape the results</span>
+<span class="n">enrich.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="n">enrich.list</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">enrich.df</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Enrichment&quot;</span><span class="p">,</span><span class="s">&quot;Enrichment_std_error&quot;</span><span class="p">,</span><span class="s">&quot;Prop._h2&quot;</span><span class="p">,</span><span class="s">&quot;Prop._SNPs&quot;</span><span class="p">)</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">trait_group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">trait_group</span><span class="p">[</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">dataset</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">blood.trait</span><span class="o">$</span><span class="n">V1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Blood&quot;</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">trait_group</span><span class="p">[</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">dataset</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">brain.trait</span><span class="o">$</span><span class="n">V1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span>
+<span class="n">enr.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">trait_group</span><span class="p">),]</span>
+<span class="n">enr.df</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;_munged.parquet&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="n">enr.df</span><span class="o">$</span><span class="n">trait</span><span class="p">)</span>
+
+<span class="nf">str</span><span class="p">(</span><span class="n">enr.df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Classes ‘data.table’ and &#39;data.frame&#39;:	5840 obs. of  9 variables:
+ $ Enrichment          : num  -30.12 11.53 -59.09 -2.28 8.51 ...
+ $ Enrichment_std_error: num  61.1 31.8 43.7 19.4 29.4 ...
+ $ Prop._h2            : num  -0.01467 0.00562 -0.02879 -0.00111 0.00415 ...
+ $ Prop._SNPs          : num  0.000487 0.000487 0.000487 0.000487 0.000487 ...
+ $ Enrichment_p        : num  0.606 0.741 0.16 0.865 0.799 ...
+ $ dataset             : chr  &quot;EXF.sumstats.parquet&quot; &quot;LAN.sumstats.parquet&quot; &quot;MEM.sumstats.parquet&quot; &quot;MS.sumstats.parquet&quot; ...
+ $ study               : chr  &quot;AC_DeJager_eQTL&quot; &quot;AC_DeJager_eQTL&quot; &quot;AC_DeJager_eQTL&quot; &quot;AC_DeJager_eQTL&quot; ...
+ $ trait               : chr  &quot;EXF&quot; &quot;LAN&quot; &quot;MEM&quot; &quot;MS&quot; ...
+ $ trait_group         : chr  &quot;Brain&quot; &quot;Brain&quot; &quot;Brain&quot; &quot;Brain&quot; ...
+ - attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt; 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="heatmap-showing-enrichment-values-across-qtl-studies">
+<h3>Heatmap showing Enrichment values across QTL studies<a class="headerlink" href="#heatmap-showing-enrichment-values-across-qtl-studies" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">enr_unique</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.data.table</span><span class="p">(</span><span class="n">enr.df</span><span class="p">)</span>
+
+<span class="c1">## Matrix for Enrichment values and corresponding p values</span>
+<span class="n">mat_enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dcast</span><span class="p">(</span><span class="n">enr_unique</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">value.var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment&quot;</span><span class="p">)</span>
+<span class="n">mat_p</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dcast</span><span class="p">(</span><span class="n">enr_unique</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">value.var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment_p&quot;</span><span class="p">)</span>
+
+<span class="n">m_enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">mat_enr</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mat_enr</span><span class="o">$</span><span class="n">study</span>
+
+<span class="n">m_p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">mat_p</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">m_p</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mat_p</span><span class="o">$</span><span class="n">study</span>
+
+<span class="c1">## Set colors for heatmap</span>
+<span class="n">lim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">col_fun</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colorRamp2</span><span class="p">(</span>
+<span class="w">  </span><span class="nf">c</span><span class="p">(</span><span class="m">-1000</span><span class="p">,</span><span class="w"> </span><span class="m">-500</span><span class="p">,</span><span class="w"> </span><span class="m">-100</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">1000</span><span class="p">),</span>
+<span class="w">  </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;navy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lightblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pink&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;darkred&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c1">## Set loci type</span>
+<span class="n">loci.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.info</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="w"> </span><span class="n">loci.info</span><span class="o">$</span><span class="n">study</span><span class="p">),]</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;other&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_eQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;eQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_sQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;sQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_pQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;pQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_gpQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;gpQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_haQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;haQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">[</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;_mQTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;mQTL&quot;</span>
+<span class="n">loci.df</span><span class="o">$</span><span class="n">loci_group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">loci.df</span><span class="o">$</span><span class="n">method</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">loci_type</span><span class="p">)</span>
+<span class="n">loci.group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">loci_group</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">loci.group</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span>
+
+<span class="c1">## Classify traits</span>
+<span class="n">tra.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enr.df</span><span class="p">[</span><span class="o">!</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">enr.df</span><span class="o">$</span><span class="n">trait</span><span class="p">),]</span>
+<span class="n">tra.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">colnames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait</span><span class="p">),]</span>
+<span class="n">tra.group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait_group</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">tra.group</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait</span>
+
+<span class="n">tra.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">case_when</span><span class="p">(</span>
+<span class="w">    </span><span class="c1"># Neuroimaging traits</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^(accumbens|amygdala|brainstem|caudate|pallidum|putamen)$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;(\\.surf$|\\.thick$)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^image_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Neuroimaging&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># AD</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^AD_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;Alzheimer&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;AD&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Neurodegenerative（only ALS/PD）</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^ALS&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;nallsEtAl&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Neurodegenerative&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Psychiatric</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;Schizophrenia|SCZ|Bipolar|MDD|Depression|Anorexia|Autism|ADHD|Neuroticism&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^PGC&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Psychiatric&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Autoimmune </span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;Multiple_sclerosis|IBD|_UC_|_CD_|\\bUC_|Celiac|Lupus|Rheumatoid_Arthritis|Primary_biliary_cirrhosis|Type_1_Diabetes|Hypothyroidism|AID_Combined|ALLERGY|ECZEMA&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Autoimmune&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Blood（blood cell）</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^UKB\\.(Baso|Eosino|Lym|Mono|Neutro|Plt|RBC|MCV)\\.BOLT$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^UKB_460K\\.blood_RBC_DISTRIB_WIDTH$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Blood&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1"># Behavioral (behavioral/lifestyle/cognition)</span>
+<span class="w">    </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;BMI|Smoking|Morning_Person|Insomnia|Sleep(Duration)?|AgeFirstBirth|NumberChildrenEverBorn|Intelligence|EDU|Education|ReactionTime&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="n">trait</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;EXF&quot;</span><span class="p">,</span><span class="s">&quot;LAN&quot;</span><span class="p">,</span><span class="s">&quot;MEM&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;^MS$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trait</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Behavioral&quot;</span><span class="p">,</span>
+
+<span class="w">    </span><span class="kc">TRUE</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s">&quot;Other&quot;</span>
+<span class="w">  </span><span class="p">))</span>
+
+<span class="n">group_short</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">category</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">group_short</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait</span>
+
+<span class="c1"># Set colors for loci studies</span>
+<span class="n">grp_lv</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">loci.group</span><span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="c1">#grp_col &lt;- setNames(randomcoloR::distinctColorPalette(length(grp_lv)), grp_lv)</span>
+<span class="n">distinct_palette</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">colorspace</span><span class="o">::</span><span class="nf">qualitative_hcl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">palette</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">grp_col</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">setNames</span><span class="p">(</span><span class="nf">distinct_palette</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">grp_lv</span><span class="p">),</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">grp_lv</span><span class="p">)</span>
+
+<span class="n">ha_left</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rowAnnotation</span><span class="p">(</span>
+<span class="w">  </span><span class="n">Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loci.group</span><span class="p">,</span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grp_col</span><span class="p">),</span>
+<span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">annotation_name_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;top&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## Drawing heatmap</span>
+<span class="n">ht</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Heatmap</span><span class="p">(</span>
+<span class="w">  </span><span class="n">m_enr</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_fun</span><span class="p">,</span>
+<span class="w">  </span><span class="n">na_col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grey90&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_columns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loci.group</span><span class="p">,</span>
+<span class="w">  </span><span class="n">column_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group_short</span><span class="p">,</span>
+<span class="w">  </span><span class="n">left_annotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ha_left</span><span class="p">,</span>
+<span class="w">  </span><span class="n">show_row_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">rect_gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span>
+<span class="w">  </span><span class="n">column_names_max_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">cell_fun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.01</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">                     </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">)</span>
+<span class="c1">## Show results</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="nf">draw</span><span class="p">(</span><span class="n">ht</span><span class="p">,</span><span class="w"> </span><span class="n">heatmap_legend_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">annotation_legend_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/2d4f7dd76ff1978cdbaac891907dc115fb8caad950b2795b7960c7d86bfc8dac.png"><img alt="../../_images/2d4f7dd76ff1978cdbaac891907dc115fb8caad950b2795b7960c7d86bfc8dac.png" src="../../_images/2d4f7dd76ff1978cdbaac891907dc115fb8caad950b2795b7960c7d86bfc8dac.png" style="width: 1080px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="ad-traits">
+<h3>AD traits<a class="headerlink" href="#ad-traits" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Subset AD traits</span>
+<span class="n">enr.sig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enr.df</span><span class="p">[</span><span class="n">enr.df</span><span class="o">$</span><span class="n">Enrichment_p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">,]</span>
+<span class="n">enr.sel</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enr.sig</span><span class="p">[</span><span class="n">enr.sig</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait</span><span class="p">[</span><span class="n">tra.df</span><span class="o">$</span><span class="n">category</span><span class="o">==</span><span class="w"> </span><span class="s">&quot;AD&quot;</span><span class="p">],]</span>
+<span class="n">enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.data.table</span><span class="p">(</span><span class="n">enr.df</span><span class="p">[</span><span class="n">enr.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">enr.sel</span><span class="o">$</span><span class="n">study</span><span class="p">),])</span>
+<span class="n">enr_unique</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enr</span>
+
+<span class="c1">## Matrix for Enrichment values and corresponding p values</span>
+<span class="n">mat_enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dcast</span><span class="p">(</span><span class="n">enr_unique</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">value.var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment&quot;</span><span class="p">)</span>
+<span class="n">mat_p</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dcast</span><span class="p">(</span><span class="n">enr_unique</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">value.var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment_p&quot;</span><span class="p">)</span>
+<span class="n">m_enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">mat_enr</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mat_enr</span><span class="o">$</span><span class="n">study</span>
+<span class="n">m_p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">mat_p</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">m_p</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mat_p</span><span class="o">$</span><span class="n">study</span>
+
+<span class="c1">## Set colors</span>
+<span class="n">lim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1">#col_fun &lt;- colorRamp2(c(-lim, 0, lim), c(&quot;#2166AC&quot;, &quot;white&quot;, &quot;#B2182B&quot;))</span>
+<span class="n">col_fun</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colorRamp2</span><span class="p">(</span>
+<span class="w">  </span><span class="nf">c</span><span class="p">(</span><span class="m">-1000</span><span class="p">,</span><span class="w"> </span><span class="m">-500</span><span class="p">,</span><span class="w"> </span><span class="m">-100</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">1000</span><span class="p">),</span>
+<span class="w">  </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;navy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lightblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pink&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;darkred&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">loci.sub</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">),]</span>
+<span class="w">  </span><span class="nf">rownames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">)</span>
+<span class="n">tra.group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tra.df</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="nf">colnames</span><span class="p">(</span><span class="n">m_enr</span><span class="p">),</span><span class="w"> </span><span class="n">tra.df</span><span class="o">$</span><span class="n">trait</span><span class="p">),]</span>
+
+<span class="n">ht</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Heatmap</span><span class="p">(</span>
+<span class="w">  </span><span class="n">m_enr</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_fun</span><span class="p">,</span>
+<span class="w">  </span><span class="n">na_col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grey90&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_columns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="n">row_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loci.sub</span><span class="o">$</span><span class="n">loci_group</span><span class="p">,</span><span class="n">column_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tra.group</span><span class="o">$</span><span class="n">category</span><span class="p">,</span>
+<span class="w">  </span><span class="n">column_names_max_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">rect_gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span><span class="w"> </span>
+<span class="w">  </span><span class="n">cell_fun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.01</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">                     </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">grp_lv</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">loci.sub</span><span class="o">$</span><span class="n">loci_group</span><span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">distinct_palette</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">colorspace</span><span class="o">::</span><span class="nf">qualitative_hcl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">palette</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">grp_col</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">setNames</span><span class="p">(</span><span class="nf">distinct_palette</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">grp_lv</span><span class="p">),</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">grp_lv</span><span class="p">)</span>
+
+<span class="n">ha_left</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rowAnnotation</span><span class="p">(</span>
+<span class="w">  </span><span class="n">Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loci.sub</span><span class="o">$</span><span class="n">loci_group</span><span class="p">,</span><span class="w">  </span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grp_col</span><span class="p">),</span>
+<span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">annotation_name_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;top&quot;</span>
+<span class="p">)</span>
+
+
+<span class="n">ht_ad</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Heatmap</span><span class="p">(</span>
+<span class="w">  </span><span class="n">m_enr</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_fun</span><span class="p">,</span>
+<span class="w">  </span><span class="n">na_col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grey90&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cluster_columns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loci.sub</span><span class="o">$</span><span class="n">loci_group</span><span class="p">,</span><span class="w">   </span>
+<span class="w">  </span><span class="n">column_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tra.group</span><span class="o">$</span><span class="n">category</span><span class="p">,</span>
+<span class="w">  </span><span class="n">left_annotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ha_left</span><span class="p">,</span>
+<span class="w">  </span><span class="n">show_row_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row_gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">rect_gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span>
+<span class="w">  </span><span class="n">column_names_max_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cm&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">cell_fun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.01</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;**&quot;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.001</span><span class="p">){</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="kr">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">m_enr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w"> </span><span class="nf">grid.text</span><span class="p">(</span><span class="s">&quot;***&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span><span class="w">                     </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">)</span>
+<span class="c1">## Show results</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+<span class="nf">draw</span><span class="p">(</span><span class="n">ht_ad</span><span class="p">,</span><span class="w"> </span><span class="n">heatmap_legend_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">annotation_legend_side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'AC_DeJager_eQTL'</li><li>'Ast_mega_eQTL'</li><li>'BM_22_MSBB_eQTL'</li><li>'BM_36_MSBB_eQTL'</li><li>'DLPFC_Bennett_pQTL'</li><li>'DLPFC_Klein_gpQTL_adjusted'</li><li>'DLPFC_Klein_gpQTL_unadjusted'</li><li>'Metabrain_Cerebellum'</li><li>'Metabrain_Cortex'</li><li>'MiGA_GTS_eQTL'</li><li>'Mic_12_Kellis_eQTL'</li><li>'Mic_DeJager_eQTL'</li><li>'Mic_Kellis_eQTL'</li><li>'Mic_mega_eQTL'</li><li>'OPC_Kellis_eQTL'</li><li>'ROSMAP'</li><li>'ROSMAP_Exc_DeJager_eQTL'</li><li>'ROSMAP_Mic_DeJager_eQTL'</li><li>'monocyte_ROSMAP_eQTL'</li></ol>
+</div><a class="reference internal image-reference" href="../../_images/a332f0e24e14fad92088fdd2be259276de1c21e6d54ed96988334226589bd00c.png"><img alt="../../_images/a332f0e24e14fad92088fdd2be259276de1c21e6d54ed96988334226589bd00c.png" src="../../_images/a332f0e24e14fad92088fdd2be259276de1c21e6d54ed96988334226589bd00c.png" style="width: 1140px; height: 600px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+<section id="meta-analysis">
+<h2>04 Meta analysis<a class="headerlink" href="#meta-analysis" title="Link to this heading">#</a></h2>
+<section id="barplot-showing-marginal-tau-values-across-qtl-studies">
+<h3>Barplot showing marginal tau values across QTL studies<a class="headerlink" href="#barplot-showing-marginal-tau-values-across-qtl-studies" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="c1">## Data prepare</span>
+<span class="n">tau.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="n">enrich.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">study</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">studies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">meta.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">res.dir</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/sumstats/processed_stats_2/single_tau.&quot;</span><span class="p">,</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.meta_processed_stats.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="w">  </span><span class="n">metas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="n">meta.dir</span><span class="p">)</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">metas</span><span class="o">$</span><span class="n">tau</span><span class="p">)</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">study</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">metas</span><span class="o">$</span><span class="n">enrichment</span><span class="p">)</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">study</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]])</span>
+<span class="p">}</span>
+
+<span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="w"> </span><span class="n">tau.list</span><span class="p">)</span>
+<span class="n">enrich.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="w"> </span><span class="n">enrich.list</span><span class="p">)</span>
+<span class="n">loci.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.info</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">loci.info</span><span class="o">$</span><span class="n">study</span><span class="p">),]</span>
+<span class="nf">all</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="o">==</span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)</span>
+<span class="nf">all</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="o">==</span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)</span>
+
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">signif</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">method</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">method</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">Lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">Upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">signif</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">method</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">method</span>
+
+<span class="n">tau.df.mar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span>
+
+<span class="n">reorder_levels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">          </span><span class="c1"># choose reference trait</span>
+<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">Mean</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">               </span><span class="c1"># descending by Mean</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">study</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">                       </span><span class="c1"># get vector</span>
+<span class="w">  </span><span class="nf">unique</span><span class="p">()</span>
+
+<span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_levels</span><span class="p">)</span>
+
+<span class="c1">## 5. Mark significance (95 % CI does NOT include zero)</span>
+<span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">signif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1">## 6. Prepare a colour palette</span>
+<span class="n">all_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qualitative_hcl</span><span class="p">(</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## 7. Plot</span>
+<span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span>
+<span class="w">  </span><span class="n">tau.df</span><span class="p">,</span>
+<span class="w">  </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span>
+<span class="w">      </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w">          </span><span class="c1"># one colour per study</span>
+<span class="w">      </span><span class="n">group</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">method</span><span class="p">)</span><span class="w">         </span><span class="c1"># required for dodging</span>
+<span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># point estimates</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># error bars (95 % CI)</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="p">,</span>
+<span class="w">        </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span><span class="w">               </span><span class="c1"># thick if significant</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># asterisks on significant estimates</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">tau.df</span><span class="p">,</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.05</span><span class="p">),</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkred&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># colour &amp; linewidth scales</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_colors</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_linewidth_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">`TRUE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">`FALSE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># horizontal zero line</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># facet: rows = trait, columns = method</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span>
+<span class="w">    </span><span class="n">trait</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">method</span><span class="p">,</span>
+<span class="w">    </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1"># each column keeps only its own studies</span>
+<span class="w">    </span><span class="n">space</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="w">    </span><span class="c1"># and shrinks horizontally</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># theme tweaks</span>
+<span class="w">  </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w">  </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">plot.margin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># axis title</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Marginal Tau (Mean ± 1.96 × SD)&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="c1">#ggsave(&quot;marginal_tau_all.png&quot;,width = 18,height = 8)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">TRUE</div><div class="output text_html">TRUE</div><a class="reference internal image-reference" href="../../_images/a7d6828d02beb639885098b8d7d490d56b2f743ece7b546782b69c4e8868e91a.png"><img alt="../../_images/a7d6828d02beb639885098b8d7d490d56b2f743ece7b546782b69c4e8868e91a.png" src="../../_images/a7d6828d02beb639885098b8d7d490d56b2f743ece7b546782b69c4e8868e91a.png" style="width: 1020px; height: 360px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="barplot-showing-enrichment-values-across-qtl-studies">
+<h3>Barplot showing enrichment values across QTL studies<a class="headerlink" href="#barplot-showing-enrichment-values-across-qtl-studies" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="n">reorder_levels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">          </span><span class="c1"># choose reference trait</span>
+<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">Mean</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">               </span><span class="c1"># descending by Mean</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">study</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">                       </span><span class="c1"># get vector</span>
+<span class="w">  </span><span class="nf">unique</span><span class="p">()</span>
+
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_levels</span><span class="p">)</span>
+
+<span class="c1">## 5. Mark significance (95 % CI does NOT include zero) ---------</span>
+<span class="n">enrich.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">signif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1">## 6. Prepare a colour palette ---------------------------------</span>
+<span class="n">all_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qualitative_hcl</span><span class="p">(</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## 7. Plot -------------------------------------------------------</span>
+<span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span>
+<span class="w">  </span><span class="n">enrich.df</span><span class="p">,</span>
+<span class="w">  </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span>
+<span class="w">      </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w">          </span><span class="c1"># one colour per study</span>
+<span class="w">      </span><span class="n">group</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">method</span><span class="p">)</span><span class="w">         </span><span class="c1"># required for dodging</span>
+<span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># point estimates</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># error bars (95 % CI)</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="p">,</span>
+<span class="w">        </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span><span class="w">               </span><span class="c1"># thick if significant</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># asterisks on significant estimates</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">enrich.df</span><span class="p">,</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkred&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># colour &amp; linewidth scales</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_colors</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_linewidth_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">`TRUE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">`FALSE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># horizontal zero line</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># facet: rows = trait, columns = method</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span>
+<span class="w">    </span><span class="n">trait</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">method</span><span class="p">,</span>
+<span class="w">    </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1"># each column keeps only its own studies</span>
+<span class="w">    </span><span class="n">space</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="w">    </span><span class="c1"># and shrinks horizontally</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># theme tweaks</span>
+<span class="w">  </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w">  </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">plot.margin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ylim</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">-300</span><span class="p">,</span><span class="m">200</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># axis title</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Enrichment (Mean ± 1.96 × SD)&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="c1">#ggsave(&quot;enrichment_all.png&quot;,width = 18,height = 8)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 2 rows containing missing values or values outside the scale range
+(`geom_text()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/296df051abe27102f3e4a0b704623aa4580aa4abc5cc224fdc78ffc484f62af3.png"><img alt="../../_images/296df051abe27102f3e4a0b704623aa4580aa4abc5cc224fdc78ffc484f62af3.png" src="../../_images/296df051abe27102f3e4a0b704623aa4580aa4abc5cc224fdc78ffc484f62af3.png" style="width: 1020px; height: 360px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="barplot-showing-joint-tau-values-across-qtl-studies">
+<h3>Barplot showing joint tau values across QTL studies<a class="headerlink" href="#barplot-showing-joint-tau-values-across-qtl-studies" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="n">jres</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output/qtl.joint_tau/sumstats/qtl.joint_tau.joint_tau.initial_processed_stats.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output/qtl.joint_tau/sumstats/processed_stats_2/joint_tau.qtl.joint_tau.meta_processed_stats.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+
+<span class="n">df.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">res</span><span class="p">[[</span><span class="n">i</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">studies</span>
+<span class="w">  </span><span class="n">df</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">res</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">  </span><span class="n">df.list</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span>
+<span class="p">}</span>
+
+<span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="w"> </span><span class="n">df.list</span><span class="p">)</span>
+
+<span class="n">loci.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.info</span><span class="p">[</span><span class="nf">match</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">loci.info</span><span class="o">$</span><span class="n">study</span><span class="p">),]</span>
+<span class="nf">all</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="o">==</span><span class="n">loci.df</span><span class="o">$</span><span class="n">study</span><span class="p">)</span>
+
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">signif</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">method</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loci.df</span><span class="o">$</span><span class="n">method</span>
+
+<span class="n">reorder_levels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">          </span><span class="c1"># choose reference trait</span>
+<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">Mean</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">               </span><span class="c1"># descending by Mean</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">study</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">                       </span><span class="c1"># get vector</span>
+<span class="w">  </span><span class="nf">unique</span><span class="p">()</span>
+
+<span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_levels</span><span class="p">)</span>
+
+<span class="c1">## 5. Mark significance (95 % CI does NOT include zero) ---------</span>
+<span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">signif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1">## 6. Prepare a colour palette ---------------------------------</span>
+<span class="n">all_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qualitative_hcl</span><span class="p">(</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## 7. Plot -------------------------------------------------------</span>
+<span class="n">p3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span>
+<span class="w">  </span><span class="n">tau.df</span><span class="p">,</span>
+<span class="w">  </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span>
+<span class="w">      </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w">          </span><span class="c1"># one colour per study</span>
+<span class="w">      </span><span class="n">group</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">method</span><span class="p">)</span><span class="w">         </span><span class="c1"># required for dodging</span>
+<span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># point estimates</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># error bars (95 % CI)</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="p">,</span>
+<span class="w">        </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span><span class="w">               </span><span class="c1"># thick if significant</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># asterisks on significant estimates</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">tau.df</span><span class="p">,</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.05</span><span class="p">),</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkred&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># colour &amp; linewidth scales</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_colors</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_linewidth_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">`TRUE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">`FALSE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># horizontal zero line</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># facet: rows = trait, columns = method</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span>
+<span class="w">    </span><span class="n">trait</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">method</span><span class="p">,</span>
+<span class="w">    </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1"># each column keeps only its own studies</span>
+<span class="w">    </span><span class="n">space</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free_x&quot;</span><span class="w">    </span><span class="c1"># and shrinks horizontally</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># theme tweaks</span>
+<span class="w">  </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w">  </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">plot.margin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># axis title</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Joint Tau (Mean ± 1.96 × SD)&quot;</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+<span class="c1">#ggsave(&quot;joint_tau_all.png&quot;,width = 18,height = 8)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">TRUE</div><a class="reference internal image-reference" href="../../_images/abb35df7646169c09df16b8bc56a5ba10044cd809d33966c85e3e8e84eea19f1.png"><img alt="../../_images/abb35df7646169c09df16b8bc56a5ba10044cd809d33966c85e3e8e84eea19f1.png" src="../../_images/abb35df7646169c09df16b8bc56a5ba10044cd809d33966c85e3e8e84eea19f1.png" style="width: 1020px; height: 360px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">patchwork</span><span class="p">)</span>
+
+<span class="n">combined_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">                            </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">                            </span><span class="n">axis.ticks.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()))</span><span class="w"> </span><span class="o">/</span>
+<span class="w">                 </span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">                            </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">                            </span><span class="n">axis.ticks.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()))</span><span class="w"> </span><span class="o">/</span>
+<span class="w">                 </span><span class="p">(</span><span class="n">p3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">)))</span>
+<span class="n">combined_plot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 2 rows containing missing values or values outside the scale range
+(`geom_text()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/c956bc695058317578d5ce1f50327a65eaf2e748eb3e3193862ed3c8d70a2f0c.png"><img alt="../../_images/c956bc695058317578d5ce1f50327a65eaf2e748eb3e3193862ed3c8d70a2f0c.png" src="../../_images/c956bc695058317578d5ce1f50327a65eaf2e748eb3e3193862ed3c8d70a2f0c.png" style="width: 1020px; height: 720px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Checking the consistence of xlab labels across p1,p2 and p3</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">patchwork</span><span class="p">)</span>
+
+<span class="n">p2</span><span class="w"> </span><span class="o">/</span>
+<span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">/</span>
+<span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="c1">#ggsave(&quot;marginal_joint_tau_enrichment.png&quot;,width = 16,height = 14)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 2 rows containing missing values or values outside the scale range
+(`geom_text()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/f4f8649e99c255abb46b63f766b8b41b64d91c570e2aa1f07ec926dfe032936d.png"><img alt="../../_images/f4f8649e99c255abb46b63f766b8b41b64d91c570e2aa1f07ec926dfe032936d.png" src="../../_images/f4f8649e99c255abb46b63f766b8b41b64d91c570e2aa1f07ec926dfe032936d.png" style="width: 1020px; height: 960px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/2_single_context_cis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-library">01 Load library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-data">02 Prepare the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traits-specific-analysis">03 Traits specific analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-showing-enrichment-values-across-qtl-studies">Heatmap showing Enrichment values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-traits">AD traits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-analysis">04 Meta analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-marginal-tau-values-across-qtl-studies">Barplot showing marginal tau values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-enrichment-values-across-qtl-studies">Barplot showing enrichment values across QTL studies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-showing-joint-tau-values-across-qtl-studies">Barplot showing joint tau values across QTL studies</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
