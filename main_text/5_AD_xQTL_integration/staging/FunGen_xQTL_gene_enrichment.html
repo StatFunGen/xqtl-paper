@@ -433,7 +433,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction">Prediction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glmnet">model with glmnet</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glm">model with glm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glm">model with glm</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-sample">cross sample</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grn">GRN</a><ul class="nav section-nav flex-column">
@@ -457,6 +460,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">another top split</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">check gene expression</a></li>
 </ul>
 </li>
 </ul>
@@ -567,6 +571,16 @@ strong_list &lt;- Reduce(intersect, list(gvc_list$gene_id, gene_list$gene_id, tw
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>twas_xqtl_list &lt;- intersect(twas_list$gene_id, gene_list$gene_id)
+twas_xqtl_list %&gt;% length
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">96</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2873,59 +2887,6 @@ library(caret)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type &#39;citation(&quot;pROC&quot;)&#39; for a citation.
-
-
-Attaching package: &#39;pROC&#39;
-
-
-The following objects are masked from &#39;package:IRanges&#39;:
-
-    cov, var
-
-
-The following objects are masked from &#39;package:S4Vectors&#39;:
-
-    cov, var
-
-
-The following object is masked from &#39;package:BiocGenerics&#39;:
-
-    var
-
-
-The following objects are masked from &#39;package:stats&#39;:
-
-    cov, smooth, var
-
-
-Loading required package: lattice
-
-
-Attaching package: &#39;lattice&#39;
-
-
-The following object is masked from &#39;package:clusterProfiler&#39;:
-
-    dotplot
-
-
-The following object is masked from &#39;package:UpSetR&#39;:
-
-    histogram
-
-
-
-Attaching package: &#39;caret&#39;
-
-
-The following object is masked from &#39;package:purrr&#39;:
-
-    lift
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3197,7 +3158,7 @@ xQTL_exp_shared2 &lt;- get_exp_matrix(exp_raw, xQTL_list_shared$shared_2$gene_id
 xQTL_exp_shared3 &lt;- get_exp_matrix(exp_raw, xQTL_list_shared$shared_3$gene_id)
 xQTL_exp_shared4 &lt;- get_exp_matrix(exp_raw, xQTL_list_shared$shared_4$gene_id)
 xQTL_exp_shared5 &lt;- get_exp_matrix(exp_raw, xQTL_list_shared$shared_5$gene_id)
-
+twas_xQTL_exp_all &lt;- get_exp_matrix(exp_raw,twas_xqtl_list)
 # Prepare labels
 labels &lt;- exp_meta %&gt;% mutate(labels = ifelse(group == &quot;ad&quot;, 1, 0)) %&gt;% pull(labels)
 
@@ -3209,7 +3170,8 @@ datasets &lt;- list(
   data4 = data.frame(xQTL_exp_shared3, Disease = factor(labels)),
   data5 = data.frame(xQTL_exp_shared4, Disease = factor(labels)),
   data6 = data.frame(xQTL_exp_shared5, Disease = factor(labels)),
-  data7 = data.frame(gvc_small, Disease = factor(labels))
+  data7 = data.frame(gvc_small, Disease = factor(labels)),
+  data8 = data.frame(twas_xQTL_exp_all, Disease = factor(labels))
 )
 
 # Split train/test indices
@@ -3255,6 +3217,7 @@ roc_data &lt;- roc_data %&gt;%
     Set == &quot;Gene Set 5&quot; ~ &quot;xQTL genes with 4 methods&quot;,
     Set == &quot;Gene Set 6&quot; ~ &quot;xQTL genes with 5 methods&quot;,
     Set == &quot;Gene Set 7&quot; ~ &quot;GVC small&quot;,
+    Set == &quot;Gene Set 8&quot; ~ &quot;xQTL and TWAS&quot;,
     TRUE ~ Set
   ))
 
@@ -3266,7 +3229,7 @@ ggplot(roc_data, aes(x = Specificity, y = Sensitivity, color = Set)) +
       &quot;ROC Curves (AUC: \n&quot;,
       paste0(c(&quot;GVC&quot;, &quot;all xQTL genes&quot;, &quot;xQTL genes with 2 methods&quot;,
                &quot;xQTL genes with 3 methods&quot;, &quot;xQTL genes with 4 methods&quot;,
-               &quot;xQTL genes with 5 methods&quot;, &quot;GVC small&quot;),
+               &quot;xQTL genes with 5 methods&quot;, &quot;GVC small&quot;, &quot;xQTL and TWAS&quot;),
              &quot; = &quot;, round(aucs, 3), collapse = &quot;, \n&quot;),
       &quot;)&quot;
     ),
@@ -3309,12 +3272,12 @@ Setting levels: control = 0, case = 1
 
 Setting direction: controls &lt; cases
 
-Warning message:
-&quot;Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-<span class=" -Color -Color-Cyan">i</span> Please use `linewidth` instead.&quot;
+Setting levels: control = 0, case = 1
+
+Setting direction: controls &lt; cases
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../../../_images/12d1247cf83db0339c300af2cd0bc1ffa95199583157cc811853f0e4c59045aa.png"><img alt="../../../_images/12d1247cf83db0339c300af2cd0bc1ffa95199583157cc811853f0e4c59045aa.png" src="../../../_images/12d1247cf83db0339c300af2cd0bc1ffa95199583157cc811853f0e4c59045aa.png" style="width: 720px; height: 720px;" />
+<a class="reference internal image-reference" href="../../../_images/0073452d321e57431895c0fd9bc128195530af968e530d3f3cc3a116a1f62dfc.png"><img alt="../../../_images/0073452d321e57431895c0fd9bc128195530af968e530d3f3cc3a116a1f62dfc.png" src="../../../_images/0073452d321e57431895c0fd9bc128195530af968e530d3f3cc3a116a1f62dfc.png" style="width: 720px; height: 720px;" />
 </a>
 </div>
 </div>
@@ -3325,6 +3288,96 @@ Warning message:
 </div>
 </div>
 </div>
+<section id="cross-sample">
+<h4>cross sample<a class="headerlink" href="#cross-sample" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># double check to make the outcome as the factor, so to preserve the class distribution of disease 
+str(datasets[[1]]$Disease)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Factor w/ 2 levels &quot;0&quot;,&quot;1&quot;: 2 1 2 2 1 1 2 1 2 1 ...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>                
+# Replace train/test split and model training section with cross-validation
+ctrl &lt;- trainControl(method = &quot;cv&quot;, number = 5, classProbs = TRUE, summaryFunction = twoClassSummary)
+
+# Fit models with cross-validation
+models_cv &lt;- lapply(datasets, function(df) {
+  df$Disease &lt;- factor(df$Disease, levels = c(0, 1), labels = c(&quot;Control&quot;, &quot;AD&quot;))  # caret needs factor with levels
+  train(Disease ~ ., data = df, method = &quot;glm&quot;, family = &quot;binomial&quot;,
+        trControl = ctrl, metric = &quot;ROC&quot;)
+})
+
+# Extract AUC from cross-validation
+aucs &lt;- sapply(models_cv, function(model) max(model$results$ROC))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+&quot;glm.fit: fitted probabilities numerically 0 or 1 occurred&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span># Prepare ROC data for plotting
+roc_data &lt;- do.call(rbind, lapply(seq_along(rocs), function(i) {
+  data.frame(
+    Specificity = 1 - rocs[[i]]$specificities,
+    Sensitivity = rocs[[i]]$sensitivities,
+    Set = paste0(&quot;Gene Set &quot;, i)
+  )
+}))
+
+roc_data &lt;- roc_data %&gt;%
+  mutate(Set = case_when(
+    Set == &quot;Gene Set 1&quot; ~ &quot;GVC&quot;,
+    Set == &quot;Gene Set 2&quot; ~ &quot;all xQTL genes&quot;,
+    Set == &quot;Gene Set 3&quot; ~ &quot;xQTL genes with 2 methods&quot;,
+    Set == &quot;Gene Set 4&quot; ~ &quot;xQTL genes with 3 methods&quot;,
+    Set == &quot;Gene Set 5&quot; ~ &quot;xQTL genes with 4 methods&quot;,
+    Set == &quot;Gene Set 6&quot; ~ &quot;xQTL genes with 5 methods&quot;,
+    Set == &quot;Gene Set 7&quot; ~ &quot;GVC small&quot;,
+    Set == &quot;Gene Set 8&quot; ~ &quot;xQTL and TWAS&quot;,
+    TRUE ~ Set
+  ))
+
+ggplot(roc_data, aes(x = Specificity, y = Sensitivity, color = Set)) +
+  geom_line(size = 1) +
+  geom_abline(slope = 1, intercept = 0, linetype = &quot;dashed&quot;, color = &quot;gray&quot;) +
+  labs(
+    title = paste0(
+      &quot;ROC Curves (AUC: \n&quot;,
+      paste0(c(&quot;GVC&quot;, &quot;all xQTL genes&quot;, &quot;xQTL genes with 2 methods&quot;,
+               &quot;xQTL genes with 3 methods&quot;, &quot;xQTL genes with 4 methods&quot;,
+               &quot;xQTL genes with 5 methods&quot;, &quot;GVC small&quot;, &quot;xQTL and TWAS&quot;),
+             &quot; = &quot;, round(aucs, 3), collapse = &quot;, \n&quot;),
+      &quot;)&quot;
+    ),
+    x = &quot;1 - Specificity&quot;,
+    y = &quot;Sensitivity&quot;
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/58768ae366bd391cd0e1511c2a250d54eac3eb5070d9f58911d16358c099c5ea.png"><img alt="../../../_images/58768ae366bd391cd0e1511c2a250d54eac3eb5070d9f58911d16358c099c5ea.png" src="../../../_images/58768ae366bd391cd0e1511c2a250d54eac3eb5070d9f58911d16358c099c5ea.png" style="width: 720px; height: 720px;" />
+</a>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="grn">
@@ -5927,6 +5980,100 @@ OPC_V2
 </div>
 </section>
 </section>
+<section id="id6">
+<h3>check gene expression<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>we are wondering why CORO1A was picked by cTWAS, wondering if that gene has a higher expression correlation with others</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>mic_exp &lt;- fread(&#39;/data/eQTL/ROSMAP/DLPFC_Mic/analysis_ready/phenotype_preprocessing/phenotype_by_chrom/Mic.log2cpm.bed.chr11.bed.gz&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>mic_exp %&gt;% filter(ID == &#39;ENSG00000066336&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 1 x 428</caption>
+<thead>
+	<tr><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>ID</th><th scope=col>MAP15387421</th><th scope=col>MAP22868024</th><th scope=col>MAP46246604</th><th scope=col>MAP50104134</th><th scope=col>MAP50104846</th><th scope=col>MAP50106442</th><th scope=col>...</th><th scope=col>SM-CTEMS</th><th scope=col>SM-CTEMU</th><th scope=col>SM-CTEMW</th><th scope=col>SM-CTEMY</th><th scope=col>SM-CTEN2</th><th scope=col>SM-CTEN5</th><th scope=col>SM-CTEN7</th><th scope=col>SM-CTEND</th><th scope=col>SM-CTENF</th><th scope=col>SM-CTENG</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr11</td><td>47378546</td><td>47378547</td><td>ENSG00000066336</td><td>0.3710662</td><td>-1.778669</td><td>0.7291951</td><td>-0.7291951</td><td>-0.9848335</td><td>1.054258</td><td>...</td><td>-0.168891</td><td>1.650584</td><td>-0.3964614</td><td>-0.1808688</td><td>0.661588</td><td>-1.525803</td><td>2.454256</td><td>-0.4480493</td><td>0.1509692</td><td>-0.3271831</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>spi1_fmp &lt;- readRDS(&#39;/data/analysis_result/single_context/ROSMAP_eQTL/export/ROSMAP_eQTL.ENSG00000066336.cis_results_db.export.rds&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>spi1_fmp[[1]] %&gt;% names
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Mic_DeJager_eQTL_ENSG00000066336'</li><li>'Ast_DeJager_eQTL_ENSG00000066336'</li><li>'Inh_DeJager_eQTL_ENSG00000066336'</li><li>'DLPFC_DeJager_eQTL_ENSG00000066336'</li><li>'PCC_DeJager_eQTL_ENSG00000066336'</li><li>'AC_DeJager_eQTL_ENSG00000066336'</li><li>'Mic_Kellis_eQTL_ENSG00000066336'</li><li>'Mic_mega_eQTL_ENSG00000066336'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>spi1_fmp[[1]][[&#39;Mic_DeJager_eQTL_ENSG00000066336&#39;]][[&#39;top_loci&#39;]]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 0 x 8</caption>
+<thead>
+	<tr><th scope=col>variant_id</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>maf</th><th scope=col>pip</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>spi1_fmp[[1]][[&#39;Mic_Kellis_eQTL_ENSG00000066336&#39;]][[&#39;top_loci&#39;]]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NULL
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sos notranslate"><div class="highlight"><pre><span></span>spi1_fmp[[1]][[&#39;Mic_mega_eQTL_ENSG00000066336&#39;]][[&#39;top_loci&#39;]]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NULL
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -6019,7 +6166,10 @@ OPC_V2
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction">Prediction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glmnet">model with glmnet</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glm">model with glm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-with-glm">model with glm</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-sample">cross sample</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grn">GRN</a><ul class="nav section-nav flex-column">
@@ -6043,6 +6193,7 @@ OPC_V2
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">another top split</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">check gene expression</a></li>
 </ul>
 </li>
 </ul>
