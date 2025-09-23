@@ -1,0 +1,1069 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SLDSC &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/2_single_context_cis/Figure_sLDSC_GWAS_specific';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_project_overview/index.html">Multi-omics QTL atlas of the aging human brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Fine-mapped QTL landscape across brain molecular phenotypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_single_context_multigene_trans/index.html">Coordinated gene regulation and long-range genetic effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_multi_context/index.html">Cascading genetic effects across molecular contexts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_AD_xQTL_integration/index.html">Regulatory architecture of AD susceptibility loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_AD_xQTL_genes/index.html">Molecular dissection of prioritized AD loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_AD_gene_prioritized/index.html">Molecular insights and gene prioritization at key AD loci</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/2_single_context_cis/Figure_sLDSC_GWAS_specific.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/main_text/2_single_context_cis/Figure_sLDSC_GWAS_specific.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SLDSC</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot">Plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-traits">Meta traits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seprate-traits">Seprate traits</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sldsc">
+<h1>SLDSC<a class="headerlink" href="#sldsc" title="Link to this heading">#</a></h1>
+<section id="plot">
+<h2>Plot<a class="headerlink" href="#plot" title="Link to this heading">#</a></h2>
+<section id="meta-traits">
+<h3>Meta traits<a class="headerlink" href="#meta-traits" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Library</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">colorspace</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.1.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">between()</span>     masks <span class=" -Color -Color-Blue">data.table</span>::between()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span>      masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">first()</span>       masks <span class=" -Color -Color-Blue">data.table</span>::first()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">hour()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::hour()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">isoweek()</span> masks <span class=" -Color -Color-Blue">data.table</span>::isoweek()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>         masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">last()</span>        masks <span class=" -Color -Color-Blue">data.table</span>::last()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">mday()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::mday()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">minute()</span>  masks <span class=" -Color -Color-Blue">data.table</span>::minute()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">month()</span>   masks <span class=" -Color -Color-Blue">data.table</span>::month()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">quarter()</span> masks <span class=" -Color -Color-Blue">data.table</span>::quarter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">second()</span>  masks <span class=" -Color -Color-Blue">data.table</span>::second()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">purrr</span>::<span class=" -Color -Color-Green">transpose()</span>   masks <span class=" -Color -Color-Blue">data.table</span>::transpose()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">wday()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::wday()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">week()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::week()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">yday()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::yday()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">lubridate</span>::<span class=" -Color -Color-Green">year()</span>    masks <span class=" -Color -Color-Blue">data.table</span>::year()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#studies &lt;- c(&#39;ROSMAP_gpQTL_glycosylation_unadjusted&#39;) ## change context</span>
+<span class="n">all_studies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.dirs</span><span class="p">(</span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output/&quot;</span><span class="p">,</span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">,</span><span class="n">recursive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="w"> </span><span class="c1"># All QTL studies - FIXME</span>
+<span class="n">studies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_studies</span><span class="p">[</span><span class="n">all_studies</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;qtl.joint_tau&quot;</span><span class="p">]</span>
+<span class="n">studies</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'AC_DeJager_eQTL'</li><li>'Ast_10_Kellis_eQTL'</li><li>'Ast_DeJager_eQTL'</li><li>'Ast_Kellis_eQTL'</li><li>'Ast_mega_eQTL'</li><li>'BM_10_MSBB_eQTL'</li><li>'BM_22_MSBB_eQTL'</li><li>'BM_36_MSBB_eQTL'</li><li>'BM_44_MSBB_eQTL'</li><li>'DLPFC_Bennett_pQTL'</li><li>'DLPFC_DeJager_eQTL'</li><li>'DLPFC_Klein_gpQTL_adjusted'</li><li>'DLPFC_Klein_gpQTL_unadjusted'</li><li>'Exc_DeJager_eQTL'</li><li>'Exc_Kellis_eQTL'</li><li>'Exc_mega_eQTL'</li><li>'Inh_DeJager_eQTL'</li><li>'Inh_Kellis_eQTL'</li><li>'Inh_mega_eQTL'</li><li>'Knight_eQTL_brain'</li><li>'Knight_pQTL_brain'</li><li>'MSBB'</li><li>'MSBB_BM36_pQTL'</li><li>'MSBB_BM_10_eQTL'</li><li>'MSBB_BM_22_eQTL'</li><li>'MSBB_BM_36_eQTL'</li><li>'MSBB_BM_44_eQTL'</li><li>'Metabrain_Basalganglia'</li><li>'Metabrain_Cerebellum'</li><li>'Metabrain_Cortex'</li><li>'Metabrain_Hippocampus'</li><li>'Metabrain_Spinalcord'</li><li>'MiGA_GFM_eQTL'</li><li>'MiGA_GTS_eQTL'</li><li>'MiGA_SVZ_eQTL'</li><li>'MiGA_THA_eQTL'</li><li>'Mic_12_Kellis_eQTL'</li><li>'Mic_13_Kellis_eQTL'</li><li>'Mic_DeJager_eQTL'</li><li>'Mic_Kellis_eQTL'</li><li>'Mic_mega_eQTL'</li><li>'OPC_DeJager_eQTL'</li><li>'OPC_Kellis_eQTL'</li><li>'OPC_mega_eQTL'</li><li>'Oli_DeJager_eQTL'</li><li>'Oli_Kellis_eQTL'</li><li>'Oli_mega_eQTL'</li><li>'PCC_DeJager_eQTL'</li><li>'ROSMAP'</li><li>'ROSMAP_AC_DeJager_eQTL'</li><li>'ROSMAP_AC_sQTL'</li><li>'ROSMAP_Ast_DeJager_eQTL'</li><li>'ROSMAP_Ast_mega_eQTL'</li><li>'ROSMAP_DLPFC_Bennett_pQTL'</li><li>'ROSMAP_DLPFC_DeJager_eQTL'</li><li>'ROSMAP_DLPFC_sQTL'</li><li>'ROSMAP_Exc_DeJager_eQTL'</li><li>'ROSMAP_Exc_mega_eQTL'</li><li>'ROSMAP_Inh_DeJager_eQTL'</li><li>'ROSMAP_Inh_mega_eQTL'</li><li>'ROSMAP_Mic_DeJager_eQTL'</li><li>'ROSMAP_Mic_mega_eQTL'</li><li>'ROSMAP_OPC_DeJager_eQTL'</li><li>'ROSMAP_OPC_mega_eQTL'</li><li>'ROSMAP_Oli_DeJager_eQTL'</li><li>'ROSMAP_Oli_mega_eQTL'</li><li>'ROSMAP_PCC_DeJager_eQTL'</li><li>'ROSMAP_PCC_sQTL'</li><li>'ROSMAP_haQTL_all_pip0.5_inCS'</li><li>'ROSMAP_haQTL_all_pip0.5_maxpip'</li><li>'ROSMAP_haQTL_pc1_pip0.5_inCS'</li><li>'ROSMAP_haQTL_pc1_pip0.5_maxpip'</li><li>'ROSMAP_mQTL_all_pip0.5_inCS'</li><li>'ROSMAP_mQTL_all_pip0.5_maxpip'</li><li>'ROSMAP_mQTL_pc1_pip0.5_inCS'</li><li>'ROSMAP_mQTL_pc1_pip0.5_maxpip'</li><li>'ROSMAP_monocyte_ROSMAP_eQTL'</li><li>'STARNET_eQTL_Mac'</li><li>'monocyte_ROSMAP_eQTL'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># res.dir &lt;- &quot;./&quot; ## change path</span>
+<span class="n">res.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;/restricted/projectnb/xqtl/jaempawi/xqtl/output/&quot;</span><span class="w"> </span><span class="c1"># Please untar the tar.gz filer.gz #FIXME</span>
+
+<span class="n">tau.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="n">enrich.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">study</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">studies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># meta.dir &lt;- paste0(res.dir, study, &quot;/sumstats/all_m/processed_stats_2/single_tau.&quot;,study, &quot;.meta_processed_stats.rds&quot;)</span>
+<span class="w">  </span><span class="n">meta.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">res.dir</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/sumstats/processed_stats_2/single_tau.&quot;</span><span class="p">,</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.meta_processed_stats.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+<span class="w">  </span><span class="n">metas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="n">meta.dir</span><span class="p">)</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">metas</span><span class="o">$</span><span class="n">tau</span><span class="p">)</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">study</span>
+<span class="w">  </span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">tau.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">metas</span><span class="o">$</span><span class="n">enrichment</span><span class="p">)</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">study</span>
+<span class="w">  </span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]]</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">enrich.list</span><span class="p">[[</span><span class="n">study</span><span class="p">]])</span>
+<span class="w">  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="w"> </span><span class="n">tau.list</span><span class="p">)</span>
+<span class="n">enrich.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="w"> </span><span class="n">enrich.list</span><span class="p">)</span>
+
+<span class="c1"># 95% confidence interval</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">Upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">tau.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">tau.df</span><span class="o">$</span><span class="n">signif</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="o">$</span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">Lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">Upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">Mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1.96</span><span class="o">*</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">SD</span>
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">signif</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="o">$</span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">reorder_levels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">          </span><span class="c1"># choose reference trait</span>
+<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">Mean</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">               </span><span class="c1"># descending by Mean</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">study</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">                       </span><span class="c1"># get vector</span>
+<span class="w">  </span><span class="nf">unique</span><span class="p">()</span>
+
+<span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_levels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## 5. Mark significance (95 % CI does NOT include zero) ---------</span>
+<span class="n">tau.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tau.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">signif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1">## 6. Prepare a colour palette ---------------------------------</span>
+<span class="n">all_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qualitative_hcl</span><span class="p">(</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">tau.df</span><span class="o">$</span><span class="n">study</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## 7. Plot marginal_tau -------------------------------------------------------</span>
+<span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span>
+<span class="w">  </span><span class="n">tau.df</span><span class="p">,</span>
+<span class="w">  </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span>
+<span class="w">      </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trait</span><span class="p">)</span><span class="w">         </span>
+<span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># point estimates</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># error bars (95 % CI)</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="p">,</span>
+<span class="w">        </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span><span class="w">               </span><span class="c1"># thick if significant</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># asterisks on significant estimates</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">tau.df</span><span class="p">,</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.05</span><span class="p">),</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># colour &amp; linewidth scales</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_colors</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_linewidth_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">`TRUE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">`FALSE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># horizontal zero line</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># theme tweaks</span>
+<span class="w">  </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w">  </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># axis title</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Tau (Mean ± 1.96 × SD)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">trait</span><span class="p">)</span>
+
+<span class="c1">## 8. Display plot ----------------------------------------------</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/ac246588bfa7634a1d2c57f998d0dc4b425fc976fa879fc71b3ca5f6db890d16.png"><img alt="../../_images/ac246588bfa7634a1d2c57f998d0dc4b425fc976fa879fc71b3ca5f6db890d16.png" src="../../_images/ac246588bfa7634a1d2c57f998d0dc4b425fc976fa879fc71b3ca5f6db890d16.png" style="width: 420px; height: 420px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Enrichment</span>
+
+<span class="n">reorder_levels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Brain&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">          </span><span class="c1"># choose reference trait</span>
+<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">Mean</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">               </span><span class="c1"># descending by Mean</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">study</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">                       </span><span class="c1"># get vector</span>
+<span class="w">  </span><span class="nf">unique</span><span class="p">()</span>
+
+<span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_levels</span><span class="p">)</span>
+
+<span class="c1">## 5. Mark significance (95 % CI does NOT include zero) ---------</span>
+<span class="n">enrich.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">enrich.df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">signif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1">## 6. Prepare a colour palette ---------------------------------</span>
+<span class="n">all_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qualitative_hcl</span><span class="p">(</span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">enrich.df</span><span class="o">$</span><span class="n">study</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark 3&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">## 7. Plot Enrichment-------------------------------------------------------</span>
+<span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span>
+<span class="w">  </span><span class="n">enrich.df</span><span class="p">,</span>
+<span class="w">  </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span>
+<span class="w">      </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">study</span><span class="p">)</span><span class="w">      </span>
+<span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># point estimates</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># error bars (95 % CI)</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="p">,</span>
+<span class="w">        </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span><span class="w">               </span><span class="c1"># thick if significant</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># asterisks on significant estimates</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">enrich.df</span><span class="p">,</span><span class="w"> </span><span class="n">signif</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Upper</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_dodge</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># colour &amp; linewidth scales</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_colors</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_linewidth_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">`TRUE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">`FALSE`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># horizontal zero line</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># theme tweaks</span>
+<span class="w">  </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w">  </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># axis title</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Enrichment (Mean ± 1.96 × SD)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">trait</span><span class="p">)</span>
+
+
+
+<span class="c1">## 8. Display plot ----------------------------------------------</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 6 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/69a6b98efff0c995025bceab332a744480db277e95bb448ca429d205a5c4097e.png"><img alt="../../_images/69a6b98efff0c995025bceab332a744480db277e95bb448ca429d205a5c4097e.png" src="../../_images/69a6b98efff0c995025bceab332a744480db277e95bb448ca429d205a5c4097e.png" style="width: 420px; height: 420px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="seprate-traits">
+<h3>Seprate traits<a class="headerlink" href="#seprate-traits" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## Library</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">colorspace</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ttmp &lt;- readRDS(&#39;./ROSMAP_gpQTL_glycosylation_unadjusted.single_tau.initial_processed_stats.rds&#39;)</span>
+<span class="n">ttmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">res.dir</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/sumstats/&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">study</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.single_tau.initial_processed_stats.rds&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">#FIXME</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">blood_traits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;UKB.Lym.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Mono.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Plt.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.RBC.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.blood_RBC_DISTRIB_WIDTH.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Eosino.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Baso.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Neutro.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.MCV.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_IBD_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_CD_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_UC_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.disease_ALLERGY_ECZEMA_DIAGNOSED.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Hypothyroidism.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Rheumatoid_Arthritis.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Primary_biliary_cirrhosis.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Lupus.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Type_1_Diabetes.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.AID_Combined.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Celiac.sumstats.parquet&#39;</span><span class="p">)</span>
+<span class="n">brain_traits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;AD_Bellenguez_buildGRCh38_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_Excluding23andMe_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Bellenguez_EADB_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_ExcludingUKB23andMe_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="s">&#39;AD_Kunkle_etal_Stage1_results_hg38.sorted.munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_full_2021_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;PASS_Alzheimers_Jansen2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;EXF.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;LAN.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;MEM.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;MS.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;accumbens.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;ALS-Rheenen-2021.GCST90027163_buildGRCh37.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;ALS-Rheenen-2021.GCST90027164_buildGRCh37.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;amygdala.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;brainstem.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;caudate.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;nallsEtAl2019_excluding23andMe.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;neuroticism_ctg.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;pallidum.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC3_SCZ_wave3_public.v2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC_UKB_23andMe_depression_10000.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC_UKB_depression_genome-wide.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;putamen.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;rmf.surf.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;rmf.thick.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;sf.surf.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;sf.thick.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_AD1.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging5.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_AD2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging3.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging1.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging4.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.repro_NumberChildrenEverBorn_Pooled.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Anorexia.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_ADHD_Demontis2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Autism.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_SleepDuration_Dashti2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.BMI.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_MDD_Wray2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Neuroticism.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Smoking_Ever_Never.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.cov_EDU_YEARS.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Intelligence_SavageJansen2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Morning_Person.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Insomnia.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Schizophrenia.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_SCZvsBD_Ruderfer2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_BipolarDisorder_Ruderfer2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_ReactionTime_Davies2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_AgeFirstBirth.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Multiple_sclerosis.sumstats.parquet&#39;</span><span class="p">)</span>
+<span class="n">all_traits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;AD_Bellenguez_buildGRCh38_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_Excluding23andMe_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Bellenguez_EADB_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_ExcludingUKB23andMe_hg38_sorted_munged.parquet&#39;</span><span class="p">,</span><span class="s">&#39;AD_Kunkle_etal_Stage1_results_hg38.sorted.munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AD_Wightman_full_2021_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;PASS_Alzheimers_Jansen2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;EXF.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;LAN.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;MEM.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;MS.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;accumbens.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;ALS-Rheenen-2021.GCST90027163_buildGRCh37.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;ALS-Rheenen-2021.GCST90027164_buildGRCh37.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;amygdala.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;brainstem.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;caudate.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;GWAS_CP_all.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;GWAS_EA_excl23andMe.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;MegaGWAS_summary_European.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;nallsEtAl2019_excluding23andMe.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;neuroticism_ctg.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;pallidum.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC3_SCZ_wave3_public.v2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC_UKB_23andMe_depression_10000.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PGC_UKB_depression_genome-wide.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;putamen.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;rmf.surf.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;rmf.thick.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;sf.surf.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;sf.thick.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_AD1.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging5.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_AD2.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging3.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging1.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;image_Aging4.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Lym.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Mono.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Plt.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.RBC.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.blood_RBC_DISTRIB_WIDTH.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Eosino.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Baso.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Neutro.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.MCV.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.biochemistry_Creatinine.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.VitD.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.TBil.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.biochemistry_AlkalinePhosphatase.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.biochemistry_AspartateAminotransferase.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.TP.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_IBD_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_CD_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_UC_deLange2017.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.disease_ALLERGY_ECZEMA_DIAGNOSED.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Hypothyroidism.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Rheumatoid_Arthritis.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Primary_biliary_cirrhosis.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Lupus.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Type_1_Diabetes.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.AID_Combined.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Celiac.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Alzheimers_Jansen2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Multiple_sclerosis.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.repro_NumberChildrenEverBorn_Pooled.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Anorexia.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_ADHD_Demontis2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Autism.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_SleepDuration_Dashti2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.BMI.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_MDD_Wray2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Neuroticism.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Smoking_Ever_Never.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.cov_EDU_YEARS.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Intelligence_SavageJansen2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Morning_Person.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.Insomnia.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Schizophrenia.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_SCZvsBD_Ruderfer2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_BipolarDisorder_Ruderfer2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_ReactionTime_Davies2018.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_AgeFirstBirth.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;CAD_META.filtered.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.bp_SYSTOLICadjMEDz.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.bp_DIASTOLICadjMEDz.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_ChildOnsetAsthma_Ferreira2019.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.FEV1FVC.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_Height1.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.BrC.SAIGE.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB.WHRadjBMI.BOLT.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;Mahajan.NatGenet2018b.T2D.European.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;UKB_460K.impedance_BASAL_METABOLIC_RATEz.sumstats.parquet&#39;</span><span class="p">,</span><span class="s">&#39;PASS_GeneralRiskTolerance_KarlssonLinner2019.sumstats.parquet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+
+<span class="n">traits_dt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbindlist</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="nf">seq_along</span><span class="p">(</span><span class="n">ttmp</span><span class="p">),</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ttmp</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span>
+<span class="w">   </span><span class="n">enr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">res</span><span class="o">$</span><span class="n">enrichment</span><span class="o">$</span><span class="n">enrichment_summary</span>
+<span class="w">  </span><span class="nf">data.table</span><span class="p">(</span>
+<span class="w">    </span><span class="n">trait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">ttmp</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span>
+<span class="w">    </span><span class="n">enrichment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enr</span><span class="o">$</span><span class="n">Enrichment.Enrichment</span><span class="p">,</span>
+<span class="w">    </span><span class="n">se</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enr</span><span class="o">$</span><span class="n">Enrichment_std_error.Enrichment_std_error</span><span class="p">,</span>
+<span class="w">    </span><span class="n">prop_h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enr</span><span class="o">$</span><span class="n">`Prop._h2.Prop._h2`</span><span class="p">,</span>
+<span class="w">    </span><span class="n">prop_snps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enr</span><span class="o">$</span><span class="n">`Prop._SNPs.Prop._SNPs`</span><span class="p">,</span>
+<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enr</span><span class="o">$</span><span class="n">Enrichment_p</span><span class="p">,</span>
+<span class="w">    </span><span class="n">enrich_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="o">$</span><span class="n">meta_enrstat</span><span class="o">$</span><span class="n">enrich_z</span><span class="p">,</span>
+<span class="w">    </span><span class="n">h2g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="o">$</span><span class="n">single_tau</span><span class="o">$</span><span class="n">h2g</span><span class="p">,</span>
+<span class="w">    </span><span class="n">sd_annot</span><span class="w"> </span><span class="o">=</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">res</span><span class="o">$</span><span class="n">single_tau</span><span class="o">$</span><span class="n">sd_annot</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">traits_dt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traits_dt</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">blood_traits</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Blood&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                      </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">brain_traits</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Brain&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                      </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">all_traits</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Others&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;.sumstats.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="p">)</span>
+<span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;.munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="p">)</span>
+<span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;_munged.parquet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trait_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+
+<span class="w">  </span><span class="c1"># Alzheimer’s/ Dementia / FTD &amp; neurological disorders</span>
+<span class="w">  </span><span class="s">&quot;PASS_Alzheimers_Jansen2019&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Jansen 2019)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Multiple_sclerosis&quot;</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Multiple Sclerosis&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Bellenguez_buildGRCh38&quot;</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Bellenguez)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Wightman_Excluding23andMe_hg38_sorted&quot;</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Wightman excl. 23andMe)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Bellenguez_EADB_hg38_sorted&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Bellenguez EADB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Wightman_ExcludingUKB23andMe_hg38_sorted&quot;</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Wightman excl. UKB &amp; 23andMe)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Kunkle_etal_Stage1_results_hg38.sorted&quot;</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Kunkle Stage 1)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;AD_Wightman_full_2021&quot;</span><span class="w">                        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alzheimer&#39;s Disease (Wightman Full)&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1"># Brain structures / imaging / neuro</span>
+<span class="w">  </span><span class="s">&quot;EXF&quot;</span><span class="w">                        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Executive Function&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;LAN&quot;</span><span class="w">                        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Language&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;MEM&quot;</span><span class="w">                        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Memory&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;MS&quot;</span><span class="w">                         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Multiple Sclerosis (from Lu)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;accumbens&quot;</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nucleus Accumbens Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;ALS-Rheenen-2021.GCST90027163_buildGRCh37&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ALS (Rheenen 2021, GWAS1)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;ALS-Rheenen-2021.GCST90027164_buildGRCh37&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ALS (Rheenen 2021, GWAS2)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;amygdala&quot;</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Amygdala Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;brainstem&quot;</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Brainstem Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;caudate&quot;</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Caudate Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;GWAS_CP_all&quot;</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cognitive Performance&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;GWAS_EA_excl23andMe&quot;</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Educational Attainment (Excl. 23andMe)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;MegaGWAS_summary_European&quot;</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cognitive Ability (European MegaGWAS)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;nallsEtAl2019_excluding23andMe&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Parkinson&#39;s Disease (Nalls 2019 excl. 23andMe)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;neuroticism_ctg&quot;</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Neuroticism (CTG)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;pallidum&quot;</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pallidum Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PGC3_SCZ_wave3_public.v2&quot;</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Schizophrenia (PGC3 Wave3)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PGC_UKB_23andMe_depression_10000&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Depression (PGC+UKB+23andMe)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PGC_UKB_depression_genome-wide&quot;</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Depression (PGC+UKB GWAS)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;putamen&quot;</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Putamen Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;rmf.surf&quot;</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rostral Middle Frontal Surface Area&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;rmf.thick&quot;</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rostral Middle Frontal Thickness&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;sf.surf&quot;</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Superior Frontal Surface Area&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;sf.thick&quot;</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Superior Frontal Thickness&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_AD1&quot;</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Alzheimer&#39;s Set1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_AD2&quot;</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Alzheimer&#39;s Set2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_Aging1&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Aging Set1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_Aging2&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Aging Set2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_Aging3&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Aging Set3&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_Aging4&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Aging Set4&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;image_Aging5&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Imaging Aging Set5&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1"># Blood-related traits</span>
+<span class="w">  </span><span class="s">&quot;UKB.Lym.BOLT&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Lymphocyte Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Mono.BOLT&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Monocyte Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Plt.BOLT&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Platelet Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.RBC.BOLT&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB RBC Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.blood_RBC_DISTRIB_WIDTH&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB RBC Distribution Width&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Eosino.BOLT&quot;</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Eosinophil Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Baso.BOLT&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Basophil Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Neutro.BOLT&quot;</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Neutrophil Count&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.MCV.BOLT&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Mean Corpuscular Volume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.biochemistry_Creatinine&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Serum Creatinine&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.VitD.BOLT&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Vitamin D&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.TBil.BOLT&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Total Bilirubin&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.biochemistry_AlkalinePhosphatase&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Alkaline Phosphatase&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.biochemistry_AspartateAminotransferase&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB AST&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.TP.BOLT&quot;</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB Total Protein&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1"># Autoimmune &amp; Inflammatory</span>
+<span class="w">  </span><span class="s">&quot;PASS_IBD_deLange2017&quot;</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Inflammatory Bowel Disease (de Lange 2017)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_CD_deLange2017&quot;</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Crohn&#39;s Disease (de Lange 2017)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_UC_deLange2017&quot;</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ulcerative Colitis (de Lange 2017)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.disease_ALLERGY_ECZEMA_DIAGNOSED&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Allergy/Eczema (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Hypothyroidism.SAIGE&quot;</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hypothyroidism (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Rheumatoid_Arthritis&quot;</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rheumatoid Arthritis&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Primary_biliary_cirrhosis&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Primary Biliary Cirrhosis&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Lupus&quot;</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Systemic Lupus Erythematosus&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Type_1_Diabetes&quot;</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Type 1 Diabetes&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.AID_Combined.SAIGE&quot;</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Combined Autoimmune Diseases (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Celiac&quot;</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Celiac Disease&quot;</span><span class="p">,</span>
+
+
+<span class="w">  </span><span class="c1"># Reproductive &amp; psychiatric</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.repro_NumberChildrenEverBorn_Pooled&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Number of Children Ever Born&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Anorexia&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Anorexia Nervosa&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_ADHD_Demontis2018&quot;</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ADHD (Demontis 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Autism&quot;</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Autism Spectrum Disorder&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_SleepDuration_Dashti2019&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sleep Duration (Dashti 2019)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.BMI.BOLT&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UKB BMI&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_MDD_Wray2018&quot;</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Major Depression (Wray 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Neuroticism&quot;</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Neuroticism (PASS)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Smoking_Ever_Never.SAIGE&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Smoking Ever/Never (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.cov_EDU_YEARS&quot;</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Educational Years (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Intelligence_SavageJansen2018&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Intelligence (Savage &amp; Jansen 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Morning_Person.BOLT&quot;</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Chronotype (Morning Person)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.Insomnia.BOLT&quot;</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Insomnia (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Schizophrenia&quot;</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Schizophrenia&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_SCZvsBD_Ruderfer2018&quot;</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Schizophrenia vs Bipolar (Ruderfer 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_BipolarDisorder_Ruderfer2018&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bipolar Disorder (Ruderfer 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_ReactionTime_Davies2018&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Reaction Time (Davies 2018)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_AgeFirstBirth&quot;</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Age at First Birth&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1"># Cardiometabolic &amp; general health</span>
+<span class="w">  </span><span class="s">&quot;CAD_META.filtered&quot;</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Coronary Artery Disease (Meta)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.bp_SYSTOLICadjMEDz&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Systolic BP (adj. meds)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.bp_DIASTOLICadjMEDz&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Diastolic BP (adj. meds)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_ChildOnsetAsthma_Ferreira2019&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Childhood Onset Asthma (Ferreira 2019)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.FEV1FVC.BOLT&quot;</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FEV1/FVC Ratio (Lung Function)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_Height1&quot;</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Height&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.BrC.SAIGE&quot;</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Breast Cancer (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB.WHRadjBMI.BOLT&quot;</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Waist-Hip Ratio adj. BMI&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;Mahajan.NatGenet2018b.T2D.European&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Type 2 Diabetes (Mahajan 2018, European)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;UKB_460K.impedance_BASAL_METABOLIC_RATEz&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Basal Metabolic Rate (UKB)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;PASS_GeneralRiskTolerance_KarlssonLinner2019&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;General Risk Tolerance (Karlsson Linner 2019)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="c1"># replace codes with human-readable names</span>
+<span class="n">traits_dt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traits_dt</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">trait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">recode</span><span class="p">(</span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="o">!!!</span><span class="n">trait_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">traits_dt</span><span class="o">$</span><span class="n">category</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">traits_dt</span><span class="o">$</span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Brain&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Blood&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Others&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">traits_dt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 12</caption>
+<thead>
+	<tr><th scope=col>trait</th><th scope=col>enrichment</th><th scope=col>se</th><th scope=col>prop_h2</th><th scope=col>prop_snps</th><th scope=col>p</th><th scope=col>h2g</th><th scope=col>sd_annot</th><th scope=col>category</th><th scope=col>trait_order</th><th scope=col>n_traits</th><th scope=col>color</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Executive Function          </td><td> 47.062</td><td>198.600</td><td>0.0037062</td><td>7.8751e-05</td><td>0.818320</td><td>-0.4997</td><td>0.006778389</td><td>Brain</td><td>29</td><td>54</td><td>#79A1E1</td></tr>
+	<tr><td>Language                    </td><td>186.650</td><td> 96.120</td><td>0.0146990</td><td>7.8751e-05</td><td>0.052973</td><td>-1.0392</td><td>0.006778389</td><td>Brain</td><td>44</td><td>54</td><td>#648ECD</td></tr>
+	<tr><td>Memory                      </td><td> 38.301</td><td> 83.466</td><td>0.0030163</td><td>7.8751e-05</td><td>0.654800</td><td>-1.0016</td><td>0.006778389</td><td>Brain</td><td>25</td><td>54</td><td>#7FA7E6</td></tr>
+	<tr><td>Multiple Sclerosis (from Lu)</td><td> 98.475</td><td> 73.171</td><td>0.0077550</td><td>7.8751e-05</td><td>0.181800</td><td> 0.3672</td><td>0.006778389</td><td>Brain</td><td>36</td><td>54</td><td>#6F99D8</td></tr>
+	<tr><td>Nucleus Accumbens Volume    </td><td> 44.794</td><td>101.330</td><td>0.0035276</td><td>7.8751e-05</td><td>0.661210</td><td> 0.2397</td><td>0.006778389</td><td>Brain</td><td>28</td><td>54</td><td>#7BA3E2</td></tr>
+	<tr><td>ALS (Rheenen 2021, GWAS1)   </td><td>104.960</td><td> 88.185</td><td>0.0082655</td><td>7.8751e-05</td><td>0.238750</td><td> 0.1111</td><td>0.006778389</td><td>Brain</td><td>37</td><td>54</td><td>#6E97D6</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+
+<span class="n">category_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;Blood&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#4575B4&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1"># </span>
+<span class="w">  </span><span class="s">&quot;Brain&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#D73027&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1"># </span>
+<span class="w">  </span><span class="s">&quot;All&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#1A9850&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># </span>
+<span class="w">  </span><span class="s">&quot;Others&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#984EA3&quot;</span><span class="w">      </span><span class="c1"># others</span>
+<span class="p">)</span>
+
+<span class="c1"># Assign colors by category (soft variations within each)</span>
+<span class="n">traits_dt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traits_dt</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">category</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">    </span><span class="n">trait_order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.integer</span><span class="p">(</span><span class="nf">factor</span><span class="p">(</span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">trait</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">enrichment</span><span class="p">)]))),</span>
+<span class="w">    </span><span class="n">n_traits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">lighten</span><span class="p">(</span><span class="n">category_colors</span><span class="p">[</span><span class="n">category</span><span class="p">],</span><span class="w"> </span>
+<span class="w">                    </span><span class="n">amount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scales</span><span class="o">::</span><span class="nf">rescale</span><span class="p">(</span><span class="n">trait_order</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.1</span><span class="p">)))</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">ungroup</span><span class="p">()</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">traits_dt</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">reorder</span><span class="p">(</span><span class="n">trait</span><span class="p">,</span><span class="w"> </span><span class="n">enrichment</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enrichment</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trait</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_errorbar</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enrichment</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">se</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enrichment</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">se</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">coord_flip</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free_y&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LDSC Enrichment Across Traits&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Trait&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Enrichment ± SE&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">setNames</span><span class="p">(</span><span class="n">traits_dt</span><span class="o">$</span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">traits_dt</span><span class="o">$</span><span class="n">trait</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+<span class="w">    </span><span class="n">strip.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">),</span>
+<span class="w">    </span><span class="n">axis.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">panel.grid.minor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">panel.grid.major.y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/0646b448ebfb4e77b14cc8d3549f669e51b3f41b8d2598d0b66a4e7ea73e2273.png"><img alt="../../_images/0646b448ebfb4e77b14cc8d3549f669e51b3f41b8d2598d0b66a4e7ea73e2273.png" src="../../_images/0646b448ebfb4e77b14cc8d3549f669e51b3f41b8d2598d0b66a4e7ea73e2273.png" style="width: 1500px; height: 600px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/2_single_context_cis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot">Plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-traits">Meta traits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seprate-traits">Seprate traits</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
