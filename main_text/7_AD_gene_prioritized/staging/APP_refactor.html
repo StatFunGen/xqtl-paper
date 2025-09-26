@@ -1,0 +1,1116 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>APP &#8212; FunGen-xQTL Manuscript Repository</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/7_AD_gene_prioritized/staging/APP_refactor';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FunGen-xQTL Manuscript Repository</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../README.html">
+                    About
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1_project_overview/index.html">Multi-omics QTL atlas of the aging human brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_single_context_cis/index.html">Fine-mapped QTL landscape across brain molecular phenotypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_single_context_multigene_trans/index.html">Coordinated gene regulation and long-range genetic effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_multi_context/index.html">Cascading genetic effects across molecular contexts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5_AD_xQTL_integration/index.html">Regulatory architecture of AD susceptibility loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5a_AD_GWAS_loci_harmonized.html">AD GWAS loci harmonization and refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5b_AD_GWAS_loci_properties.html">Refined AD GWAS loci properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5c_AD_loci_xQTL_annotated.html">AD loci “explained” by xQTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5d_AD_loci_table_summary.html">Summary of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5e_GSEA.html">Gene Set Enrichment Analysis for AD Risk Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5f_PPI.html">PPI Networks for Selected AD Risk Genes in xQTL Loci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5_AD_xQTL_integration/Figure_5g_cV2F.html">Consensus Variant-to-Function Score for AD</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../6_AD_xQTL_genes/index.html">Molecular dissection of prioritized AD loci</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization.html">Visualization of FunGen-xQTL AD loci table</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Molecular insights and gene prioritization at key AD loci</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/StatFunGen/xqtl-paper/issues/new?title=Issue%20on%20page%20%2Fmain_text/7_AD_gene_prioritized/staging/APP_refactor.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/main_text/7_AD_gene_prioritized/staging/APP_refactor.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>APP</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">APP</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-loading">Data loading</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#annotate-the-peaks">Annotate the peaks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data preparation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-data-for-the-loop-plot">Setup the data for the loop plot</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="app">
+<h1>APP<a class="headerlink" href="#app" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">magrittr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggrepel</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">cowplot</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-loading">
+<h1>Data loading<a class="headerlink" href="#data-loading" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#effect_table_snatac =  read_delim(&quot;/data/analysis_result/snatac_fsusie/top_loci/ROSMAP_Kelis_snatac_fsusie.exported.toploci.bed.gz&quot;) # This is what should be loaded while at the moment I loaded the copy in my local folder first. </span>
+<span class="n">effect_table_snatac</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/output_file/ROSMAP_Kelis_snatac_fsusie.exported.toploci.bed.gz&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># This is what should be loaded while at the moment I loaded the copy in my local folder first. </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">554</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">21</span>
+<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;\t&quot;
+<span class=" -Color -Color-Red">chr</span> (13): #chr, a1, a2, variant_ID, event_ID, region_ID, cs_id, cs_root, epi...
+<span class=" -Color -Color-Green">dbl</span>  (8): start, end, TADB_start, TADB_end, maf, PIP, cs_coverage_0.95, grid...
+
+<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">effect_table_snatac_app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect_table_snatac</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">region_ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;chr21_21882581_26518865&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">effect_table_snatac_app</span><span class="o">$</span><span class="n">cs_id</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'ROSMAP_snATAC_Kelis_Ast:chr21_21882581_26518865:2'</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/snatac_case_study/fsusie-experiments/scripts_plot/cases_study/get_gene_annotations.R&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/snatac_case_study/fsusie-experiments/scripts_plot/cases_study/interpolate_effect_estimates.R&quot;</span><span class="p">)</span>
+<span class="n">gene_file</span><span class="w"> </span><span class="o">&lt;-</span>
+<span class="w">  </span><span class="nf">file.path</span><span class="p">(</span><span class="s">&quot;/home/ubuntu/data/resource/references/Homo_sapiens.GRCh38.103.chr.reformatted.collapse_only.gene.ERCC.gtf&quot;</span><span class="p">)</span>
+<span class="n">genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_gene_annotations</span><span class="p">(</span><span class="n">gene_file</span><span class="p">)</span>
+
+<span class="n">eQTL_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;~/data/analysis_result/finemapping_twas/susie_twas/ROSMAP_DeJager_eQTL.ENSG00000142192.univariate_susie_twas_weights.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># These two rds is required to load the marginal sumstat for the null snps</span>
+<span class="n">GWAS_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/snatac_case_study/RSS_QC_RAISS_imputed.chr21_24215031_26405838.univariate_susie_rss.rds&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># These two rds is required to load the marginal sumstat for the null snps</span>
+
+<span class="n">key_marker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26171790</span>
+<span class="n">pos0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25500000</span>
+<span class="n">pos1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">26405838</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">diff_cor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/snatac_case_study/APP_snatac_case_study.homo_alt_vs_homo_ref.diff_in_cor.rds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">eQTL_1</span><span class="o">$</span><span class="n">ENSG00000142192</span><span class="o">$</span><span class="n">Ast_DeJager_eQTL</span><span class="o">$</span><span class="n">top_loci</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">variant_id</span><span class="p">,</span><span class="s">&quot;26171790&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 1 × 8</caption>
+<thead>
+	<tr><th scope=col>variant_id</th><th scope=col>betahat</th><th scope=col>sebetahat</th><th scope=col>maf</th><th scope=col>pip</th><th scope=col>cs_coverage_0.95</th><th scope=col>cs_coverage_0.7</th><th scope=col>cs_coverage_0.5</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr21:26171790:A:G</td><td>0.191449</td><td>0.03906881</td><td>0.4379475</td><td>0.01346267</td><td>1</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="annotate-the-peaks">
+<h1>Annotate the peaks<a class="headerlink" href="#annotate-the-peaks" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">snatac_cood</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/output_file/snatac_coord.tsv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)”
+<span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">756888</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">4</span>
+<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;\t&quot;
+<span class=" -Color -Color-Red">chr</span> (2): #chr, ID
+<span class=" -Color -Color-Green">dbl</span> (2): start, end
+
+<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">remap_ast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163//external_data/remap2022_astrocyte_nr_macs2_hg38_v1_0.bed.gz&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">76945</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">9</span>
+<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;\t&quot;
+<span class=" -Color -Color-Red">chr</span> (3): X1, X4, X6
+<span class=" -Color -Color-Green">dbl</span> (5): X2, X3, X5, X7, X8
+<span class=" -Color -Color-Green">num</span> (1): X9
+
+<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">remap_ast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remap_ast</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">X1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;chr21&quot;</span><span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">remap_ast</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">X2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">pos0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">X3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pos1</span><span class="w"> </span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">separate_rows</span><span class="p">(</span><span class="n">X4</span><span class="p">,</span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">X4</span><span class="p">,</span><span class="s">&quot;,&quot;</span><span class="p">))</span><span class="o">%&gt;%</span><span class="n">head</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>X1</th><th scope=col>X2</th><th scope=col>X3</th><th scope=col>X4</th><th scope=col>X5</th><th scope=col>X6</th><th scope=col>X7</th><th scope=col>X8</th><th scope=col>X9</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>chr21</td><td>25507594</td><td>25507840</td><td>CTCF     </td><td>146</td><td>.</td><td>25507721</td><td>25507722</td><td>25214056</td></tr>
+	<tr><td>chr21</td><td>25562036</td><td>25562434</td><td>CTCF     </td><td>297</td><td>.</td><td>25562218</td><td>25562219</td><td>25214056</td></tr>
+	<tr><td>chr21</td><td>25606771</td><td>25606934</td><td>CTCF     </td><td>  1</td><td>.</td><td>25606832</td><td>25606833</td><td>25214056</td></tr>
+	<tr><td>chr21</td><td>25606771</td><td>25606934</td><td>astrocyte</td><td>  1</td><td>.</td><td>25606832</td><td>25606833</td><td>25214056</td></tr>
+	<tr><td>chr21</td><td>25607426</td><td>25607791</td><td>CTCF     </td><td>526</td><td>.</td><td>25607603</td><td>25607604</td><td>25214056</td></tr>
+	<tr><td>chr21</td><td>25608203</td><td>25608646</td><td>CTCF     </td><td>588</td><td>.</td><td>25608443</td><td>25608444</td><td>25214056</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="data-preparation">
+<h1>Data preparation<a class="headerlink" href="#data-preparation" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ─────────────────────────────────────────────</span>
+<span class="c1"># SECTION 1: GWAS</span>
+<span class="c1"># ─────────────────────────────────────────────</span>
+<span class="n">GWAS_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">GWAS_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="m">2</span><span class="p">]])</span><span class="o">%&gt;%</span><span class="nf">select</span><span class="p">(</span><span class="n">variant_id</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">se</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">pval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pvalue</span><span class="w"> </span><span class="p">)</span><span class="o">%&gt;%</span>
+<span class="w">                                </span><span class="nf">mutate</span><span class="p">(</span><span class="n">CS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">variant_id</span><span class="w"> </span><span class="o">%in%</span><span class="w">  </span>
+<span class="p">((</span><span class="n">GWAS_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="m">1</span><span class="p">]][[</span><span class="s">&quot;top_loci&quot;</span><span class="p">]])</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">cs_coverage_0.95</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">pull</span><span class="p">(</span><span class="n">variant_id</span><span class="p">))</span><span class="w">  </span><span class="p">)</span><span class="o">%&gt;%</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">variant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;chr&quot;</span><span class="p">,</span><span class="n">variant_id</span><span class="w"> </span><span class="p">))</span><span class="o">%&gt;%</span><span class="nf">mutate</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">CS</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">variant_id</span><span class="p">,</span><span class="kc">NA</span><span class="p">))</span>
+
+<span class="c1"># ─────────────────────────────────────────────</span>
+<span class="c1"># SECTION 2: eQTL</span>
+<span class="c1"># ─────────────────────────────────────────────</span>
+<span class="n">eQTL_pdat_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
+<span class="n">variant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eQTL_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="s">&quot;Ast_DeJager_eQTL&quot;</span><span class="p">]][[</span><span class="s">&quot;variant_names&quot;</span><span class="p">]],</span>
+<span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eQTL_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="s">&quot;Ast_DeJager_eQTL&quot;</span><span class="p">]][[</span><span class="s">&quot;sumstats&quot;</span><span class="p">]][[</span><span class="m">1</span><span class="p">]],</span>
+<span class="n">se</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eQTL_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="s">&quot;Ast_DeJager_eQTL&quot;</span><span class="p">]][[</span><span class="s">&quot;sumstats&quot;</span><span class="p">]][[</span><span class="m">2</span><span class="p">]])</span><span class="o">%&gt;%</span><span class="nf">mutate</span><span class="p">(</span><span class="n">z</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">beta</span><span class="o">/</span><span class="n">se</span><span class="p">,</span><span class="w"> </span><span class="n">CS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">variant_id</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span>
+<span class="p">((</span><span class="n">eQTL_1</span><span class="p">[[</span><span class="m">1</span><span class="p">]][[</span><span class="s">&quot;Ast_DeJager_eQTL&quot;</span><span class="p">]][[</span><span class="s">&quot;top_loci&quot;</span><span class="p">]])</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">cs_coverage_0.95</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">pull</span><span class="p">(</span><span class="n">variant_id</span><span class="p">))</span><span class="w"> </span>
+<span class="p">)</span><span class="o">%&gt;%</span><span class="nf">separate</span><span class="p">(</span><span class="n">variant_id</span><span class="p">,</span><span class="n">into</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chr&quot;</span><span class="p">,</span><span class="s">&quot;pos&quot;</span><span class="p">),</span><span class="n">remove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">mutate</span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">pos</span><span class="p">),</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">CS</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">variant_id</span><span class="p">,</span><span class="kc">NA</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="o">%&gt;%</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">pval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">pnorm</span><span class="p">(</span><span class="o">-</span><span class="nf">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Expected 2 pieces. Additional pieces discarded in 11374 rows [1, 2, 3, 4, 5, 6,
+7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].”
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ─────────────────────────────────────────────</span>
+<span class="c1"># SECTION 4: PANEL 3 – mSNP PIP fine-mapping</span>
+<span class="c1"># ─────────────────────────────────────────────</span>
+<span class="n">pdat3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">effect_table_snatac_app</span><span class="o">$</span><span class="n">variant_ID</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect_table_snatac_app</span><span class="o">$</span><span class="n">end</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect_table_snatac_app</span><span class="o">$</span><span class="n">PIP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cs</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">effect_table_snatac_app</span><span class="o">$</span><span class="n">cs_coverage_0.95</span><span class="p">,</span>
+<span class="w">  </span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span>
+<span class="p">)</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">pdat3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pdat3</span><span class="o">$</span><span class="n">id</span>
+
+<span class="n">pdat4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">effect_table_snatac_app</span><span class="o">%&gt;%</span><span class="nf">select</span><span class="p">(</span><span class="n">pos</span><span class="w">	</span><span class="o">=</span><span class="w"> </span><span class="n">epi_mark_positions</span><span class="p">,</span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">epi_mark_effects</span><span class="p">)</span><span class="o">%&gt;%</span>
+<span class="nf">separate_rows</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">effect</span><span class="p">,</span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;;&quot;</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">mutate_all</span><span class="p">(</span><span class="n">as.numeric</span><span class="p">)</span>
+
+<span class="n">pdat5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">genes</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">chromosome</span><span class="o">==</span><span class="s">&quot;chr21&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="o">&gt;</span><span class="n">pos0</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="o">&lt;</span><span class="n">pos1</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">    </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="p">,</span>
+<span class="w">    </span><span class="n">end</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">end</span><span class="p">,</span>
+<span class="w">    </span><span class="n">tss</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">strand</span><span class="o">==</span><span class="s">&quot;+&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">),</span>
+<span class="w">    </span><span class="n">y</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="n">length.out</span><span class="o">=</span><span class="nf">n</span><span class="p">())</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="setup-the-data-for-the-loop-plot">
+<h2>Setup the data for the loop plot<a class="headerlink" href="#setup-the-data-for-the-loop-plot" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+
+
+
+<span class="c1"># convert to data.tables</span>
+<span class="nf">setDT</span><span class="p">(</span><span class="n">remap_ast</span><span class="p">);</span><span class="w"> </span><span class="nf">setDT</span><span class="p">(</span><span class="n">pdat4</span><span class="p">)</span>
+
+<span class="c1"># if your effect table lacks a chr column, add it (here all on chr21)</span>
+<span class="n">pdat4</span><span class="p">[,</span><span class="w"> </span><span class="n">X1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">remap_ast</span><span class="o">$</span><span class="n">X1</span><span class="p">[</span><span class="m">1</span><span class="p">]]</span>
+
+<span class="c1"># define the same interval columns in both tables</span>
+<span class="n">remap_ast</span><span class="p">[,</span><span class="w">   </span><span class="nf">`:=`</span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X2</span><span class="p">,</span><span class="w">      </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X3</span><span class="p">)]</span>
+<span class="n">pdat4</span><span class="p">[,</span><span class="w"> </span><span class="nf">`:=`</span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w">      </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">)]</span>
+
+<span class="c1"># key both tables on chr, start, end</span>
+<span class="nf">setkey</span><span class="p">(</span><span class="n">remap_ast</span><span class="p">,</span><span class="w">   </span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
+<span class="nf">setkey</span><span class="p">(</span><span class="n">pdat4</span><span class="p">,</span><span class="w">  </span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
+
+<span class="c1"># find points (pos) within ranges [X2,X3]</span>
+<span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">foverlaps</span><span class="p">(</span><span class="n">pdat4</span><span class="p">,</span><span class="w"> </span><span class="n">remap_ast</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nomatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">separate</span><span class="p">(</span><span class="n">X4</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;target&quot;</span><span class="p">,</span><span class="s">&quot;biotype&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;\\:&quot;</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1) define a y‐position for the arcs just below the SNATAC effects</span>
+<span class="n">y_arc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.1</span>
+
+<span class="c1"># 2) set a diff threshold to filter which arcs to draw</span>
+<span class="n">diff_thresh</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.8</span>
+
+<span class="c1"># 3) prepare the arc data.frame, filtering by diff and flipping curvature</span>
+
+<span class="n">df3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">diff_cor</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff_thresh</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">    </span><span class="n">x</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">row</span><span class="p">),</span>
+<span class="w">    </span><span class="n">xend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">left_join</span><span class="p">(</span><span class="n">pdat4</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">effect</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pos&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">left_join</span><span class="p">(</span><span class="n">pdat4</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">effect</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;xend&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pos&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">coord_diff</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">coord_diff</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xend</span><span class="p">)</span><span class="c1">#%&gt;%filter(row %in% cre$pos  |  col %in% cre$pos )</span>
+<span class="n">df4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df3</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cre</span><span class="o">$</span><span class="n">pos</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cre</span><span class="o">$</span><span class="n">pos</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="plotting">
+<h1>Plotting<a class="headerlink" href="#plotting" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">GWAS_1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nf">log10</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">pval</span><span class="p">))</span><span class="o">*</span><span class="nf">sign</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">CS</span><span class="p">,</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GWAS_1</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">variant_id</span><span class="p">,</span><span class="s">&quot;25828851&quot;</span><span class="w"> </span><span class="p">)),</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="o">=</span><span class="n">key_marker</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;darkgray&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_text_repel</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">segment.color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GWAS_1</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;chr21:26171790:A:G&quot;</span><span class="p">),</span>
+<span class="w">                  </span><span class="n">min.segment.length</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max.overlaps</span><span class="o">=</span><span class="kc">Inf</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="s">&quot;dodgerblue&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&quot;signed -log10(pval) for AD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_cowplot</span><span class="p">(</span><span class="n">font_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 6153 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/e143b99dec638b9dd05a97640b10c36c8abf39db687c30f2431500d8342434c8.png"><img alt="../../../_images/e143b99dec638b9dd05a97640b10c36c8abf39db687c30f2431500d8342434c8.png" src="../../../_images/e143b99dec638b9dd05a97640b10c36c8abf39db687c30f2431500d8342434c8.png" style="width: 600px; height: 600px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">eQTL_pdat_1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nf">log10</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">pval</span><span class="p">))</span><span class="o">*</span><span class="nf">sign</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">CS</span><span class="p">,</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="o">=</span><span class="n">key_marker</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;darkgray&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_text_repel</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">segment.color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eQTL_pdat_1</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;chr21:26171790:A:G&quot;</span><span class="p">),</span>
+<span class="w">                  </span><span class="n">min.segment.length</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max.overlaps</span><span class="o">=</span><span class="kc">Inf</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="s">&quot;dodgerblue&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&quot;signed -log10(pval) for eQTL&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_cowplot</span><span class="p">(</span><span class="n">font_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 7068 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/316d636e98fe0018693933553e349bef071643e1413196fccd5c7c1cf1c35f37.png"><img alt="../../../_images/316d636e98fe0018693933553e349bef071643e1413196fccd5c7c1cf1c35f37.png" src="../../../_images/316d636e98fe0018693933553e349bef071643e1413196fccd5c7c1cf1c35f37.png" style="width: 600px; height: 600px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">pdat3</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">pip</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">id</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">0.75</span><span class="p">,</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dodgerblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="o">=</span><span class="n">key_marker</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;darkgray&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_text_repel</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">segment.color</span><span class="o">=</span><span class="s">&quot;dimgray&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">min.segment.length</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max.overlaps</span><span class="o">=</span><span class="kc">Inf</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&quot;ca-SNP PIP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_cowplot</span><span class="p">(</span><span class="n">font_size</span><span class="o">=</span><span class="m">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/e8d5b71449947629214d2edc3cd741ea3e4f187c5b49c67be14192772eb75ddc.png"><img alt="../../../_images/e8d5b71449947629214d2edc3cd741ea3e4f187c5b49c67be14192772eb75ddc.png" src="../../../_images/e8d5b71449947629214d2edc3cd741ea3e4f187c5b49c67be14192772eb75ddc.png" style="width: 600px; height: 600px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ─────────────────────────────────────────────</span>
+<span class="c1"># SECTION 5: PANEL 4 – SNATAC effect estimates</span>
+<span class="c1"># ─────────────────────────────────────────────</span>
+
+
+<span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">cowplot</span><span class="p">)</span>
+
+
+<span class="n">curv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span>
+<span class="c1"># 4) combined plot</span>
+<span class="n">p4</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># — SNATAC effect estimates (panel 4) —</span>
+<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dotted&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">pdat4</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25639873</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key_marker</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkgray&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">),</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cre</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CTCF&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">),</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cre</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EZH2&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">  </span><span class="c1"># — co‐accessibility arcs on top —</span>
+<span class="w">  </span><span class="c1"># — co‐accessibility arcs on top —</span>
+<span class="w">  </span><span class="nf">geom_curve</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">df3</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+<span class="w">      </span><span class="n">x</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">    </span><span class="n">y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">      </span><span class="n">xend</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">xend</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yend</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span>
+<span class="w">    </span><span class="p">),</span><span class="w">      </span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">curv</span><span class="p">,</span><span class="w">  </span><span class="c1"># negative to arc above</span>
+<span class="w">    </span><span class="n">ncp</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="nf">geom_curve</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">df3</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+<span class="w">      </span><span class="n">x</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">    </span><span class="n">y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">      </span><span class="n">xend</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">xend</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yend</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span>
+<span class="w">    </span><span class="p">),</span><span class="w">      </span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curv</span><span class="p">,</span><span class="w">  </span><span class="c1"># negative to arc above</span>
+<span class="w">    </span><span class="n">ncp</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_curve</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">df4</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+<span class="w">      </span><span class="n">x</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">    </span><span class="n">y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">      </span><span class="n">xend</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">xend</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yend</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span>
+<span class="w">    </span><span class="p">),</span><span class="w">      </span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">curv</span><span class="p">,</span><span class="w">  </span><span class="c1"># negative to arc above</span>
+<span class="w">    </span><span class="n">ncp</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="nf">geom_curve</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">df4</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+<span class="w">      </span><span class="n">x</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">    </span><span class="n">y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">      </span><span class="n">xend</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">xend</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yend</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span>
+<span class="w">    </span><span class="p">),</span><span class="w">      </span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curv</span><span class="p">,</span><span class="w">  </span><span class="c1"># negative to arc above</span>
+<span class="w">    </span><span class="n">ncp</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="nf">geom_curve</span><span class="p">(</span>
+<span class="w">    </span><span class="n">data</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">df4</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">==</span><span class="w">  </span><span class="m">25639873</span><span class="p">),</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+<span class="w">      </span><span class="n">x</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">    </span><span class="n">y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">      </span><span class="n">xend</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">xend</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yend</span><span class="p">,</span>
+<span class="w">      </span><span class="n">color</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span>
+<span class="w">    </span><span class="p">),</span><span class="w">      </span><span class="n">curvature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curv</span><span class="p">,</span><span class="w">  </span><span class="c1"># negative to arc above</span>
+<span class="w">    </span><span class="n">ncp</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1"># — scales &amp; theme —</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;effect of alt allele&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">pos0</span><span class="p">,</span><span class="w"> </span><span class="n">pos1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_viridis_c</span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_cowplot</span><span class="p">(</span><span class="n">font_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="o">+</span><span class="nf">xlim</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">25550000</span><span class="p">,</span><span class="m">26200000</span><span class="p">))</span>
+
+<span class="n">p4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scale for <span class=" -Color -Color-Green">x</span> is already present.
+Adding another scale for <span class=" -Color -Color-Green">x</span>, which will replace the existing scale.
+Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/04560e2f74c158e8ae9fe41539e545854e08a121c24fdb11f45bffd7d7abd1da.png"><img alt="../../../_images/04560e2f74c158e8ae9fe41539e545854e08a121c24fdb11f45bffd7d7abd1da.png" src="../../../_images/04560e2f74c158e8ae9fe41539e545854e08a121c24fdb11f45bffd7d7abd1da.png" style="width: 600px; height: 600px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">pdat5</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">xend</span><span class="o">=</span><span class="n">end</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="n">gene_name</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_segment</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;dodgerblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">tss</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;dodgerblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="o">=</span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">fontface</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">hjust</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nudge_x</span><span class="o">=</span><span class="m">-0.003</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="o">=</span><span class="n">key_marker</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="s">&quot;darkgray&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="c1">#scale_x_continuous(limits=c(pos0,pos1)/1e6, breaks=seq(45,48,0.05)) +</span>
+<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">))</span><span class="o">+</span><span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;base-pair position on chromosome 21&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_cowplot</span><span class="p">(</span><span class="n">font_size</span><span class="o">=</span><span class="m">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plot_grid</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="p">)),</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">p2</span><span class="o">+</span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="p">)),</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">p3</span><span class="o">+</span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="p">)),</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">p4</span><span class="o">+</span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="p">)),</span>
+<span class="w">                 </span><span class="n">p5</span><span class="o">+</span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="p">)),</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">align</span><span class="o">=</span><span class="s">&quot;v&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 6153 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 7068 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../../_images/1785e7044dcbe6e1f09945de2fc1dab23c2e781dfb141f1be1bdb37edb1558d5.png"><img alt="../../../_images/1785e7044dcbe6e1f09945de2fc1dab23c2e781dfb141f1be1bdb37edb1558d5.png" src="../../../_images/1785e7044dcbe6e1f09945de2fc1dab23c2e781dfb141f1be1bdb37edb1558d5.png" style="width: 600px; height: 600px;" />
+</a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;APP_zoomplot.pdf&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nf">plot_grid</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">p3</span><span class="p">,</span><span class="n">p4</span><span class="p">,</span><span class="n">p5</span><span class="p">,</span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">align</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v&quot;</span><span class="p">),</span>
+<span class="w">       </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 6153 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 7068 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 8 rows containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+Warning message:
+“Removed 1 row containing missing values or values outside the scale range
+(`geom_curve()`).”
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./main_text/7_AD_gene_prioritized/staging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">APP</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-loading">Data loading</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#annotate-the-peaks">Annotate the peaks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data preparation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-data-for-the-loop-plot">Setup the data for the loop plot</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By FunGen-AD Consortium
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
