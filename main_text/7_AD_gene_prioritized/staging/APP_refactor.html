@@ -491,6 +491,43 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p6dat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read_delim</span><span class="p">(</span><span class="s">&quot;/data/interactive_analysis/hs3163/snatac_case_study/Astro.chr21_21882581_26518865.fsusie_mixture_normal_none__top_pc_weights.raw_input.tsv&quot;</span><span class="p">)</span>
+<span class="c1"># compute diff_mat as you have</span>
+<span class="n">diff_mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p6dat</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">genotype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">`25386103`</span><span class="o">:</span><span class="n">`26469950`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">cor</span><span class="p">(</span><span class="n">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pairwise.complete.obs&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span>
+<span class="w">  </span><span class="n">p6dat</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">genotype</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">`25386103`</span><span class="o">:</span><span class="n">`26469950`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">cor</span><span class="p">(</span><span class="n">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pairwise.complete.obs&quot;</span><span class="p">)</span>
+
+<span class="c1"># get matrix indices where diff &gt; 0.8</span>
+<span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span>
+<span class="p">(</span><span class="n">diff_mat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1"># assemble a data.frame of row/col names + value</span>
+<span class="n">diff_cor</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">  </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">diff_mat</span><span class="p">)[</span><span class="n">idx</span><span class="p">[,</span><span class="m">1</span><span class="p">]],</span>
+<span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">diff_mat</span><span class="p">)[</span><span class="n">idx</span><span class="p">[,</span><span class="m">2</span><span class="p">]],</span>
+<span class="w">  </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff_mat</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">68</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">46</span>
+<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;\t&quot;
+<span class=" -Color -Color-Red">chr</span>  (1): sample
+<span class=" -Color -Color-Green">dbl</span> (45): 21969345, 22254003, 22343124, 24045583, 24046115, 24436483, 249394...
+
+<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">eQTL_1</span><span class="o">$</span><span class="n">ENSG00000142192</span><span class="o">$</span><span class="n">Ast_DeJager_eQTL</span><span class="o">$</span><span class="n">top_loci</span><span class="p">)</span><span class="o">%&gt;%</span><span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">variant_id</span><span class="p">,</span><span class="s">&quot;26171790&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
