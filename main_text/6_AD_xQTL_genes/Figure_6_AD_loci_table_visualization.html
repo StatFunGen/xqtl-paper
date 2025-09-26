@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Visualization of FunGen-xQTL AD loci table &#8212; FunGen-xQTL Manuscript Repository</title>
+    <title>Visualization of FunGen-xQTL AD Loci Table &#8212; FunGen-xQTL Manuscript Repository</title>
   
   
   
@@ -57,6 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'main_text/6_AD_xQTL_genes/Figure_6_AD_loci_table_visualization';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -189,7 +191,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Molecular dissection of prioritized AD loci</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Visualization of FunGen-xQTL AD loci table</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Visualization of FunGen-xQTL AD Loci Table</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../7_AD_gene_prioritized/index.html">Molecular insights and gene prioritization at key AD loci</a></li>
@@ -378,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Visualization of FunGen-xQTL AD loci table</h1>
+    <h1>Visualization of FunGen-xQTL AD Loci Table</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,8 +390,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-alexandre-pelletier-and-jenny-empawi">Author: Alexandre Pelletier and Jenny Empawi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-result">Load result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-evidence-levels-for-each-evidence-type">Assign evidence levels for each evidence type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-for-genome-wide-significant-hits-and-top-genes-per-locus">Filter for genome-wide significant hits and top genes per locus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#genome-wide-significance-hits">Genome-wide significance hits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-confidence-score-per-method">Total confidence score per method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-with-colors-by-context">Plot with colors by context</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-by-gene">Version by gene</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-grouping-some-contexts">Version grouping some contexts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subset-gene-to-top-2-tiers-with-c1-2-3-4-confidence">Subset gene to top 2 tiers: with C1/2/3/4 confidence</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -401,16 +416,370 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="visualization-of-fungen-xqtl-ad-loci-table">
-<h1>Visualization of FunGen-xQTL AD loci table<a class="headerlink" href="#visualization-of-fungen-xqtl-ad-loci-table" title="Link to this heading">#</a></h1>
-<p><strong>Author:</strong> Alexandre Pelletier and Jenny Empawi</p>
+  <section id="visualization-of-fungen-xqtl-ad-loci-table">
+<h1>Visualization of FunGen-xQTL AD Loci Table<a class="headerlink" href="#visualization-of-fungen-xqtl-ad-loci-table" title="Link to this heading">#</a></h1>
+<section id="author-alexandre-pelletier-and-jenny-empawi">
+<h2>Author: Alexandre Pelletier and Jenny Empawi<a class="headerlink" href="#author-alexandre-pelletier-and-jenny-empawi" title="Link to this heading">#</a></h2>
+</section>
 <section id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
-<p>Create an informative visualization summarizing key information from the comprehensive AD loci table.</p>
+<p>Create an information visualization summarizing key information from the comprehensive AD loci table.</p>
 </section>
 <section id="implementation">
 <h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
 <p>Generate one figure to highlight the most critical insights from the AD loci table. Possible information to include: effect size direction for AD risk variants wrt xQTL</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">out</span><span class="o">&lt;-</span><span class="s">&#39;/restricted/projectnb/xqtl/jaempawi/xqtl/Figure_6&#39;</span><span class="w">  </span><span class="c1">#FIXME</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&#39;/restricted/projectnb/xqtl/jaempawi/xqtl/Figure_6/gene_prio_utils.R&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">#FIXME</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-result">
+<h2>Load result<a class="headerlink" href="#load-result" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#update table figure</span>
+<span class="n">res_adx</span><span class="o">&lt;-</span><span class="nf">fread</span><span class="p">(</span><span class="nf">fp</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="s">&#39;res_allanalysis_ADloci_overlap.csv.gz&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">#FIXME</span>
+
+<span class="c1">#add the confidence level</span>
+<span class="n">res_adxub</span><span class="o">&lt;-</span><span class="nf">fread</span><span class="p">(</span><span class="nf">fp</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="s">&#39;res_AD_variants_xQTL.csv.gz&#39;</span><span class="p">))</span><span class="w">  </span><span class="c1">#FIXME</span>
+<span class="n">res_adxub</span><span class="p">[,</span><span class="n">top_confidence</span><span class="o">:=</span><span class="nf">str_extract</span><span class="p">(</span><span class="n">xQTL_effects</span><span class="p">,</span><span class="s">&#39;C[0-9]&#39;</span><span class="p">)]</span>
+
+<span class="n">res_adx</span><span class="o">&lt;-</span><span class="nf">merge</span><span class="p">(</span><span class="n">res_adx</span><span class="p">,</span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adxub</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="n">gene_name</span><span class="p">,</span><span class="n">confidence_lvl</span><span class="p">),</span><span class="nf">.</span><span class="p">(</span><span class="n">gene_name</span><span class="p">,</span><span class="n">locus_index</span><span class="p">,</span><span class="n">context_short</span><span class="p">,</span><span class="n">confidence_lvl</span><span class="p">,</span><span class="n">top_confidence</span><span class="p">)]),</span><span class="n">all.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="n">allow.cartesian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1">#xQTL evidence summary dot plot at locus level</span>
+<span class="c1">#for each QTL evidence type put in 3 cat : absent, present, high, </span>
+<span class="c1">#for fp: high if cs95, coloc : high if npc &gt; 0.95, TWAS: MR</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">res_adx</span><span class="o">$</span><span class="n">Method</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">res_adx</span><span class="o">$</span><span class="n">context_short</span><span class="p">)</span>
+
+<span class="c1">#group contexts better: </span>
+<span class="n">res_adx</span><span class="p">[</span><span class="n">Method</span><span class="o">%in%</span><span class="s">&#39;TWAS/MR&#39;</span><span class="p">,</span><span class="n">evidence_type</span><span class="o">:=</span><span class="s">&#39;twas&#39;</span><span class="p">]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">Method</span><span class="p">,</span><span class="s">&#39;finemapping&#39;</span><span class="p">)</span><span class="o">&amp;</span><span class="n">Method</span><span class="o">!=</span><span class="s">&#39;AD_GWAS_finemapping&#39;</span><span class="p">,</span><span class="n">evidence_type</span><span class="o">:=</span><span class="s">&#39;finemapping&#39;</span><span class="p">]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="nf">str_detect</span><span class="p">(</span><span class="nf">str_to_lower</span><span class="p">(</span><span class="n">Method</span><span class="p">),</span><span class="s">&#39;coloc&#39;</span><span class="p">),</span><span class="n">evidence_type</span><span class="o">:=</span><span class="s">&#39;coloc&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       AD_GWAS_finemapping     AD_meta_colocalization 
+                      6552                       7825 
+    AD_xQTL_colocalization           APOE interaction 
+                    331652                       2662 
+                     Coloc                         QR 
+                     43665                     652037 
+                   TWAS/MR                      cTWAS 
+                      4610                        203 
+        fSuSiE_finemapping           msex interaction 
+                     37369                         12 
+ multi_context_finemapping     multi_gene_finemapping 
+                    236609                     123761 
+single_context_finemapping                    sn_sQTL 
+                   2877444                     227297 
+         trans_finemapping 
+                    173687 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              Ast caQTL    Ast eQTL    Ast sQTL           B    Exc eQTL 
+      38008           7      136446       12744       10551      165828 
+   Exc sQTL    Inh eQTL    Inh sQTL           J           K   Mic caQTL 
+     162545      178391       24492         672        1118          12 
+   Mic eQTL    Mic sQTL    OPC eQTL    OPC sQTL    Oli eQTL    Oli sQTL 
+      65779           2       97801        8720      156945       18794 
+          W   bMac eQTL   bMic eQTL  bMono eQTL   bulk eQTL  bulk gpQTL 
+      40897       64755       49788       33898     2864062       16773 
+ bulk haQTL   bulk mQTL bulk p-sQTL   bulk pQTL   bulk sQTL bulk u-sQTL 
+        657       42350      190813       29143      267940       45454 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assign-evidence-levels-for-each-evidence-type">
+<h2>Assign evidence levels for each evidence type<a class="headerlink" href="#assign-evidence-levels-for-each-evidence-type" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#res_adx[,evidence_level:=NULL]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">,</span><span class="n">evidence_level</span><span class="o">:=</span><span class="nf">ifelse</span><span class="p">(</span><span class="nf">any</span><span class="p">(</span><span class="n">MR_signif</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">ADlocus</span><span class="p">,</span><span class="n">gene_ID</span><span class="p">,</span><span class="n">context_short</span><span class="p">)]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;finemapping&#39;</span><span class="p">,</span><span class="n">evidence_level</span><span class="o">:=</span><span class="nf">ifelse</span><span class="p">(</span><span class="nf">any</span><span class="p">(</span><span class="n">susie_coverage</span><span class="o">==</span><span class="s">&#39;cs95&#39;</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">ADlocus</span><span class="p">,</span><span class="n">gene_ID</span><span class="p">,</span><span class="n">context_short</span><span class="p">)]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;coloc&#39;</span><span class="p">,</span><span class="n">evidence_level</span><span class="o">:=</span><span class="nf">ifelse</span><span class="p">(</span><span class="nf">any</span><span class="p">(</span><span class="n">cos_npc</span><span class="o">&gt;</span><span class="m">0.95</span><span class="p">)</span><span class="o">|</span><span class="nf">any</span><span class="p">(</span><span class="n">L_PP.H4.abf</span><span class="o">&gt;</span><span class="m">0.95</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">ADlocus</span><span class="p">,</span><span class="n">gene_ID</span><span class="p">,</span><span class="n">context_short</span><span class="p">)]</span>
+
+<span class="n">res_adx</span><span class="p">[,</span><span class="n">locus_gene</span><span class="o">:=</span><span class="nf">paste</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="nf">ifelse</span><span class="p">(</span><span class="n">gene_name</span><span class="o">==</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="s">&#39;?&#39;</span><span class="p">,</span><span class="n">gene_name</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;_&#39;</span><span class="p">)]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_gene</span><span class="p">,</span><span class="n">cV2F_rank</span><span class="p">),</span><span class="n">locus_gene_variant</span><span class="o">:=</span><span class="nf">paste</span><span class="p">(</span><span class="n">locus_gene</span><span class="p">,</span><span class="n">variant_ID</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;_&#39;</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="s">&#39;locus_gene&#39;</span><span class="p">]</span>
+
+<span class="n">res_adx</span><span class="p">[,</span><span class="n">n.study</span><span class="o">:=</span><span class="nf">length</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">context</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">&gt;</span><span class="m">0</span><span class="p">])),</span>
+<span class="w">            </span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;context_short&#39;</span><span class="p">,</span><span class="s">&#39;locus_gene&#39;</span><span class="p">,</span><span class="s">&#39;evidence_type&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filter-for-genome-wide-significant-hits-and-top-genes-per-locus">
+<h2>Filter for genome-wide significant hits and top genes per locus<a class="headerlink" href="#filter-for-genome-wide-significant-hits-and-top-genes-per-locus" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res_adx</span><span class="p">[,</span><span class="w"> </span><span class="n">genomewide_sig_loc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">any</span><span class="p">(</span><span class="n">min_pval</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5e-8</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;locus_gene&#39;</span><span class="p">]</span>
+<span class="n">res_adx</span><span class="p">[</span><span class="n">context_short</span><span class="o">==</span><span class="s">&#39;Ast caQTL&#39;</span><span class="p">]</span>
+<span class="n">res_adxloc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adx</span><span class="p">[</span><span class="o">!</span><span class="n">context_short</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;B&#39;</span><span class="p">,</span><span class="s">&#39;J&#39;</span><span class="p">,</span><span class="s">&#39;K&#39;</span><span class="p">,</span><span class="s">&#39;W&#39;</span><span class="p">)][</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">evidence_type</span><span class="p">)][</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_gene</span><span class="p">,</span><span class="w"> </span><span class="n">cV2F_rank</span><span class="p">)],</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;context&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;locus_gene&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;evidence_type&#39;</span><span class="p">))</span>
+<span class="c1">#count numnber of dataset per broad context</span>
+<span class="n">res_adxloc</span><span class="p">[,</span><span class="n">n.study</span><span class="o">:=</span><span class="nf">length</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">context</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">&gt;</span><span class="m">0</span><span class="p">])),</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;context_short&#39;</span><span class="p">,</span><span class="s">&#39;locus_gene&#39;</span><span class="p">,</span><span class="s">&#39;evidence_type&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.table: 7 × 217</caption>
+<thead>
+	<tr><th scope=col>locus_index</th><th scope=col>context_short</th><th scope=col>gene_name</th><th scope=col>gene_ID</th><th scope=col>context</th><th scope=col>variant_ID</th><th scope=col>#chr</th><th scope=col>start</th><th scope=col>end</th><th scope=col>a1</th><th scope=col>⋯</th><th scope=col>context_broad2</th><th scope=col>qtl_type</th><th scope=col>confidence_lvl</th><th scope=col>top_confidence</th><th scope=col>evidence_type</th><th scope=col>evidence_level</th><th scope=col>locus_gene</th><th scope=col>locus_gene_variant</th><th scope=col>n.study</th><th scope=col>genomewide_sig_loc</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>chr21</td><td>26171789</td><td>26171790</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>finemapping</td><td> 2</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>chr21</td><td>26171789</td><td>26171790</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>finemapping</td><td> 2</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>21   </td><td>      NA</td><td>      NA</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>coloc      </td><td>NA</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>21   </td><td>      NA</td><td>      NA</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>coloc      </td><td>NA</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>21   </td><td>      NA</td><td>      NA</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>coloc      </td><td>NA</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>21   </td><td>      NA</td><td>      NA</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>coloc      </td><td>NA</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+	<tr><td>196</td><td>Ast caQTL</td><td>APP</td><td>ENSG00000142192</td><td>ROSMAP_snATAC_Kelis_Ast</td><td>chr21:26171790:A:G</td><td>21   </td><td>      NA</td><td>      NA</td><td></td><td>⋯</td><td>Ast</td><td>caQTL</td><td>NA</td><td>NA</td><td>coloc      </td><td>NA</td><td>196_APP</td><td>196_APP_chr21:26121885:C:T</td><td>1</td><td>TRUE</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="genome-wide-significance-hits">
+<h2>Genome-wide significance hits<a class="headerlink" href="#genome-wide-significance-hits" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">seqid</span><span class="o">&lt;-</span><span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">only_num</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">){</span>
+<span class="w">  </span><span class="kr">if</span><span class="p">(</span><span class="n">only_num</span><span class="p">){</span>
+<span class="w">    </span><span class="nf">str_extract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s">&#39;[0-9]+&#39;</span><span class="p">)</span><span class="o">|&gt;</span><span class="nf">as.numeric</span><span class="p">()</span>
+<span class="w">  </span><span class="p">}</span><span class="kr">else</span><span class="p">{</span>
+<span class="w">    </span><span class="nf">sapply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="nf">strsplit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s">&quot;\\.|-|:|_|,|\\[|\\]&quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">])</span>
+<span class="w">    </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="w">           </span>
+<span class="n">res_adxlocf</span><span class="o">&lt;-</span><span class="n">res_adxloc</span><span class="p">[(</span><span class="n">genomewide_sig_loc</span><span class="p">)][</span><span class="n">evidence_level</span><span class="o">&gt;</span><span class="m">0</span><span class="p">]</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocf</span><span class="o">$</span><span class="n">locus_gene_variant</span><span class="p">)</span><span class="c1">#622</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocf</span><span class="o">$</span><span class="n">locus_index</span><span class="p">)</span><span class="o">|&gt;</span><span class="nf">length</span><span class="p">()</span><span class="w"> </span><span class="c1">#94</span>
+
+<span class="c1">#take top gene per locus</span>
+<span class="c1">#based on the confidence level</span>
+
+<span class="c1">#top gene: based on confidence level and then number of studies/dataset</span>
+<span class="n">res_adxlocf</span><span class="p">[</span><span class="n">gene_name</span><span class="o">!=</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="n">n.study.gene</span><span class="o">:=</span><span class="nf">length</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">context</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">&gt;</span><span class="m">0</span><span class="p">])),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">gene_name</span><span class="p">,</span><span class="n">locus_index</span><span class="p">)]</span>
+
+<span class="n">res_adxlocf</span><span class="p">[</span><span class="n">gene_name</span><span class="o">!=</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="n">top_gene</span><span class="o">:=</span><span class="n">gene_name</span><span class="o">==</span><span class="n">gene_name</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">top_confidence</span><span class="p">,</span><span class="o">-</span><span class="n">n.study.gene</span><span class="p">)][</span><span class="m">1</span><span class="p">],</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">locus_index</span><span class="p">)]</span>
+
+
+
+<span class="n">res_adxlocfge</span><span class="o">&lt;-</span><span class="n">res_adxlocf</span><span class="p">[</span><span class="n">context_short</span><span class="o">!=</span><span class="s">&#39;&#39;</span><span class="p">][</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="o">-</span><span class="n">cV2F_rank</span><span class="p">)][(</span><span class="n">top_gene</span><span class="p">)]</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="o">$</span><span class="n">locus_index</span><span class="p">)</span><span class="o">|&gt;</span><span class="nf">length</span><span class="p">()</span><span class="w"> </span><span class="c1">#94</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="o">$</span><span class="n">gene_name</span><span class="p">)</span><span class="o">|&gt;</span><span class="nf">length</span><span class="p">()</span><span class="c1">#82</span>
+
+<span class="c1">#plot the total confidence score per method</span>
+<span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">gene_name</span><span class="o">!=</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="n">tot.evidence_level</span><span class="o">:=</span><span class="nf">sum</span><span class="p">(</span><span class="n">evidence_level</span><span class="p">,</span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="n">gene_name</span><span class="p">,</span><span class="n">evidence_type</span><span class="p">,</span><span class="n">context_short</span><span class="p">)]</span>
+
+
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">chr</span><span class="o">:=</span><span class="nf">seqid</span><span class="p">(</span><span class="n">variant_ID</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">variant_ID</span><span class="p">)][</span><span class="m">1</span><span class="p">],</span><span class="n">only_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">locus_index</span><span class="p">)]</span>
+<span class="n">res_adxlocfge</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">chr</span><span class="p">),</span><span class="n">chr</span><span class="o">:=</span><span class="n">`#chr`</span><span class="p">]</span>
+<span class="n">res_adxlocfge</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">chr</span><span class="p">)]</span><span class="o">|&gt;</span><span class="nf">nrow</span><span class="p">()</span>
+
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">locus_gene</span><span class="o">:=</span><span class="nf">factor</span><span class="p">(</span><span class="n">locus_gene</span><span class="p">,</span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">locus_gene</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="n">confidence_lvl</span><span class="p">,</span><span class="o">-</span><span class="n">n.study.gene</span><span class="p">)]))]</span>
+
+<span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="o">$</span><span class="n">context_short</span><span class="p">)</span>
+<span class="n">contexts_order</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Exc eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Inh eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Oli eQTL&#39;</span><span class="p">,</span><span class="s">&#39;OPC eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Ast eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Ast caQTL&#39;</span><span class="p">,</span><span class="s">&#39;Mic eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bMic eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bMac eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bMono eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk eQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk p-sQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk u-sQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk a-sQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk pQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk gpQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk mQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk haQTL&#39;</span><span class="p">)</span>
+
+<span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">context_short</span><span class="o">==</span><span class="s">&#39;bulk sQTL&#39;</span><span class="p">,</span><span class="n">context_short</span><span class="o">:=</span><span class="s">&#39;bulk a-sQTL&#39;</span><span class="p">]</span>
+
+
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">context_short</span><span class="o">:=</span><span class="nf">factor</span><span class="p">(</span><span class="n">context_short</span><span class="p">,</span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">contexts_order</span><span class="p">))]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'100_EED_chr11:86139201:C:T'</li><li>'100_LINC01054_chr11:86139201:C:T'</li><li>'100_PICALM_chr11:86146597:T:C'</li><li>'102_ARHGEF12_chr11:121480287:A:G'</li><li>'103_GFPT1_chr11:121522741:G:A'</li><li>'104_SORL1_chr11:121564878:T:C'</li><li>'112_AL031687.1_chr14:92465707:A:G'</li><li>'112_BCAT1_chr14:92465639:G:A'</li><li>'112_C4orf46_chr14:92470683:C:T'</li><li>'112_Metazoa_SRP_chr14:92465707:A:G'</li><li>'112_RBM19_chr14:92465639:G:A'</li><li>'112_RIN3_chr14:92465707:A:G'</li><li>'112_SLC24A4_chr14:92465707:A:G'</li><li>'113_AL035409.1_chr14:92472511:G:A'</li><li>'113_LAPTM4A_chr14:92472511:G:A'</li><li>'113_MND1_chr14:92472511:G:A'</li><li>'113_RIN3_chr14:92472511:G:A'</li><li>'113_RYR3_chr14:92472511:G:A'</li><li>'113_SLC24A4_chr14:92472511:G:A'</li><li>'116_AC103796.1_chr14:52913160:G:A'</li><li>'116_AC139451.1_chr14:52913160:G:A'</li><li>'116_H4-16_chr14:52866898:C:A'</li><li>'116_ITGAV_chr14:52846687:T:C'</li><li>'116_RPL35AP9_chr14:52866898:C:A'</li><li>'117_ADAM10_chr15:58768943:A:G'</li><li>'117_MINDY2_chr15:58768943:A:G'</li><li>'117_PRAL_chr15:58690191:T:C'</li><li>'117_REL_chr15:58768943:A:G'</li><li>'118_OGFOD1_chr15:49901356:G:A'</li><li>'119_APH1B_chr15:63277703:C:T'</li><li>'119_COL12A1_chr15:63277703:C:T'</li><li>'119_LINC00381_chr15:63277703:C:T'</li><li>'119_STOX2_chr15:63277703:C:T'</li><li>'119_TRIM53AP_chr15:63277703:C:T'</li><li>'11_NCK2_chr2:105749599:T:C'</li><li>'127_ALG5_chr16:79538543:T:C'</li><li>'129_CALM3_chr16:81740211:A:T'</li><li>'129_CDK12_chr16:81739662:A:G'</li><li>'129_COL27A1_chr16:81740211:A:T'</li><li>'129_DENND6B_chr16:81739662:A:G'</li><li>'129_ZFPM2_chr16:81739662:A:G'</li><li>'132_AC006254.1_chr16:81937798:T:C'</li><li>'132_AC008840.1_chr16:81937798:T:C'</li><li>'132_DOCK3_chr16:81946414:T:C'</li><li>'132_EXOC3_chr16:81946414:T:C'</li><li>'132_SEC24B_chr16:81937798:T:C'</li><li>'133_COL6A1_chr16:90103687:G:A'</li><li>'134_AC011944.2_chr16:30004244:C:T'</li><li>'134_AC023866.2_chr16:29954956:G:C'</li><li>'134_AC093512.2_chr16:29983601:C:T'</li><li>'134_AC113349.2_chr16:30011243:A:G'</li><li>'134_ARHGEF1_chr16:30045827:C:T'</li><li>'134_ASPHD1_chr16:29983601:C:T'</li><li>'134_BCKDK_chr16:30010081:C:T'</li><li>'134_CCDC30_chr16:29977620:A:G'</li><li>'134_DOC2A_chr16:29983601:C:T'</li><li>'134_GDPD3_chr16:30018227:C:T'</li><li>'134_INO80E_chr16:29983601:C:T'</li><li>'134_ITGAM_chr16:30023148:T:G'</li><li>'134_KCTD13_chr16:29983601:C:T'</li><li>'134_LMF2_chr16:30012465:C:G'</li><li>'134_MAPK3_chr16:29983601:C:T'</li><li>'134_MTUS2_chr16:30018227:C:T'</li><li>'134_PPP4C_chr16:30011243:A:G'</li><li>'134_PRSS8_chr16:30023148:T:G'</li><li>'134_RPL28_chr16:30011243:A:G'</li><li>'134_SEPHS2_chr16:29954956:G:C'</li><li>'134_SETD1A_chr16:30004244:C:T'</li><li>'134_SEZ6L2_chr16:29983601:C:T'</li><li>'134_TAOK2_chr16:29954956:G:C'</li><li>'134_TLCD3B_chr16:30018227:C:T'</li><li>'134_TMEM219_chr16:29983601:C:T'</li><li>'134_USF2_chr16:30011243:A:G'</li><li>'134_YPEL3_chr16:29983601:C:T'</li><li>'134_ZNF432_chr16:30096460:A:G'</li><li>'134_ZNF689_chr16:30037232:C:T'</li><li>'134_ZNF747_chr16:29977620:A:G'</li><li>'137_BCKDK_chr16:31144137:C:T'</li><li>'137_BCL7C_chr16:31144137:C:T'</li><li>'137_BRD4_chr16:31144137:C:T'</li><li>'137_C5orf17_chr16:31144137:C:T'</li><li>'137_CCDC189_chr16:31144137:C:T'</li><li>'137_KAT8_chr16:31144137:C:T'</li><li>'137_PRSS36_chr16:31144137:C:T'</li><li>'137_PRSS8_chr16:31144137:C:T'</li><li>'137_PYGM_chr16:31143037:G:A'</li><li>'137_SETD1A_chr16:31144137:C:T'</li><li>'137_STX4_chr16:31144137:C:T'</li><li>'137_ZNF668_chr16:31120929:A:G'</li><li>'13_BIN1_chr2:127131542:C:T'</li><li>'13_DDX51_chr2:127131542:C:T'</li><li>'13_FBXO9_chr2:127112406:C:T'</li><li>'13_PTPMT1_chr2:127131542:C:T'</li><li>'13_ZNF749_chr2:127123643:GGT:G'</li><li>'144_LHPP_chr17:58332680:A:G'</li><li>'144_OBSL1_chr17:58332680:A:G'</li><li>'145_AC048341.1_chr17:63476980:C:T'</li><li>'145_AC113554.1_chr17:63471587:C:A'</li><li>'145_AC138356.1_chr17:63488670:G:A'</li><li>'145_ACE_chr17:63471587:C:A'</li><li>'145_BX664718.2_chr17:63486691:A:G'</li><li>'145_FHL2_chr17:63486691:A:G'</li><li>'145_FTSJ3_chr17:63471587:C:A'</li><li>'145_METTL18_chr17:63486691:A:G'</li><li>'145_MTATP6P1_chr17:63487770:T:A'</li><li>'145_UBQLN4_chr17:63486691:A:G'</li><li>'146_AC095032.1_chr17:5328907:C:T'</li><li>'146_AC108002.1_chr17:5058224:C:G'</li><li>'146_CHRNE_chr17:5235009:C:T'</li><li>'146_COQ5_chr17:5139542:C:T'</li><li>'146_CRKL_chr17:5328907:C:T'</li><li>'146_DERL2_chr17:5147314:A:G'</li><li>'146_DNAJC6_chr17:5058224:C:G'</li><li>'146_FAM160B2_chr17:5279135:G:A'</li><li>'146_HBB_chr17:5330522:C:T'</li><li>'146_LINC01239_chr17:5255419:T:C'</li><li>'146_MKLN1_chr17:5132362:G:T'</li><li>'146_MRPS26_chr17:5235685:G:A'</li><li>'146_MRPS31_chr17:5337701:A:G'</li><li>'146_MSMO1_chr17:5213084:A:C'</li><li>'146_NOVA1_chr17:5215656:T:G'</li><li>'146_NUP88_chr17:5235009:C:T'</li><li>'146_PCDHB10_chr17:5235009:C:T'</li><li>'146_RABEP1_chr17:5235009:C:T'</li><li>'146_RBPJ_chr17:5139542:C:T'</li><li>'146_SCIMP_chr17:5235009:C:T'</li><li>'146_STMND1_chr17:5328907:C:T'</li><li>'146_UQCR10_chr17:5215656:T:G'</li><li>'146_XAF1_chr17:5139542:C:T'</li><li>'146_ZNF232_chr17:5235009:C:T'</li><li>'146_ZNF276_chr17:5073106:A:C'</li><li>'14_BIN1_chr2:127090354:G:A'</li><li>'150_AC012321.1_chr17:44352876:C:T'</li><li>'150_AC092376.2_chr17:44352876:C:T'</li><li>'150_AC115223.1_chr17:44352876:C:T'</li><li>'150_APOD_chr17:44352876:C:T'</li><li>'150_C1R_chr17:44352876:C:T'</li><li>'150_CASP4_chr17:44352876:C:T'</li><li>'150_CD47_chr17:44352876:C:T'</li><li>'150_CHID1_chr17:44364976:T:C'</li><li>'150_CTAGE12P_chr17:44352876:C:T'</li><li>'150_ENPP7P8_chr17:44352876:C:T'</li><li>'150_FAM171A2_chr17:44364976:T:C'</li><li>'150_GPATCH8_chr17:44352876:C:T'</li><li>'150_GRN_chr17:44352876:C:T'</li><li>'150_ITGA2B_chr17:44352876:C:T'</li><li>'150_KIT_chr17:44352876:C:T'</li><li>'150_NXPH1_chr17:44352876:C:T'</li><li>'150_PPIAP72_chr17:44352876:C:T'</li><li>'150_SLC24A3_chr17:44352876:C:T'</li><li>'150_SPTLC1P1_chr17:44352876:C:T'</li><li>'150_TMEM106B_chr17:44364976:T:C'</li><li>'152_AC002550.1_chr17:45667624:C:T'</li><li>'152_AC005670.2_chr17:45667624:C:T'</li><li>'152_AC104472.5_chr17:45833670:G:A'</li><li>'152_ACKR1_chr17:45941033:A:G'</li><li>'152_ADCYAP1_chr17:45616096:C:T'</li><li>'152_AJM1_chr17:45614011:T:C'</li><li>'152_AL021807.1_chr17:45667624:C:T'</li><li>'152_ARHGAP27_chr17:45667624:C:T'</li><li>'152_ARHGAP31_chr17:45667624:C:T'</li><li>'152_ARHGAP9_chr17:45941033:A:G'</li><li>'152_ARL17A_chr17:45667624:C:T'</li><li>'152_ARL17B_chr17:45667624:C:T'</li><li>'152_ATP10D_chr17:45941033:A:G'</li><li>'152_ATP5MC1_chr17:46282983:A:G'</li><li>'152_BCAN_chr17:46006036:G:A'</li><li>'152_BECN1_chr17:45667624:C:T'</li><li>'152_CAMLG_chr17:45833670:G:A'</li><li>'152_CEP170B_chr17:45667624:C:T'</li><li>'152_CLOCK_chr17:45945068:G:A'</li><li>'152_CNTD1_chr17:45667624:C:T'</li><li>'152_CRHR1_chr17:45667624:C:T'</li><li>'152_CYP2A13_chr17:45667624:C:T'</li><li>'152_DALRD3_chr17:45759587:A:C'</li><li>'152_DBF4B_chr17:45608341:T:C'</li><li>'152_DGKH_chr17:45667624:C:T'</li><li>'152_DHTKD1_chr17:46783637:C:T'</li><li>'152_DHX58_chr17:45667624:C:T'</li><li>'152_DIPK2A_chr17:45667624:C:T'</li><li>'152_DNAJC7_chr17:45608341:T:C'</li><li>'152_DND1_chr17:45667624:C:T'</li><li>'152_EFCAB13_chr17:45603484:G:C'</li><li>'152_EPB41_chr17:45667624:C:T'</li><li>'152_EZH1_chr17:45603484:G:C'</li><li>'152_FAAP20_chr17:45613102:C:T'</li><li>'152_FANCC_chr17:45663199:G:T'</li><li>'152_FBXO31_chr17:45980229:G:A'</li><li>'152_FBXO41_chr17:45667624:C:T'</li><li>'152_FMNL1_chr17:45667624:C:T'</li><li>'152_FNDC1-IT1_chr17:45667624:C:T'</li><li>'152_GFM2_chr17:45941033:A:G'</li><li>'152_GRN_chr17:45667624:C:T'</li><li>'152_HDDC3_chr17:45833670:G:A'</li><li>'152_HYOU1_chr17:45980229:G:A'</li><li>'152_IPCEF1_chr17:45941033:A:G'</li><li>'152_KANSL1_chr17:45667624:C:T'</li><li>'152_LINC00365_chr17:45904465:A:T'</li><li>'152_LINC02196_chr17:45667624:C:T'</li><li>'152_LINC02210-CRHR1_chr17:45667624:C:T'</li><li>⋯</li><li>'57_TAGLN3_chr7:12216922:T:C'</li><li>'57_TMEM106B_chr7:12216038:G:A'</li><li>'57_TMSB10_chr7:12223912:T:C'</li><li>'57_TNFRSF4_chr7:12216038:G:A'</li><li>'57_TSHZ2_chr7:12228617:C:A'</li><li>'57_TUBB2A_chr7:12216038:G:A'</li><li>'57_UQCRB_chr7:12228617:C:A'</li><li>'57_UQCRQ_chr7:12216922:T:C'</li><li>'57_YWHAE_chr7:12236192:A:G'</li><li>'57_YWHAH_chr7:12216922:T:C'</li><li>'57_ZNF37A_chr7:12216922:T:C'</li><li>'58_AC068896.1_chr7:28118439:C:T'</li><li>'58_FAM171A2_chr7:28118439:C:T'</li><li>'58_HDAC1P1_chr7:28118439:C:T'</li><li>'58_HIBADH_chr7:28118439:C:T'</li><li>'58_JAZF1_chr7:28118439:C:T'</li><li>'58_NOC2L_chr7:28118439:C:T'</li><li>'58_SOCS6_chr7:28118439:C:T'</li><li>'58_VIPR1_chr7:28130784:T:C'</li><li>'58_ZFYVE1_chr7:28118439:C:T'</li><li>'5_FCER1G_chr1:161185602:G:A'</li><li>'5_FRY-AS1_chr1:161185602:G:A'</li><li>'5_NDUFS2_chr1:161185602:G:A'</li><li>'5_ZBTB46_chr1:161185602:G:A'</li><li>'60_BBS5_chr7:54881563:A:G'</li><li>'60_EGFR_chr7:54881563:A:G'</li><li>'60_PITPNM2_chr7:54881563:A:G'</li><li>'60_SMCR8_chr7:54881563:A:G'</li><li>'60_UBE2L3_chr7:54881563:A:G'</li><li>'61_AC022919.1_chr7:100210528:G:A'</li><li>'61_AP4M1_chr7:100212212:C:T'</li><li>'61_AZGP1_chr7:100212212:C:T'</li><li>'61_CASTOR3_chr7:100212212:C:T'</li><li>'61_CNPY4_chr7:100210528:G:A'</li><li>'61_DYRK2_chr7:100210528:G:A'</li><li>'61_GPC2_chr7:100210528:G:A'</li><li>'61_JUNB_chr7:100212212:C:T'</li><li>'61_LAPTM4B_chr7:100212212:C:T'</li><li>'61_PILRA_chr7:100212212:C:T'</li><li>'61_PVRIG_chr7:100210528:G:A'</li><li>'61_STAG3_chr7:100212212:C:T'</li><li>'61_ZKSCAN1_chr7:100212212:C:T'</li><li>'62_ACTL6B_chr7:100392741:T:G'</li><li>'62_CSNK1E_chr7:100392741:T:G'</li><li>'62_MTCYBP28_chr7:100334426:C:T'</li><li>'62_PILRA_chr7:100374211:A:G'</li><li>'62_RANBP1_chr7:100374211:A:G'</li><li>'62_RNF217_chr7:100392741:T:G'</li><li>'62_STAG3_chr7:100392741:T:G'</li><li>'62_ZKSCAN1_chr7:100392741:T:G'</li><li>'62_ZSCAN21_chr7:100392741:T:G'</li><li>'66_CPNE7_chr7:143407238:G:C'</li><li>'66_FAM131B_chr7:143392066:C:T'</li><li>'66_HAPLN3_chr7:143392066:C:T'</li><li>'66_M6PR_chr7:143407238:G:C'</li><li>'66_RNF180_chr7:143392066:C:T'</li><li>'66_TAS2R3_chr7:143391433:T:C'</li><li>'66_UBXN8_chr7:143392066:C:T'</li><li>'68_AC016717.2_chr7:143411748:C:T'</li><li>'68_AC093591.2_chr7:143406388:G:A'</li><li>'68_ANKRD12_chr7:143411748:C:T'</li><li>'68_LINC01001_chr7:143411748:C:T'</li><li>'68_SLC37A3_chr7:143411748:C:T'</li><li>'69_EPHA1_chr7:143414203:T:C'</li><li>'69_FAM131B_chr7:143414203:T:C'</li><li>'69_GABRA4_chr7:143414109:CCA:C'</li><li>'69_MAPK9_chr7:143414203:T:C'</li><li>'69_OTUD3_chr7:143414203:T:C'</li><li>'69_TAS2R60_chr7:143414203:T:C'</li><li>'69_ZYX_chr7:143414203:T:C'</li><li>'70_CBX5_chr8:11808828:A:G'</li><li>'70_CTSB_chr8:11871913:A:G'</li><li>'70_NEB_chr8:11808828:A:G'</li><li>'70_PHAX_chr8:11808828:A:G'</li><li>'71_CLU_chr8:27493464:T:C'</li><li>'71_EPHX2_chr8:27493464:T:C'</li><li>'71_GCM1_chr8:27479528:A:T'</li><li>'71_HIC2_chr8:27493464:T:C'</li><li>'71_PTK2B_chr8:27410651:T:C'</li><li>'71_SRBD1_chr8:27462330:A:T'</li><li>'71_TXNDC15_chr8:27462330:A:T'</li><li>'71_ZSCAN32_chr8:27479528:A:T'</li><li>'72_AL589743.3_chr8:27610304:C:G'</li><li>'72_CLU_chr8:27610304:C:G'</li><li>'72_NRCAM_chr8:27604964:A:G'</li><li>'72_SCARA3_chr8:27604964:A:G'</li><li>'73_CABP4_chr8:95008746:T:C'</li><li>'73_ETHE1_chr8:95041772:C:T'</li><li>'73_INTS8_chr8:94962733:T:C'</li><li>'73_NCR3LG1_chr8:94957719:C:T'</li><li>'73_NDUFAF6_chr8:94962733:T:C'</li><li>'73_TP53INP1_chr8:94962733:T:C'</li><li>'75_ANKRD46_chr8:100663356:T:C'</li><li>'75_ETV4_chr8:100663356:T:C'</li><li>'75_PABPC1_chr8:100663356:T:C'</li><li>'75_SNX31_chr8:100663356:T:C'</li><li>'80_RAB7A_chr8:144053248:G:A'</li><li>'80_SHARPIN_chr8:144053248:G:A'</li><li>'80_WDR48_chr8:144053248:G:A'</li><li>'81_DRC3_chr8:143967775:T:C'</li><li>'81_GUCY1A2_chr8:143967775:T:C'</li><li>'81_RWDD1_chr8:143967775:T:C'</li><li>'81_SLC43A2_chr8:143967775:T:C'</li><li>'82_AP003108.2_chr8:27371149:C:A'</li><li>'82_CLU_chr8:27350609:G:A'</li><li>'82_EPHX2_chr8:27369273:A:C'</li><li>'82_MAGOH_chr8:27350609:G:A'</li><li>'82_PTK2B_chr8:27350609:G:A'</li><li>'82_RPS27A_chr8:27369273:A:C'</li><li>'82_SATB1-AS1_chr8:27337604:T:C'</li><li>'82_TRBV29OR9-2_chr8:27350609:G:A'</li><li>'84_ANO8_chr10:11678309:A:G'</li><li>'84_CNTN1_chr10:11678309:A:G'</li><li>'84_LINC00320_chr10:11672508:C:T'</li><li>'84_USP6NL_chr10:11678309:A:G'</li><li>'84_ZNF525_chr10:11678309:A:G'</li><li>'86_AC026254.2_chr10:59786251:T:C'</li><li>'86_AC107918.4_chr10:59786251:T:C'</li><li>'86_BICD1_chr10:59788532:C:G'</li><li>'86_CCDC6_chr10:59786251:T:C'</li><li>'86_EBF1_chr10:59786251:T:C'</li><li>'86_FREM2-AS1_chr10:59786251:T:C'</li><li>'86_ZNF18_chr10:59786251:T:C'</li><li>'87_AC020915.2_chr10:59960176:T:A'</li><li>'87_CCDC6_chr10:59979702:C:T'</li><li>'87_HDAC4_chr10:59979702:C:T'</li><li>'87_MPP3_chr10:59960176:T:A'</li><li>'87_RAB11B_chr10:59957418:GCTAA:G'</li><li>'87_SMCR2_chr10:59979702:C:T'</li><li>'88_AC090518.1_chr10:80492013:G:A'</li><li>'88_GYPA_chr10:80492013:G:A'</li><li>'88_MAT1A_chr10:80509705:T:C'</li><li>'88_MRPS27_chr10:80462942:T:C'</li><li>'88_PXN_chr10:80511585:G:A'</li><li>'88_TSPAN14_chr10:80511585:G:A'</li><li>'8_ADAMTS4_chr1:161215268:G:T'</li><li>'8_FCER1G_chr1:161217875:C:T'</li><li>'8_NDUFS2_chr1:161217875:C:T'</li><li>'92_ANP32E_chr10:11679120:C:G'</li><li>'92_AURKC_chr10:11679478:A:T'</li><li>'92_EMC6_chr10:11679478:A:T'</li><li>'92_USP6NL_chr10:11679120:C:G'</li><li>'94_AC091152.4_chr11:60156035:A:G'</li><li>'94_AC138470.2_chr11:60092103:A:G'</li><li>'94_ATXN7L1_chr11:60156035:A:G'</li><li>'94_C1QTNF8_chr11:60187884:G:A'</li><li>'94_CYTH3_chr11:60183960:A:G'</li><li>'94_DDX46_chr11:60094788:A:T'</li><li>'94_FAM111A_chr11:60245978:A:G'</li><li>'94_FAM71E1_chr11:60166019:A:G'</li><li>'94_FGFBP2_chr11:60245978:A:G'</li><li>'94_LAMP1_chr11:60178272:T:C'</li><li>'94_LINC00513_chr11:60091239:A:T'</li><li>'94_LINC02614_chr11:60156035:A:G'</li><li>'94_MS4A4A_chr11:60254475:G:A'</li><li>'94_MS4A4E_chr11:60183960:A:G'</li><li>'94_MS4A6A_chr11:60183960:A:G'</li><li>'94_NPM1P27_chr11:60214328:T:C'</li><li>'94_RTN4RL2_chr11:60235462:G:A'</li><li>'94_SCARB2_chr11:60183960:A:G'</li><li>'94_SMARCC2_chr11:60183960:A:G'</li><li>'94_STX3_chr11:60183960:A:G'</li><li>'94_SYT11_chr11:60262984:T:C'</li><li>'94_TMEM59_chr11:60156035:A:G'</li><li>'94_TMX2_chr11:60183960:A:G'</li><li>'97_PICALM_chr11:85999137:G:A'</li><li>'97_RELB_chr11:85998516:G:A'</li><li>'98_BBS4_chr11:86089237:G:A'</li><li>'98_EED_chr11:86120648:A:G'</li><li>'98_PICALM_chr11:86156833:A:G'</li><li>'98_PRSS23_chr11:86147496:G:A'</li><li>'98_SYTL2_chr11:86006880:A:C'</li><li>'98_TMEM51-AS1_chr11:86065502:G:A'</li><li>'98_ZEB2_chr11:86051202:C:T'</li><li>'99_ACP2_chr11:47364522:T:C'</li><li>'99_ACTG2_chr11:47538881:T:C'</li><li>'99_ANKRD36C_chr11:47370328:G:A'</li><li>'99_C1QTNF4_chr11:47364522:T:C'</li><li>'99_CELF1_chr11:47538881:T:C'</li><li>'99_FAM180B_chr11:47410483:G:C'</li><li>'99_FNBP4_chr11:47474194:G:T'</li><li>'99_GAS5-AS1_chr11:47364522:T:C'</li><li>'99_GTF2IP12_chr11:47364522:T:C'</li><li>'99_KBTBD4_chr11:47364522:T:C'</li><li>'99_LARP4B_chr11:47364522:T:C'</li><li>'99_MADD_chr11:47364522:T:C'</li><li>'99_MED9_chr11:47440589:A:G'</li><li>'99_MTCH2_chr11:47364522:T:C'</li><li>'99_NDUFS3_chr11:47364522:T:C'</li><li>'99_NUP160_chr11:47364522:T:C'</li><li>'99_PSMC3_chr11:47364522:T:C'</li><li>'99_PTPMT1_chr11:47641380:T:C'</li><li>'99_PTPRJ_chr11:47594246:G:C'</li><li>'99_RPS19BP1_chr11:47387661:C:T'</li><li>'99_SLC39A13_chr11:47364522:T:C'</li><li>'99_SPI1_chr11:47364522:T:C'</li><li>'99_SPINT2_chr11:47395632:A:C'</li><li>'99_ST6GALNAC5_chr11:47364522:T:C'</li><li>'99_TET2_chr11:47364522:T:C'</li><li>'99_TRPC3_chr11:47401310:C:G'</li></ol>
+</div><div class="output text_html">92</div><div class="output text_html">92</div><div class="output text_html">78</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in `[.data.table`(res_adxlocfge, is.na(chr), `:=`(chr, `#chr`)):
+“Coercing &#39;character&#39; RHS to &#39;integer&#39; to match the type of column 154 named &#39;chr&#39;.”
+</pre></div>
+</div>
+<div class="output text_html">0</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'bulk eQTL'</li><li>'Oli eQTL'</li><li>'bulk haQTL'</li><li>'Mic eQTL'</li><li>'bMono eQTL'</li><li>'bulk pQTL'</li><li>'Ast eQTL'</li><li>'Exc eQTL'</li><li>'Inh eQTL'</li><li>'OPC eQTL'</li><li>'bulk p-sQTL'</li><li>'bMac eQTL'</li><li>'bulk mQTL'</li><li>'bulk gpQTL'</li><li>'bulk u-sQTL'</li><li>'bMic eQTL'</li><li>'bulk sQTL'</li><li>'Ast caQTL'</li></ol>
+</div></div>
+</div>
+</section>
+<section id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Link to this heading">#</a></h2>
+<section id="total-confidence-score-per-method">
+<h3>Total confidence score per method<a class="headerlink" href="#total-confidence-score-per-method" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">)</span><span class="o">+</span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">locus_gene</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">evidence_type</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">size</span><span class="o">=</span><span class="n">tot.evidence_level</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">col</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">evidence_level</span><span class="p">),</span>
+<span class="w">                                        </span><span class="n">shape</span><span class="o">=</span><span class="n">evidence_level</span><span class="o">==</span><span class="m">2</span><span class="o">&amp;</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">chr</span><span class="o">~</span><span class="n">context_short</span><span class="p">,</span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">,</span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">)</span><span class="o">+</span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">))</span><span class="o">+</span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_axis</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;black&#39;</span><span class="p">,</span><span class="s">&#39;red3&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s">&#39;MR significant&#39;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/1308b65b9b611de3694083724a26d2c53095dc5c6d77dda4d5b47a073b24db0e.png"><img alt="../../_images/1308b65b9b611de3694083724a26d2c53095dc5c6d77dda4d5b47a073b24db0e.png" src="../../_images/1308b65b9b611de3694083724a26d2c53095dc5c6d77dda4d5b47a073b24db0e.png" style="width: 720px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="plot-with-colors-by-context">
+<h3>Plot with colors by context<a class="headerlink" href="#plot-with-colors-by-context" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">!=</span><span class="m">0</span><span class="p">][</span><span class="n">n.study.gene</span><span class="o">&gt;</span><span class="m">0</span><span class="p">])</span><span class="o">+</span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">locus_gene</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">evidence_type</span><span class="p">,</span>
+<span class="w">                                                                          </span><span class="n">size</span><span class="o">=</span><span class="n">tot.evidence_level</span><span class="p">,</span>
+<span class="w">                                                                          </span><span class="n">col</span><span class="o">=</span><span class="n">context_short</span><span class="p">,</span>
+<span class="w">                                                                          </span><span class="n">shape</span><span class="o">=</span><span class="n">evidence_level</span><span class="o">==</span><span class="m">2</span><span class="o">&amp;</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">chr</span><span class="o">~</span><span class="n">context_short</span><span class="p">,</span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">,</span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">)</span><span class="o">+</span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">))</span><span class="o">+</span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_axis</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s">&#39;MR significant&#39;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/d86d077d436ddb76eb240693269db21afa22de2777948bbc5e0ec34d97adcf02.png"><img alt="../../_images/d86d077d436ddb76eb240693269db21afa22de2777948bbc5e0ec34d97adcf02.png" src="../../_images/d86d077d436ddb76eb240693269db21afa22de2777948bbc5e0ec34d97adcf02.png" style="width: 720px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="version-by-gene">
+<h3>Version by gene<a class="headerlink" href="#version-by-gene" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">tot.evidence_level.gene</span><span class="o">:=</span><span class="nf">sum</span><span class="p">(</span><span class="n">evidence_level</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">gene_name</span><span class="p">,</span><span class="n">evidence_type</span><span class="p">,</span><span class="n">context_short</span><span class="p">)]</span>
+
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">gene_name</span><span class="o">:=</span><span class="nf">factor</span><span class="p">(</span><span class="n">gene_name</span><span class="p">,</span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="nf">unique</span><span class="p">(</span><span class="n">gene_name</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">locus_index</span><span class="p">,</span><span class="n">confidence_lvl</span><span class="p">,</span><span class="o">-</span><span class="n">n.study.gene</span><span class="p">)]))]</span>
+
+<span class="n">p3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">!=</span><span class="m">0</span><span class="p">][</span><span class="n">n.study.gene</span><span class="o">&gt;</span><span class="m">0</span><span class="p">],</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;gene_name&#39;</span><span class="p">,</span><span class="s">&#39;locus_index&#39;</span><span class="p">,</span><span class="s">&#39;evidence_type&#39;</span><span class="p">,</span><span class="s">&#39;context_short&#39;</span><span class="p">)))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">gene_name</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">evidence_type</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">size</span><span class="o">=</span><span class="n">tot.evidence_level.gene</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">col</span><span class="o">=</span><span class="n">context_short</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">shape</span><span class="o">=</span><span class="n">evidence_level</span><span class="o">==</span><span class="m">2</span><span class="o">&amp;</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">chr</span><span class="o">~</span><span class="n">context_short</span><span class="p">,</span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">,</span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">)</span><span class="o">+</span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">))</span><span class="o">+</span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_axis</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s">&#39;MR significant&#39;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="n">p3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/d89875d84fd1bd06cd1e3ac75a15e1394a641fa78d7f2a6f4ac80cbfdb76e444.png"><img alt="../../_images/d89875d84fd1bd06cd1e3ac75a15e1394a641fa78d7f2a6f4ac80cbfdb76e444.png" src="../../_images/d89875d84fd1bd06cd1e3ac75a15e1394a641fa78d7f2a6f4ac80cbfdb76e444.png" style="width: 720px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="version-grouping-some-contexts">
+<h3>Version grouping some contexts<a class="headerlink" href="#version-grouping-some-contexts" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">context_group</span><span class="o">:=</span><span class="nf">ifelse</span><span class="p">(</span><span class="n">context_short</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;bMono eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bMac eQTL&#39;</span><span class="p">,</span><span class="s">&#39;bMic eQTL&#39;</span><span class="p">),</span><span class="s">&#39;Immune eQTL&#39;</span><span class="p">,</span>
+<span class="w">                                     </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">context_short</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="w"> </span><span class="s">&#39;bulk p-sQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk u-sQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk a-sQTL&#39;</span><span class="p">),</span><span class="s">&#39;bulk sQTL&#39;</span><span class="p">,</span>
+<span class="w">                                     </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">context_short</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;bulk pQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk gpQTL&#39;</span><span class="p">),</span><span class="s">&#39;bulk (g)pQTL&#39;</span><span class="p">,</span>
+<span class="w">                                            </span><span class="nf">ifelse</span><span class="p">(</span><span class="n">context_short</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;bulk haQTL&#39;</span><span class="p">,</span><span class="s">&#39;bulk mQTL&#39;</span><span class="p">),</span><span class="s">&#39;bulk epiQTL&#39;</span><span class="p">,</span><span class="nf">as.character</span><span class="p">(</span><span class="n">context_short</span><span class="p">)))))]</span>
+<span class="n">contexts_order</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Exc eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Inh eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Oli eQTL&#39;</span><span class="p">,</span><span class="s">&#39;OPC eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Ast eQTL&#39;</span><span class="p">,</span><span class="s">&#39;Ast caQTL&#39;</span><span class="p">,</span><span class="s">&#39;Mic eQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;Immune eQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk eQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk sQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk (g)pQTL&#39;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s">&#39;bulk epiQTL&#39;</span><span class="p">)</span>
+
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">context_group</span><span class="o">:=</span><span class="nf">factor</span><span class="p">(</span><span class="n">context_group</span><span class="p">,</span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contexts_order</span><span class="p">)]</span>
+<span class="n">res_adxlocfge</span><span class="p">[,</span><span class="n">tot.evidence_level.gene.contextgroup</span><span class="o">:=</span><span class="nf">sum</span><span class="p">(</span><span class="n">evidence_level</span><span class="p">),</span><span class="n">by</span><span class="o">=</span><span class="nf">.</span><span class="p">(</span><span class="n">gene_name</span><span class="p">,</span><span class="n">evidence_type</span><span class="p">,</span><span class="n">context_group</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p4</span><span class="w"> </span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">!=</span><span class="m">0</span><span class="p">][</span><span class="n">n.study.gene</span><span class="o">&gt;</span><span class="m">0</span><span class="p">],</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;gene_name&#39;</span><span class="p">,</span><span class="s">&#39;locus_index&#39;</span><span class="p">,</span><span class="s">&#39;evidence_type&#39;</span><span class="p">,</span><span class="s">&#39;context_group&#39;</span><span class="p">)))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">gene_name</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">evidence_type</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">size</span><span class="o">=</span><span class="n">tot.evidence_level.gene.contextgroup</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">col</span><span class="o">=</span><span class="n">context_group</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">shape</span><span class="o">=</span><span class="n">evidence_level</span><span class="o">==</span><span class="m">2</span><span class="o">&amp;</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">chr</span><span class="o">~</span><span class="n">context_group</span><span class="p">,</span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">,</span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">)</span><span class="o">+</span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">))</span><span class="o">+</span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_axis</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s">&#39;MR significant&#39;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="n">p4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/bb0b095d9d67a8e094daf98447e007b5519dfacdf34f81183905e15fb7bb01c8.png"><img alt="../../_images/bb0b095d9d67a8e094daf98447e007b5519dfacdf34f81183905e15fb7bb01c8.png" src="../../_images/bb0b095d9d67a8e094daf98447e007b5519dfacdf34f81183905e15fb7bb01c8.png" style="width: 720px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="subset-gene-to-top-2-tiers-with-c1-2-3-4-confidence">
+<h3>Subset gene to top 2 tiers: with C1/2/3/4 confidence<a class="headerlink" href="#subset-gene-to-top-2-tiers-with-c1-2-3-4-confidence" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">confidence_lvl</span><span class="p">)],</span><span class="n">by</span><span class="o">=</span><span class="s">&#39;gene_name&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">confidence_lvl</span><span class="o">|&gt;</span><span class="nf">table</span><span class="p">()</span>
+
+<span class="n">res_adxlocfge_cont_top</span><span class="o">&lt;-</span><span class="nf">unique</span><span class="p">(</span><span class="n">res_adxlocfge</span><span class="p">[</span><span class="n">evidence_level</span><span class="o">!=</span><span class="m">0</span><span class="p">][</span><span class="n">n.study.gene</span><span class="o">&gt;</span><span class="m">0</span><span class="p">],</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;gene_name&#39;</span><span class="p">,</span><span class="s">&#39;locus_index&#39;</span><span class="p">,</span><span class="s">&#39;evidence_type&#39;</span><span class="p">,</span><span class="s">&#39;context_group&#39;</span><span class="p">))[</span><span class="n">gene_name</span><span class="o">%in%</span><span class="n">gene_name</span><span class="p">[</span><span class="n">top_confidence</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;C1&#39;</span><span class="p">,</span><span class="s">&#39;C2&#39;</span><span class="p">,</span><span class="s">&#39;C3&#39;</span><span class="p">,</span><span class="s">&#39;C4&#39;</span><span class="p">)]]</span>
+
+
+<span class="n">p5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">res_adxlocfge_cont_top</span><span class="p">)</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">gene_name</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">evidence_type</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">size</span><span class="o">=</span><span class="n">tot.evidence_level.gene.contextgroup</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">col</span><span class="o">=</span><span class="n">context_group</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">shape</span><span class="o">=</span><span class="n">evidence_level</span><span class="o">==</span><span class="m">2</span><span class="o">&amp;</span><span class="n">evidence_type</span><span class="o">==</span><span class="s">&#39;twas&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">chr</span><span class="o">~</span><span class="n">context_group</span><span class="p">,</span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">,</span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;free&#39;</span><span class="p">)</span><span class="o">+</span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.75</span><span class="p">,</span><span class="m">5</span><span class="p">))</span><span class="o">+</span><span class="nf">theme_minimal</span><span class="p">()</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_axis</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">strip.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s">&#39;MR significant&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s">&#39;Total evidence level&#39;</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+<span class="n">p5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C1 C2 C3 C4 C5 C6 
+13  5 23 11  8 18 
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/f562f631723cc1651d67511d83c8532a952e09c45947d753109dd495ac046e98.png"><img alt="../../_images/f562f631723cc1651d67511d83c8532a952e09c45947d753109dd495ac046e98.png" src="../../_images/f562f631723cc1651d67511d83c8532a952e09c45947d753109dd495ac046e98.png" style="width: 720px; height: 1080px;" />
+</a>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -478,8 +847,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-alexandre-pelletier-and-jenny-empawi">Author: Alexandre Pelletier and Jenny Empawi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-result">Load result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-evidence-levels-for-each-evidence-type">Assign evidence levels for each evidence type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-for-genome-wide-significant-hits-and-top-genes-per-locus">Filter for genome-wide significant hits and top genes per locus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#genome-wide-significance-hits">Genome-wide significance hits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-confidence-score-per-method">Total confidence score per method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-with-colors-by-context">Plot with colors by context</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-by-gene">Version by gene</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-grouping-some-contexts">Version grouping some contexts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subset-gene-to-top-2-tiers-with-c1-2-3-4-confidence">Subset gene to top 2 tiers: with C1/2/3/4 confidence</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
